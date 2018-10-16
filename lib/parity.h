@@ -69,7 +69,9 @@ int parity_config_from_cli(char const* const* args, size_t const* arg_lens, size
 /// 				the configuration object as well (even on failure).
 void parity_config_destroy(void* cfg);
 
-int parity_start_default(void** out, const char *args);
+int parity_start_ios(void **output, const char *args);
+int parity_rpc_ios_query(void *client, const char *query, char **reply);
+void parity_rpc_ios_release(char *reply);
 
 /// Starts the parity client in background threads. Returns a pointer to a struct that represents
 /// the running client. Can also return NULL if the execution completes instantly.
