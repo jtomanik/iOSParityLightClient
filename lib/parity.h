@@ -70,7 +70,11 @@ int parity_config_from_cli(char const* const* args, size_t const* arg_lens, size
 void parity_config_destroy(void* cfg);
 
 int parity_start_ios(void **output, const char *args);
-int parity_rpc_ios_query(void *client, const char *query, char **reply);
+int parity_rpc_ios_query(void *client,
+                         const char *query,
+                         char **reply_bytes,
+                         size_t *reply_length);
+
 void parity_rpc_ios_release(char *reply);
 
 /// Starts the parity client in background threads. Returns a pointer to a struct that represents
