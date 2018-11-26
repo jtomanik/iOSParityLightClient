@@ -12,11 +12,10 @@
 		7A573D6F20FF4084009F74CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A573D6D20FF4084009F74CC /* Main.storyboard */; };
 		7A573D7120FF4088009F74CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A573D7020FF4088009F74CC /* Assets.xcassets */; };
 		7A573D7420FF4088009F74CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A573D7220FF4088009F74CC /* LaunchScreen.storyboard */; };
-		7A573D8820FF4323009F74CC /* libparity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A573D8720FF4323009F74CC /* libparity.a */; };
 		7A573D8920FF432B009F74CC /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A573D8020FF41D5009F74CC /* libresolv.tbd */; };
 		7A573D8C20FF44F8009F74CC /* Parity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A573D8B20FF44F8009F74CC /* Parity.swift */; };
 		7A573D9020FFC48F009F74CC /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A573D8F20FFC48F009F74CC /* libstdc++.tbd */; };
-		7ABB71C5217631E0005443F9 /* libjemalloc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABB71C4217631E0005443F9 /* libjemalloc.a */; };
+		7A76DCFE217BBE0000C0E34B /* libparity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A573D8720FF4323009F74CC /* libparity.a */; };
 		7AD705F6216A38C5001849B6 /* custom_foundation.json in Resources */ = {isa = PBXBuildFile; fileRef = 7AD705F5216A38C5001849B6 /* custom_foundation.json */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		7A573D8B20FF44F8009F74CC /* Parity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parity.swift; sourceTree = "<group>"; };
 		7A573D8D20FFC3C5009F74CC /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		7A573D8F20FFC48F009F74CC /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		7ABB71C4217631E0005443F9 /* libjemalloc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjemalloc.a; path = lib/libjemalloc.a; sourceTree = "<group>"; };
 		7AD705F5216A38C5001849B6 /* custom_foundation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = custom_foundation.json; path = lib/custom_foundation.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,10 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ABB71C5217631E0005443F9 /* libjemalloc.a in Frameworks */,
+				7A76DCFE217BBE0000C0E34B /* libparity.a in Frameworks */,
 				7A573D9020FFC48F009F74CC /* libstdc++.tbd in Frameworks */,
 				7A573D8920FF432B009F74CC /* libresolv.tbd in Frameworks */,
-				7A573D8820FF4323009F74CC /* libparity.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +89,6 @@
 		7A573D7C20FF417E009F74CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7ABB71C4217631E0005443F9 /* libjemalloc.a */,
 				7A573D8F20FFC48F009F74CC /* libstdc++.tbd */,
 				7A573D8D20FFC3C5009F74CC /* libstdc++.6.tbd */,
 				7A573D8720FF4323009F74CC /* libparity.a */,
