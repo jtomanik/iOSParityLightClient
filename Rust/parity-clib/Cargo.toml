@@ -13,6 +13,7 @@ panic_hook = { path = "../util/panic_hook" }
 parity-ethereum = { git = "https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git", branch = "master" }
 [patch.crates-io]
 heapsize  = { path = '../heapsize-0.4.2' }
+parity-rocksdb-sys = { path = '../parity-rocksdb-sys-0.5.3' }
 kvdb-rocksdb  = { path = '../kvdb-rocksdb-0.1.4' }
 
 [features]
