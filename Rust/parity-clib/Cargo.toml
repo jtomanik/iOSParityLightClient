@@ -4,10 +4,14 @@ name = "parity-clib"
 version = "1.12.0"
 license = "GPL-3.0"
 authors = ["Parity Technologies <admin@parity.io>"]
+build = "build.rs"
 
 [lib]
 name = "parity"
 path = "src/lib.rs"
+[build-dependencies]
+cbindgen = "0.6"
+
 [dependencies]
 panic_hook = { path = "../util/panic_hook" }
 parity-ethereum = { git = "https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git", branch = "master" }
