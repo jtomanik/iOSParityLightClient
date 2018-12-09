@@ -9,6 +9,13 @@ build = "build.rs"
 [lib]
 name = "parity"
 path = "src/lib.rs"
+#crate-type = ["staticlib"]
+
+[[bin]]
+name = "libexample"
+path = "src/main.rs"
+doc = false
+
 [build-dependencies]
 cbindgen = "0.6"
 
