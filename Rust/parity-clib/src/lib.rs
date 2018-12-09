@@ -21,6 +21,8 @@ extern crate parity_ethereum;
 extern crate panic_hook;
 
 mod helpers;
+mod logger;
+
 use std::os::raw::{c_char, c_void, c_int};
 use std::{panic, ptr, str};
 use std::ffi::{CStr, CString};
@@ -32,6 +34,8 @@ use std::alloc::System;
 #[cfg(feature = "malloc")]
 #[global_allocator]
 static A: System = System;
+
+pub use self::logger::parity_logger_start;
 
 #[no_mangle]
 pub unsafe extern fn parity_start_ios(output: *mut *mut c_void, args: *const c_char) -> c_int {

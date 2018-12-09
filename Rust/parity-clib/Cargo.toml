@@ -11,6 +11,8 @@ path = "src/lib.rs"
 [dependencies]
 panic_hook = { path = "../util/panic_hook" }
 parity-ethereum = { git = "https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git", branch = "master" }
+log = { version = "0.4", features = ["std"] }
+
 [patch.crates-io]
 heapsize  = { path = '../heapsize-0.4.2' }
 rust-crypto  = { path = '../rust-crypto-0.2.36' }
