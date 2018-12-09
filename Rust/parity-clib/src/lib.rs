@@ -20,9 +20,11 @@
 extern crate parity_ethereum;
 extern crate panic_hook;
 
+mod helpers;
 use std::os::raw::{c_char, c_void, c_int};
 use std::{panic, ptr, str};
 use std::ffi::{CStr, CString};
+use helpers::{LoggingCallback, ForeginCallbackObject};
 
 #[cfg(feature = "malloc")]
 use std::alloc::System;
@@ -99,5 +101,13 @@ pub unsafe extern fn parity_destroy(client: *mut c_void) {
 	let _ = panic::catch_unwind(|| {
 		let client = Box::from_raw(client as *mut parity_ethereum::RunningClient);
 		client.shutdown();
+	});
+}
+
+#[no_mangle]
+pub unsafe extern fn parity_set_panic_hook(owner: *mut c_void, callback: LoggingCallback) {
+	let foreign_callback_object = ForeginCallbackObject { owner: owner, callback: callback };
+	panic_hook::set_with(move |panic_msg| {
+		foreign_callback_object.call_with(panic_msg);
 	});
 }
