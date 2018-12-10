@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7A0FC67721BE94AE00000874 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FC67621BE94AE00000874 /* SettingsViewController.swift */; };
 		7A0FC67921BE94BC00000874 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0FC67821BE94BC00000874 /* RequestViewController.swift */; };
+		7A0FC68921BF0B6900000874 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7A0FC68821BF0B6900000874 /* README.md */; };
 		7A573D6A20FF4083009F74CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A573D6920FF4083009F74CC /* AppDelegate.swift */; };
 		7A573D6C20FF4084009F74CC /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A573D6B20FF4084009F74CC /* LogViewController.swift */; };
 		7A573D6F20FF4084009F74CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A573D6D20FF4084009F74CC /* Main.storyboard */; };
@@ -24,6 +25,10 @@
 /* Begin PBXFileReference section */
 		7A0FC67621BE94AE00000874 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7A0FC67821BE94BC00000874 /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
+		7A0FC67A21BEEF3300000874 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7A0FC67C21BEF3A700000874 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7A0FC67E21BEF3DA00000874 /* Marathonfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Marathonfile; sourceTree = "<group>"; };
+		7A0FC68821BF0B6900000874 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Rust/README.md; sourceTree = "<group>"; };
 		7A573D6620FF4083009F74CC /* StaticLibTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaticLibTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A573D6920FF4083009F74CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A573D6B20FF4084009F74CC /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +64,10 @@
 		7A573D5D20FF4083009F74CC = {
 			isa = PBXGroup;
 			children = (
+				7A0FC68821BF0B6900000874 /* README.md */,
+				7A0FC67C21BEF3A700000874 /* main.swift */,
+				7A0FC67E21BEF3DA00000874 /* Marathonfile */,
+				7A0FC67A21BEEF3300000874 /* README.md */,
 				7AD705F5216A38C5001849B6 /* custom_foundation.json */,
 				7A573D8A20FF4335009F74CC /* parity.h */,
 				7A573D6820FF4083009F74CC /* StaticLibTest */,
@@ -165,6 +174,7 @@
 			files = (
 				7A573D7420FF4088009F74CC /* LaunchScreen.storyboard in Resources */,
 				7A573D7120FF4088009F74CC /* Assets.xcassets in Resources */,
+				7A0FC68921BF0B6900000874 /* README.md in Resources */,
 				7A573D6F20FF4084009F74CC /* Main.storyboard in Resources */,
 				7AD705F6216A38C5001849B6 /* custom_foundation.json in Resources */,
 			);
@@ -332,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XAV4QTNJ2K;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = StaticLibTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XAV4QTNJ2K;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = StaticLibTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

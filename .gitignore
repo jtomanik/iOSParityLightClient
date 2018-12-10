@@ -3,3 +3,4 @@ libparity.a
 Rust/parity-clib/target
 Rust/parity-clib/.idea
 Rust/parity-clib/cmake-build-debug
+lib
