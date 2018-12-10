@@ -324,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XAV4QTNJ2K;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = StaticLibTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -336,7 +336,7 @@
 					"$(PROJECT_DIR)/lib",
 					"/Users/jakubtomanik/github/parity/target/aarch64-apple-ios/release/build/**",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tigerspike.tomanik.staticlib.StaticLibTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.jtomanik.ParityStaticLibTest.StaticLibTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "StaticLibTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -352,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XAV4QTNJ2K;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = StaticLibTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -364,7 +364,7 @@
 					"$(PROJECT_DIR)/lib",
 					"/Users/jakubtomanik/github/parity/target/aarch64-apple-ios/release/build/**",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tigerspike.tomanik.staticlib.StaticLibTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.jtomanik.ParityStaticLibTest.StaticLibTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "StaticLibTest-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
