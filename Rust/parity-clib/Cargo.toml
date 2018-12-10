@@ -9,7 +9,7 @@ build = "build.rs"
 [lib]
 name = "parity"
 path = "src/lib.rs"
-#crate-type = ["staticlib"]
+crate-type = ["staticlib"]
 
 [[bin]]
 name = "libexample"
