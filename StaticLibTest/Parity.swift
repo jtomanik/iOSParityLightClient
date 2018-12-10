@@ -90,6 +90,7 @@ final class Parity {
         }
         let data = Data(bytes: pointer, count: Int(replyLength))
         if let string = String(data: data, encoding: .utf8) {
+            print(string)
             logCallback?(string)
         }
     }
@@ -103,6 +104,7 @@ final class Parity {
         }
         let data = Data(bytes: dataPointer, count: Int(parityResponseDataLength))
         if let string = String(data: data, encoding: .utf8) {
+            print(string)
             responseCallback?(string)
         }
         parity_rpc_ios_release(dataPointer)
