@@ -10,10 +10,13 @@ import UIKit
 
 class LogViewController: UIViewController {
 
+    @IBOutlet weak var logTextView: UITextView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        Parity.shared.testRPC()
+
+        Parity.shared.logCallback = self.addLog
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +24,11 @@ class LogViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+
+    private func addLog(text: String) {
+        print(text)
+        logTextView.text = logTextView.text + "\n\(text)"
+    }
 
 }
 
