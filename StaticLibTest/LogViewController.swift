@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LogViewController.swift
 //  StaticLibTest
 //
 //  Created by Jakub Tomanik on 18/07/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LogViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
