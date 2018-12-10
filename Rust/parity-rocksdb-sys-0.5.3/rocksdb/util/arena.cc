@@ -24,9 +24,6 @@
 #include "util/logging.h"
 #include "util/sync_point.h"
 
-// JTOMANIK
-#include <iostream>
-
 namespace rocksdb {
 
 // MSVC complains that it is already defined since it is static in the header.
@@ -114,9 +111,6 @@ char* Arena::AllocateFallback(size_t bytes, bool aligned) {
 #endif
   if (!block_head) {
     size = kBlockSize;
-    // JTOMANIK
-    std::cout << "size check";
-    std::cout << size;
     block_head = AllocateNewBlock(size);
   }
   alloc_bytes_remaining_ = size - bytes;
@@ -221,9 +215,6 @@ char* Arena::AllocateNewBlock(size_t block_bytes) {
   //   via RAII.
   blocks_.emplace_back(nullptr);
 
-  // JTOMANIK
-  std::cout << "block_bytes check";
-  std::cout << block_bytes;
   char* block = new char[block_bytes];
   size_t allocated_size;
 #ifdef ROCKSDB_MALLOC_USABLE_SIZE
