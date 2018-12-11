@@ -3,15 +3,12 @@ extern crate parity;
 use parity::parity_start_ios;
 use parity::parity_rpc_ios_query;
 use parity::parity_rpc_ios_release;
-use std::ptr;
-use std::ffi::CString;
-use std::ffi::CStr;
+use std::ffi::{CString, CStr};
 use std::io;
-use std::alloc::System;
-use std::os::raw::c_char;
+use std::os::raw::{c_char, c_void};
 use std::slice;
-use std::str;
 use std::env;
+use std::{ptr};
 
 #[cfg(feature = "malloc")]
 use std::alloc::System;
@@ -19,6 +16,13 @@ use std::alloc::System;
 #[cfg(feature = "malloc")]
 #[global_allocator]
 static A: System = System;
+
+extern "C"  fn logger_callback(owner: *mut c_void, message: *const c_char, size: usize) {
+	unsafe {
+		let message_string = CStr::from_ptr(message).to_string_lossy().into_owned();
+		println!("LOL: {}", &message_string)
+	}
+}
 
 fn main() {
 
@@ -33,9 +37,13 @@ fn main() {
 
 	let mut srcunit = String::new();
 	let mut switch = true;
+	let dummy = ptr::null_mut();
 
 	unsafe {
-		let ret1 = parity_start_ios(&mut client, args.as_ptr());
+		let ret1 = parity_start_ios(&mut client,
+									args.as_ptr(),
+							dummy,
+								 Some(logger_callback));
 
 		while switch {
 			println!("Quit?");
