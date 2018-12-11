@@ -48,7 +48,7 @@ name = "atty"
 version = "0.2.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "termion 1.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.3.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -60,7 +60,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "backtrace-sys 0.1.24 (registry+https://github.com/rust-lang/crates.io-index)",
  "cfg-if 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-demangle 0.1.9 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.3.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -71,7 +71,7 @@ version = "0.1.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "cc 1.0.25 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -95,7 +95,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "byteorder 1.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "num-traits 0.1.43 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -138,7 +138,7 @@ dependencies = [
 [[package]]
 name = "blooms-db"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "byteorder 1.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethbloom 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -182,7 +182,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "clap 2.32.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
  "syn 0.14.9 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -253,15 +253,15 @@ dependencies = [
 [[package]]
 name = "common-types"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "heapsize 0.4.2",
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "rlp_derive 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "rlp_derive 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
 ]
 
 [[package]]
@@ -354,7 +354,7 @@ version = "1.1.1"
 source = "git+https://github.com/paritytech/rust-ctrlc.git#b523017108bb2d571a7a69bd97bc406e63bc7a9d"
 dependencies = [
  "kernel32-sys 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -363,7 +363,7 @@ name = "daemonize"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -377,12 +377,12 @@ dependencies = [
 [[package]]
 name = "dir"
 version = "0.1.2"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "app_dirs 1.2.1 (git+https://github.com/paritytech/app-dirs-rs)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "home 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "journaldb 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "journaldb 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
 ]
 
 [[package]]
@@ -392,7 +392,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "regex 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "strsim 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -405,7 +405,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "eip712"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethabi 6.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -417,7 +417,7 @@ dependencies = [
  "lunarity-lexer 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "regex 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-hex 2.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
  "toolshed 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -477,7 +477,7 @@ dependencies = [
  "error-chain 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-hex 2.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
  "tiny-keccak 1.4.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -503,7 +503,7 @@ dependencies = [
 [[package]]
 name = "ethash"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "crunchy 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "either 1.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -523,87 +523,87 @@ dependencies = [
  "crunchy 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethereum-types-serialize 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "fixed-hash 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "tiny-keccak 1.4.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "ethcore"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ansi_term 0.10.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "blooms-db 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "blooms-db 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "bn 0.4.4 (git+https://github.com/paritytech/bn)",
  "byteorder 1.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "common-types 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "common-types 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "crossbeam 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "error-chain 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi 6.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi-contract 6.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi-derive 6.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethash 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-bloom-journal 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-miner 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-stratum 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethash 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-bloom-journal 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-miner 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-stratum 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethstore 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "evm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "fake-hardware-wallet 0.0.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "hardware-wallet 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethstore 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "evm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "fake-hardware-wallet 0.0.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "hardware-wallet 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "hashdb 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "heapsize 0.4.2",
  "itertools 0.5.10 (registry+https://github.com/rust-lang/crates.io-index)",
- "journaldb 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "journaldb 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "kvdb 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "kvdb-memorydb 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "kvdb-rocksdb 0.1.4",
  "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "len-caching-mutex 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "len-caching-mutex 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "lru-cache 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "macros 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "memory-cache 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "macros 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "memory-cache 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "memorydb 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "num 0.1.42 (registry+https://github.com/rust-lang/crates.io-index)",
  "num_cpus 1.8.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-crypto 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "parity-machine 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "parity-machine 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parity-snappy 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "patricia-trie 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "patricia-trie-ethereum 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "patricia-trie-ethereum 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "rand 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "rayon 1.0.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "rlp_compress 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "rlp_derive 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "rlp_compress 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "rlp_derive 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "rustc-hex 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
- "stats 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "stop-guard 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "stats 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "stop-guard 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "tempdir 0.3.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "trace-time 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "triehash-ethereum 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "unexpected 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "using_queue 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "vm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "wasm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "triehash-ethereum 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "unexpected 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "using_queue 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "vm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "wasm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
 ]
 
 [[package]]
 name = "ethcore-bloom-journal"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "siphasher 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -611,12 +611,12 @@ dependencies = [
 [[package]]
 name = "ethcore-devtools"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 
 [[package]]
 name = "ethcore-io"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "crossbeam-deque 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "fnv 1.0.6 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -634,46 +634,46 @@ dependencies = [
 [[package]]
 name = "ethcore-light"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "bincode 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "error-chain 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "failsafe 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "fastmap 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "fastmap 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
  "hashdb 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "heapsize 0.4.2",
  "itertools 0.5.10 (registry+https://github.com/rust-lang/crates.io-index)",
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "kvdb 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "memory-cache 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "memory-cache 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "memorydb 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "patricia-trie 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "patricia-trie-ethereum 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "patricia-trie-ethereum 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "rand 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "rlp_derive 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rlp_derive 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "smallvec 0.6.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "stats 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "triehash-ethereum 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "vm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "stats 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "triehash-ethereum 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "vm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
 ]
 
 [[package]]
 name = "ethcore-logger"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ansi_term 0.10.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "arrayvec 0.4.8 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -689,23 +689,23 @@ dependencies = [
 [[package]]
 name = "ethcore-miner"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ansi_term 0.10.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "error-chain 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethash 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethash 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "fetch 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "fetch 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
  "heapsize 0.4.2",
  "hyper 0.12.17 (registry+https://github.com/rust-lang/crates.io-index)",
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "linked-hash-map 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "parity-runtime 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "parity-runtime 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "price-info 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "price-info 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "trace-time 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "transaction-pool 1.13.3 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -715,14 +715,14 @@ dependencies = [
 [[package]]
 name = "ethcore-network"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "error-chain 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ipnetwork 0.12.8 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-crypto 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-snappy 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -731,20 +731,20 @@ dependencies = [
 [[package]]
 name = "ethcore-network-devp2p"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ansi_term 0.10.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "bytes 0.4.11 (registry+https://github.com/rust-lang/crates.io-index)",
  "error-chain 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "igd 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ipnetwork 0.12.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "mio 0.6.16 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -756,7 +756,7 @@ dependencies = [
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rust-crypto 0.2.36",
  "rustc-hex 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
  "slab 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -766,21 +766,21 @@ dependencies = [
 [[package]]
 name = "ethcore-private-tx"
 version = "1.0.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "error-chain 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi 6.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi-contract 6.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi-derive 6.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-miner 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-miner 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "fetch 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "fetch 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
  "heapsize 0.4.2",
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -789,12 +789,12 @@ dependencies = [
  "parity-crypto 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "patricia-trie 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "patricia-trie-ethereum 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "patricia-trie-ethereum 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "rand 0.3.22 (registry+https://github.com/rust-lang/crates.io-index)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "rlp_derive 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "rlp_derive 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "rustc-hex 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
  "tiny-keccak 1.4.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -805,25 +805,25 @@ dependencies = [
 [[package]]
 name = "ethcore-service"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ansi_term 0.10.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "error-chain 0.12.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-private-tx 1.0.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-sync 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-private-tx 1.0.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-sync 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "kvdb 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "stop-guard 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "stop-guard 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "trace-time 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "ethcore-stratum"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "jsonrpc-core 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)",
@@ -837,46 +837,46 @@ dependencies = [
 [[package]]
 name = "ethcore-sync"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
- "common-types 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "common-types 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "env_logger 0.5.13 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-light 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-network-devp2p 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-light 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-network-devp2p 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "fastmap 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "fastmap 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "hashdb 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "heapsize 0.4.2",
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "kvdb 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "macros 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "macros 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "trace-time 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "triehash-ethereum 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "triehash-ethereum 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
 ]
 
 [[package]]
 name = "ethcore-transaction"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "evm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "evm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "heapsize 0.4.2",
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "unexpected 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "unexpected 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
 ]
 
 [[package]]
@@ -888,7 +888,7 @@ dependencies = [
  "ethbloom 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethereum-types-serialize 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "fixed-hash 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "uint 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -897,17 +897,17 @@ name = "ethereum-types-serialize"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "ethjson"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-hex 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -915,7 +915,7 @@ dependencies = [
 [[package]]
 name = "ethkey"
 version = "0.3.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "byteorder 1.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "edit-distance 2.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -923,13 +923,13 @@ dependencies = [
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "mem 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "mem 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parity-crypto 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-wordlist 1.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "quick-error 1.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-hex 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "tiny-keccak 1.4.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -937,20 +937,20 @@ dependencies = [
 [[package]]
 name = "ethstore"
 version = "0.2.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
- "dir 0.1.2 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "dir 0.1.2 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "itertools 0.5.10 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-crypto 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-wordlist 1.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-hex 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
  "smallvec 0.6.7 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -962,7 +962,7 @@ dependencies = [
 [[package]]
 name = "evm"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "bit-set 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -970,10 +970,10 @@ dependencies = [
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "memory-cache 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "memory-cache 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "vm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "vm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
 ]
 
 [[package]]
@@ -1009,10 +1009,10 @@ dependencies = [
 [[package]]
 name = "fake-hardware-wallet"
 version = "0.0.1"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
 ]
 
 [[package]]
@@ -1023,7 +1023,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "fastmap"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "plain_hasher 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1034,13 +1034,13 @@ name = "fdlimit"
 version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "fetch"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "bytes 0.4.11 (registry+https://github.com/rust-lang/crates.io-index)",
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1058,7 +1058,7 @@ version = "0.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "heapsize 0.4.2",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-hex 2.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -1074,7 +1074,7 @@ version = "0.2.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "libloading 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.3.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -1173,10 +1173,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "hardware-wallet"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "hidapi 0.3.1 (git+https://github.com/paritytech/hidapi-rs)",
  "libusb 0.3.0 (git+https://github.com/paritytech/libusb-rs)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1217,7 +1217,7 @@ version = "0.3.1"
 source = "git+https://github.com/paritytech/hidapi-rs#d4d323767d6f27cf5a3d73fbae0b0f2134d579bf"
 dependencies = [
  "cc 1.0.25 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -1372,7 +1372,7 @@ name = "iovec"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -1405,13 +1405,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "journaldb"
 version = "0.2.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "fastmap 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "fastmap 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "hashdb 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "heapsize 0.4.2",
- "keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "kvdb 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "memorydb 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1427,7 +1427,7 @@ source = "git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2#f8a54f
 dependencies = [
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -1465,7 +1465,7 @@ source = "git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2#f8a54f
 dependencies = [
  "jsonrpc-core 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)",
  "jsonrpc-pubsub 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -1532,7 +1532,7 @@ dependencies = [
 [[package]]
 name = "keccak-hasher"
 version = "0.1.1"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hashdb 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1600,14 +1600,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "len-caching-mutex"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "libc"
-version = "0.2.44"
+version = "0.2.45"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
@@ -1625,17 +1625,17 @@ version = "0.3.0"
 source = "git+https://github.com/paritytech/libusb-rs#442708954a720bc89a9cf41e7be021a778bdbc27"
 dependencies = [
  "bit-set 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "libusb-sys 0.2.4 (git+https://github.com/paritytech/libusb-sys)",
 ]
 
 [[package]]
 name = "libusb-sys"
 version = "0.2.4"
-source = "git+https://github.com/paritytech/libusb-sys#14bdb698003731b6344a79e1d814704e44363e7c"
+source = "git+https://github.com/paritytech/libusb-sys#1d33d9840a82adaf4d6a1a0f5141f022e5676802"
 dependencies = [
  "cc 1.0.25 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -1702,7 +1702,7 @@ dependencies = [
 [[package]]
 name = "macros"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 
 [[package]]
 name = "matches"
@@ -1712,7 +1712,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "mem"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 
 [[package]]
 name = "memchr"
@@ -1720,7 +1720,7 @@ version = "2.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "cfg-if 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "version_check 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -1729,7 +1729,7 @@ name = "memmap"
 version = "0.6.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.3.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -1741,7 +1741,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "memory-cache"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "heapsize 0.4.2",
  "lru-cache 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1766,12 +1766,12 @@ dependencies = [
 [[package]]
 name = "migration-rocksdb"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "kvdb 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "kvdb-rocksdb 0.1.4",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "macros 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "macros 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
 ]
 
 [[package]]
@@ -1803,7 +1803,7 @@ dependencies = [
  "iovec 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "kernel32-sys 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazycell 1.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "miow 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "net2 0.2.33 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1828,7 +1828,7 @@ version = "0.6.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "iovec 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "mio 0.6.16 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -1881,21 +1881,21 @@ version = "0.2.33"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "cfg-if 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.3.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "node-filter"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethabi 6.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi-contract 6.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi-derive 6.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-network-devp2p 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-network-devp2p 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "lru-cache 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -1964,7 +1964,7 @@ name = "num_cpus"
 version = "1.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -2009,14 +2009,7 @@ dependencies = [
 [[package]]
 name = "panic_hook"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
-dependencies = [
- "backtrace 0.3.9 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "panic_hook"
-version = "0.1.0"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "backtrace 0.3.9 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -2031,9 +2024,10 @@ name = "parity-clib"
 version = "1.12.0"
 dependencies = [
  "cbindgen 0.6.7 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "panic_hook 0.1.0",
- "parity-ethereum 2.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "panic_hook 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "parity-ethereum 2.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
 ]
 
 [[package]]
@@ -2050,64 +2044,64 @@ dependencies = [
 [[package]]
 name = "parity-ethereum"
 version = "2.3.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ansi_term 0.10.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "atty 0.2.11 (registry+https://github.com/rust-lang/crates.io-index)",
- "blooms-db 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "blooms-db 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "clap 2.32.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ctrlc 1.1.1 (git+https://github.com/paritytech/rust-ctrlc.git)",
  "daemonize 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "dir 0.1.2 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "dir 0.1.2 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "docopt 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "env_logger 0.5.13 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-light 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-miner 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-private-tx 1.0.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-service 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-sync 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-light 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-miner 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-private-tx 1.0.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-service 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-sync 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "fdlimit 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
- "journaldb 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "journaldb 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "jsonrpc-core 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)",
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "kvdb 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "kvdb-rocksdb 0.1.4",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "mem 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "migration-rocksdb 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "node-filter 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "mem 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "migration-rocksdb 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "node-filter 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "num_cpus 1.8.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "number_prefix 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
- "panic_hook 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "panic_hook 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "parity-hash-fetch 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "parity-ipfs-api 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "parity-local-store 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "parity-hash-fetch 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "parity-ipfs-api 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "parity-local-store 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parity-path 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "parity-rpc 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "parity-rpc-client 1.4.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "parity-runtime 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "parity-updater 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "parity-version 2.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "parity-whisper 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "parity-rpc 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "parity-rpc-client 1.4.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "parity-runtime 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "parity-updater 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "parity-version 2.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "parity-whisper 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "regex 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "registrar 0.0.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "registrar 0.0.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rpassword 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "rpc-cli 1.4.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "rpc-cli 1.4.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "rustc-hex 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc_version 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "semver 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
  "term_size 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2119,32 +2113,32 @@ dependencies = [
 [[package]]
 name = "parity-hash-fetch"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethabi 6.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi-contract 6.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi-derive 6.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "fetch 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "fetch 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "mime 0.3.12 (registry+https://github.com/rust-lang/crates.io-index)",
  "mime_guess 2.0.0-alpha.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "parity-runtime 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "parity-runtime 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "rand 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "registrar 0.0.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "registrar 0.0.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "rustc-hex 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "parity-ipfs-api"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "cid 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "jsonrpc-core 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)",
  "jsonrpc-http-server 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)",
@@ -2157,15 +2151,15 @@ dependencies = [
 [[package]]
 name = "parity-local-store"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
- "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "kvdb 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -2173,7 +2167,7 @@ dependencies = [
 [[package]]
 name = "parity-machine"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -2188,7 +2182,7 @@ name = "parity-rocksdb"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "local-encoding 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-rocksdb-sys 0.5.3",
 ]
@@ -2198,7 +2192,7 @@ name = "parity-rocksdb-sys"
 version = "0.5.3"
 dependencies = [
  "cmake 0.1.35 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "local-encoding 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-snappy-sys 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -2206,30 +2200,30 @@ dependencies = [
 [[package]]
 name = "parity-rpc"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ansi_term 0.10.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "cid 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "eip712 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethash 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-devtools 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-light 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-miner 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-private-tx 1.0.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-sync 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "eip712 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethash 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-devtools 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-light 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-miner 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-private-tx 1.0.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-sync 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethstore 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "fake-hardware-wallet 0.0.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "fastmap 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "fetch 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethstore 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "fake-hardware-wallet 0.0.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "fastmap 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "fetch 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
- "hardware-wallet 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "hardware-wallet 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "itertools 0.5.10 (registry+https://github.com/rust-lang/crates.io-index)",
  "jsonrpc-core 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)",
  "jsonrpc-http-server 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)",
@@ -2243,30 +2237,30 @@ dependencies = [
  "order-stat 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-crypto 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "parity-runtime 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "parity-updater 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "parity-version 2.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "parity-runtime 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "parity-updater 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "parity-version 2.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "patricia-trie 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-hex 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "semver 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
- "stats 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "stats 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "tempdir 0.3.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "tiny-keccak 1.4.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio-timer 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "transient-hashmap 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "vm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "vm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
 ]
 
 [[package]]
 name = "parity-rpc-client"
 version = "1.4.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
  "jsonrpc-core 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)",
@@ -2274,9 +2268,9 @@ dependencies = [
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "matches 0.1.8 (registry+https://github.com/rust-lang/crates.io-index)",
- "parity-rpc 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "parity-rpc 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
  "url 1.7.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -2284,7 +2278,7 @@ dependencies = [
 [[package]]
 name = "parity-runtime"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
  "tokio 0.1.13 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2295,7 +2289,7 @@ name = "parity-snappy"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-snappy-sys 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -2305,7 +2299,7 @@ version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "cmake 0.1.35 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -2328,21 +2322,21 @@ dependencies = [
 [[package]]
 name = "parity-updater"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethabi 6.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi-contract 6.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi-derive 6.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "ethcore-sync 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "ethcore-sync 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "parity-hash-fetch 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "parity-hash-fetch 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parity-path 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
- "parity-version 2.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "parity-version 2.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "semver 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2352,7 +2346,7 @@ dependencies = [
 [[package]]
 name = "parity-version"
 version = "2.3.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2373,25 +2367,25 @@ dependencies = [
 [[package]]
 name = "parity-whisper"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "bitflags 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "byteorder 1.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "hex 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "jsonrpc-core 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)",
  "jsonrpc-macros 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)",
  "jsonrpc-pubsub 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "mem 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "mem 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ordered-float 0.5.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-crypto 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
  "slab 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2423,7 +2417,7 @@ name = "parking_lot_core"
 version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.5.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc_version 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "smallvec 0.6.7 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2445,12 +2439,12 @@ dependencies = [
 [[package]]
 name = "patricia-trie-ethereum"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "elastic-array 0.10.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hashdb 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "patricia-trie 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2507,12 +2501,12 @@ dependencies = [
 [[package]]
 name = "price-info"
 version = "1.12.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
- "fetch 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "fetch 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "parity-runtime 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "parity-runtime 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -2624,7 +2618,7 @@ version = "0.3.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "fuchsia-zircon 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -2634,7 +2628,7 @@ version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "fuchsia-zircon 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.3.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -2645,7 +2639,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "cloudabi 0.0.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "fuchsia-zircon 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand_core 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.3.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -2657,7 +2651,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "cloudabi 0.0.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "fuchsia-zircon 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand_chacha 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand_core 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand_hc 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2740,7 +2734,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "crossbeam-deque 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "num_cpus 1.8.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -2800,7 +2794,7 @@ dependencies = [
 [[package]]
 name = "registrar"
 version = "0.0.1"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethabi 6.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "ethabi-contract 6.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2832,7 +2826,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "cc 1.0.25 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "untrusted 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -2849,7 +2843,7 @@ dependencies = [
 [[package]]
 name = "rlp_compress"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "elastic-array 0.10.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2859,7 +2853,7 @@ dependencies = [
 [[package]]
 name = "rlp_derive"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "proc-macro2 0.4.24 (registry+https://github.com/rust-lang/crates.io-index)",
  "quote 0.6.10 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2872,7 +2866,7 @@ version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "kernel32-sys 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "rprompt 1.0.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -2880,11 +2874,11 @@ dependencies = [
 [[package]]
 name = "rpc-cli"
 version = "1.4.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
- "parity-rpc 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
- "parity-rpc-client 1.4.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "parity-rpc 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
+ "parity-rpc-client 1.4.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "rpassword 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -2898,7 +2892,7 @@ name = "rust-crypto"
 version = "0.2.36"
 dependencies = [
  "gcc 0.3.55 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.3.22 (registry+https://github.com/rust-lang/crates.io-index)",
  "rustc-serialize 0.3.24 (registry+https://github.com/rust-lang/crates.io-index)",
  "time 0.1.40 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -2989,7 +2983,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "serde"
-version = "1.0.81"
+version = "1.0.82"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3012,7 +3006,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "itoa 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "ryu 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -3093,7 +3087,7 @@ version = "0.3.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "cfg-if 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "redox_syscall 0.1.43 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.3.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -3106,7 +3100,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "stats"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -3114,7 +3108,7 @@ dependencies = [
 [[package]]
 name = "stop-guard"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 
 [[package]]
 name = "string"
@@ -3187,7 +3181,7 @@ version = "3.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "cfg-if 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "rand 0.6.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "redox_syscall 0.1.43 (registry+https://github.com/rust-lang/crates.io-index)",
  "remove_dir_all 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3200,7 +3194,7 @@ version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "kernel32-sys 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -3217,7 +3211,7 @@ name = "termion"
 version = "1.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "redox_syscall 0.1.43 (registry+https://github.com/rust-lang/crates.io-index)",
  "redox_termios 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -3251,7 +3245,7 @@ name = "time"
 version = "0.1.40"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "redox_syscall 0.1.43 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.3.6 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
@@ -3486,7 +3480,7 @@ dependencies = [
  "bytes 0.4.11 (registry+https://github.com/rust-lang/crates.io-index)",
  "futures 0.1.25 (registry+https://github.com/rust-lang/crates.io-index)",
  "iovec 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "mio 0.6.16 (registry+https://github.com/rust-lang/crates.io-index)",
  "mio-uds 0.6.7 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3500,7 +3494,7 @@ name = "toml"
 version = "0.4.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -3555,10 +3549,10 @@ dependencies = [
 [[package]]
 name = "triehash-ethereum"
 version = "0.2.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "triehash 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -3596,7 +3590,7 @@ dependencies = [
 [[package]]
 name = "unexpected"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 
 [[package]]
 name = "unicase"
@@ -3668,7 +3662,7 @@ dependencies = [
 [[package]]
 name = "using_queue"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 
 [[package]]
 name = "utf8-ranges"
@@ -3683,7 +3677,7 @@ dependencies = [
  "idna 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "regex 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)",
  "url 1.7.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -3725,17 +3719,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 [[package]]
 name = "vm"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "byteorder 1.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "common-types 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "common-types 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "patricia-trie 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "patricia-trie-ethereum 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "patricia-trie-ethereum 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -3767,16 +3761,16 @@ dependencies = [
 [[package]]
 name = "wasm"
 version = "0.1.0"
-source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git#23d25a079b0fdcec87fb1c6fa301b416e4f73faf"
+source = "git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop#b77741300437697405ea954dd97451025cfa76d7"
 dependencies = [
  "byteorder 1.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
- "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)",
  "log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)",
  "parity-wasm 0.31.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "pwasm-utils 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "vm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)",
+ "vm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)",
  "wasmi 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -3920,7 +3914,7 @@ dependencies = [
 "checksum bitflags 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)" = "4efd02e230a02e18f92fc2735f44597385ed02ad8f831e7c1c1156ee5e1ab3a5"
 "checksum bitflags 1.0.4 (registry+https://github.com/rust-lang/crates.io-index)" = "228047a76f468627ca71776ecdebd732a3423081fcf5125585bcd7c49886ce12"
 "checksum block-buffer 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)" = "a076c298b9ecdb530ed9d967e74a6027d6a7478924520acddcddc24c1c8ab3ab"
-"checksum blooms-db 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum blooms-db 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum bn 0.4.4 (git+https://github.com/paritytech/bn)" = "<none>"
 "checksum byte-tools 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "560c32574a12a89ecd91f5e742165893f86e3ab98d21f8ea548658eb9eef5f40"
 "checksum byteorder 1.2.7 (registry+https://github.com/rust-lang/crates.io-index)" = "94f88df23a25417badc922ab0f5716cc1330e87f71ddd9203b3a3ccd9cedf75d"
@@ -3933,7 +3927,7 @@ dependencies = [
 "checksum clap 2.32.0 (registry+https://github.com/rust-lang/crates.io-index)" = "b957d88f4b6a63b9d70d5f454ac8011819c6efa7727858f458ab71c756ce2d3e"
 "checksum cloudabi 0.0.3 (registry+https://github.com/rust-lang/crates.io-index)" = "ddfc5b9aa5d4507acaf872de71051dfd0e309860e88966e1051e462a077aac4f"
 "checksum cmake 0.1.35 (registry+https://github.com/rust-lang/crates.io-index)" = "6ec65ee4f9c9d16f335091d23693457ed4928657ba4982289d7fafee03bc614a"
-"checksum common-types 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum common-types 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum crossbeam 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)" = "24ce9782d4d5c53674646a6a4c1863a21a8fc0cb649b3c94dfc16e45071dea19"
 "checksum crossbeam-deque 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "f739f8c5363aca78cfb059edf753d8f0d36908c348f3d8d1503f03d8b75d9cf3"
 "checksum crossbeam-deque 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)" = "4fe1b6f945f824c7a25afe44f62e25d714c0cc523f8e99d8db5cd1026e1269d3"
@@ -3947,10 +3941,10 @@ dependencies = [
 "checksum ctrlc 1.1.1 (git+https://github.com/paritytech/rust-ctrlc.git)" = "<none>"
 "checksum daemonize 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "4093d27eb267d617f03c2ee25d4c3ca525b89a76154001954a11984508ffbde5"
 "checksum digest 0.7.6 (registry+https://github.com/rust-lang/crates.io-index)" = "03b072242a8cbaf9c145665af9d250c59af3b958f83ed6824e13533cf76d5b90"
-"checksum dir 0.1.2 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum dir 0.1.2 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum docopt 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)" = "db2906c2579b5b7207fc1e328796a9a8835dc44e22dbe8e460b1d636f9a7b225"
 "checksum edit-distance 2.0.1 (registry+https://github.com/rust-lang/crates.io-index)" = "3bd26878c3d921f89797a4e1a1711919f999a9f6946bb6f5a4ffda126d297b7e"
-"checksum eip712 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum eip712 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum either 1.5.0 (registry+https://github.com/rust-lang/crates.io-index)" = "3be565ca5c557d7f59e7cfcf1844f9e3033650c929c6566f511e8005f205c1d0"
 "checksum elastic-array 0.10.0 (registry+https://github.com/rust-lang/crates.io-index)" = "88d4851b005ef16de812ea9acdb7bece2f0a40dd86c07b85631d7dafa54537bb"
 "checksum env_logger 0.5.13 (registry+https://github.com/rust-lang/crates.io-index)" = "15b0a4d2e39f8420210be8b27eeda28029729e2fd4291019455016c348240c38"
@@ -3959,36 +3953,36 @@ dependencies = [
 "checksum ethabi 6.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "8eb362fde43ed0b50b258bb0c72b72b3dccfd29f8de9506295eaf9251c49ca31"
 "checksum ethabi-contract 6.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "795e25fd868e12a59ca235dbe1f6cc8f1eba8f67d6a39438b29535e0126e0c27"
 "checksum ethabi-derive 6.0.2 (registry+https://github.com/rust-lang/crates.io-index)" = "66a587250c8190be9d6ae28d67b8957ed97cb9eee2e272173a20593ab054a075"
-"checksum ethash 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum ethash 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum ethbloom 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)" = "1a93a43ce2e9f09071449da36bfa7a1b20b950ee344b6904ff23de493b03b386"
-"checksum ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-bloom-journal 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-devtools 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-light 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-miner 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-network-devp2p 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-private-tx 1.0.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-service 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-stratum 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-sync 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum ethcore 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-bloom-journal 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-devtools 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-io 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-light 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-logger 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-miner 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-network 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-network-devp2p 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-private-tx 1.0.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-service 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-stratum 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-sync 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethcore-transaction 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum ethereum-types 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "35b3c5a18bc5e73a32a110ac743ec04b02bbbcd3b71d3118d40a6113d509378a"
 "checksum ethereum-types-serialize 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "4ac59a21a9ce98e188f3dace9eb67a6c4a3c67ec7fbc7218cb827852679dc002"
-"checksum ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum ethstore 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum evm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum ethjson 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethkey 0.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum ethstore 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum evm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum failsafe 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ad3bf1642583ea2f1fa38a1e8546613a7488816941b33e5f0fccceac61879118"
 "checksum failure 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)" = "6dd377bcc1b1b7ce911967e3ec24fa19c3224394ec05b54aa7b083d498341ac7"
 "checksum failure_derive 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)" = "64c2d913fe8ed3b6c6518eedf4538255b989945c14c2a7d5cbff62a5e2120596"
-"checksum fake-hardware-wallet 0.0.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum fake-hardware-wallet 0.0.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum fake-simd 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "e88a8acf291dafb59c2d96e8f59828f3838bb1a70398823ade51a84de6a6deed"
-"checksum fastmap 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum fastmap 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum fdlimit 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "b1ee15a7050e5580b3712877157068ea713b245b080ff302ae2ca973cfcd9baa"
-"checksum fetch 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum fetch 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum fixed-hash 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)" = "7afe6ce860afb14422711595a7b26ada9ed7de2f43c0b2ab79d09ee196287273"
 "checksum fnv 1.0.6 (registry+https://github.com/rust-lang/crates.io-index)" = "2fad85553e09a6f881f739c29f0b00b0f01357c743266d478b68951ce23285f3"
 "checksum fs-swap 0.2.4 (registry+https://github.com/rust-lang/crates.io-index)" = "921d332c89b3b61a826de38c61ee5b6e02c56806cade1b0e5d81bd71f57a71bb"
@@ -4003,7 +3997,7 @@ dependencies = [
 "checksum globset 0.4.2 (registry+https://github.com/rust-lang/crates.io-index)" = "4743617a7464bbda3c8aec8558ff2f9429047e025771037df561d383337ff865"
 "checksum h2 0.1.14 (registry+https://github.com/rust-lang/crates.io-index)" = "1ac030ae20dee464c5d0f36544d8b914a6bc606da44a57e052d2b0f5dae129e0"
 "checksum hamming 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)" = "65043da274378d68241eb9a8f8f8aa54e349136f7b8e12f63e3ef44043cc30e1"
-"checksum hardware-wallet 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum hardware-wallet 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum hashdb 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "d91261ee336dd046ac7df28306cb297b7a7228bd1ae25e9a57f4ed5e0ab628c7"
 "checksum heck 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ea04fa3ead4e05e51a7c806fc07271fdbde4e246a6c6d1efd52e72230b771b82"
 "checksum hex 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "d6a22814455d41612f41161581c2883c0c6a1c41852729b17d5ed88f01e153aa"
@@ -4026,7 +4020,7 @@ dependencies = [
 "checksum itertools 0.5.10 (registry+https://github.com/rust-lang/crates.io-index)" = "4833d6978da405305126af4ac88569b5d71ff758581ce5a987dbfa3755f694fc"
 "checksum itertools 0.7.11 (registry+https://github.com/rust-lang/crates.io-index)" = "0d47946d458e94a1b7bcabbf6521ea7c037062c81f534615abcad76e84d4970d"
 "checksum itoa 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)" = "1306f3464951f30e30d12373d31c79fbd52d236e5e896fd92f96ec7babbbe60b"
-"checksum journaldb 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum journaldb 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum jsonrpc-core 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)" = "<none>"
 "checksum jsonrpc-http-server 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)" = "<none>"
 "checksum jsonrpc-ipc-server 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)" = "<none>"
@@ -4036,15 +4030,15 @@ dependencies = [
 "checksum jsonrpc-tcp-server 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)" = "<none>"
 "checksum jsonrpc-ws-server 9.0.0 (git+https://github.com/paritytech/jsonrpc.git?branch=parity-2.2)" = "<none>"
 "checksum keccak-hash 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "253bbe643c32c816bf58fa5a88248fafedeebb139705ad17a62add3517854a86"
-"checksum keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum keccak-hasher 0.1.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum kernel32-sys 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = "7507624b29483431c0ba2d82aece8ca6cdba9382bff4ddd0f7490560c056098d"
 "checksum kvdb 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "72ae89206cea31c32014b39d5a454b96135894221610dbfd19cf4d2d044fa546"
 "checksum kvdb-memorydb 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "45bcdf5eb083602cff61a6f8438dce2a7900d714e893fc48781c39fb119d37aa"
 "checksum language-tags 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = "a91d884b6667cd606bb5a69aa0c99ba811a115fc68915e7056ec08a46e93199a"
 "checksum lazy_static 1.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "a374c89b9db55895453a74c1e38861d9deec0b01b405a82516e9d5de4820dea1"
 "checksum lazycell 1.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "b294d6fa9ee409a054354afc4352b0b9ef7ca222c69b8812cbea9e7d2bf3783f"
-"checksum len-caching-mutex 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum libc 0.2.44 (registry+https://github.com/rust-lang/crates.io-index)" = "10923947f84a519a45c8fefb7dd1b3e8c08747993381adee176d7a82b4195311"
+"checksum len-caching-mutex 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum libc 0.2.45 (registry+https://github.com/rust-lang/crates.io-index)" = "2d2857ec59fadc0773853c664d2d18e7198e83883e7060b63c924cb077bd5c74"
 "checksum libloading 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)" = "9c3ad660d7cb8c5822cd83d10897b0f1f1526792737a179e73896152f85b88c2"
 "checksum libusb 0.3.0 (git+https://github.com/paritytech/libusb-rs)" = "<none>"
 "checksum libusb-sys 0.2.4 (git+https://github.com/paritytech/libusb-sys)" = "<none>"
@@ -4056,16 +4050,16 @@ dependencies = [
 "checksum log 0.4.6 (registry+https://github.com/rust-lang/crates.io-index)" = "c84ec4b527950aa83a329754b01dbe3f58361d1c5efacd1f6d68c494d08a17c6"
 "checksum lru-cache 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "4d06ff7ff06f729ce5f4e227876cb88d10bc59cd4ae1e09fbb2bde15c850dc21"
 "checksum lunarity-lexer 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "8a1670671f305792567116d4660e6e5bd785d6fa973e817c3445c0a7a54cecb6"
-"checksum macros 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum macros 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum matches 0.1.8 (registry+https://github.com/rust-lang/crates.io-index)" = "7ffc5c5338469d4d3ea17d269fa8ea3512ad247247c30bd2df69e68309ed0a08"
-"checksum mem 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum mem 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum memchr 2.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "0a3eb002f0535929f1199681417029ebea04aadc0c7a4224b46be99c7f5d6a16"
 "checksum memmap 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)" = "e2ffa2c986de11a9df78620c01eeaaf27d94d3ff02bf81bfcca953102dd0c6ff"
 "checksum memoffset 0.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "0f9dc261e2b62d7a622bf416ea3c5245cdd5d9a7fcc428c0d06804dfce1775b3"
-"checksum memory-cache 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum memory-cache 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum memory_units 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "71d96e3f3c0b6325d8ccd83c33b28acb183edcb6c67938ba104ec546854b0882"
 "checksum memorydb 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "e143fbad9f90d2158bca3c4b09015276a6de6f085a77088943901cb26828780f"
-"checksum migration-rocksdb 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum migration-rocksdb 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum mime 0.3.12 (registry+https://github.com/rust-lang/crates.io-index)" = "0a907b83e7b9e987032439a387e187119cddafc92d5c2aaeb1d92580a793f630"
 "checksum mime_guess 2.0.0-alpha.6 (registry+https://github.com/rust-lang/crates.io-index)" = "30de2e4613efcba1ec63d8133f344076952090c122992a903359be5a4f99c3ed"
 "checksum mio 0.6.16 (registry+https://github.com/rust-lang/crates.io-index)" = "71646331f2619b1026cc302f87a2b8b648d5c6dd6937846a16cc8ce0f347f432"
@@ -4077,7 +4071,7 @@ dependencies = [
 "checksum multihash 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)" = "c62469025f45dee2464ef9fc845f4683c543993792c1993e7d903c17a4546b74"
 "checksum nan-preserving-float 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "34d4f00fcc2f4c9efa8cc971db0da9e28290e28e97af47585e48691ef10ff31f"
 "checksum net2 0.2.33 (registry+https://github.com/rust-lang/crates.io-index)" = "42550d9fb7b6684a6d404d9fa7250c2eb2646df731d1c06afc06dcee9e1bcf88"
-"checksum node-filter 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum node-filter 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum nodrop 0.1.13 (registry+https://github.com/rust-lang/crates.io-index)" = "2f9667ddcc6cc8a43afc9b7917599d7216aa09c463919ea32c59ed6cac8bc945"
 "checksum num 0.1.42 (registry+https://github.com/rust-lang/crates.io-index)" = "4703ad64153382334aa8db57c637364c322d3372e097840c72000dabdcf6156e"
 "checksum num-bigint 0.1.44 (registry+https://github.com/rust-lang/crates.io-index)" = "e63899ad0da84ce718c14936262a41cee2c79c981fc0a0e7c7beb47d5a07e8c1"
@@ -4091,38 +4085,38 @@ dependencies = [
 "checksum order-stat 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)" = "efa535d5117d3661134dbf1719b6f0ffe06f2375843b13935db186cd094105eb"
 "checksum ordered-float 0.5.2 (registry+https://github.com/rust-lang/crates.io-index)" = "7eb5259643245d3f292c7a146b2df53bba24d7eab159410e648eb73dc164669d"
 "checksum owning_ref 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "49a4b8ea2179e6a2e27411d3bca09ca6dd630821cf6894c6c7c8467a8ee7ef13"
-"checksum panic_hook 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum panic_hook 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum parity-bytes 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "fa5168b4cf41f3835e4bc6ffb32f51bc9365dc50cb351904595b3931d917fd0c"
 "checksum parity-crypto 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "8adf489acb31f1922db0ce43803b6f48a425241a8473611be3cc625a8e4a4c47"
-"checksum parity-ethereum 2.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum parity-hash-fetch 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum parity-ipfs-api 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum parity-local-store 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum parity-machine 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum parity-ethereum 2.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum parity-hash-fetch 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum parity-ipfs-api 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum parity-local-store 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum parity-machine 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum parity-path 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "5962540f99d3895d9addf535f37ab1397886bc2c68e59efd040ef458e5f8c3f7"
 "checksum parity-rocksdb 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)" = "cd55d2d6d6000ec99f021cf52c9acc7d2a402e14f95ced4c5de230696fabe00b"
-"checksum parity-rpc 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum parity-rpc-client 1.4.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum parity-runtime 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum parity-rpc 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum parity-rpc-client 1.4.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum parity-runtime 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum parity-snappy 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "e2c5f9d149b13134b8b354d93a92830efcbee6fe5b73a2e6e540fe70d4dd8a63"
 "checksum parity-snappy-sys 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "c2086caac40c79289cb70d7e1c64f5888e1c53f5d38399d3e95101493739f423"
 "checksum parity-tokio-ipc 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "eb002c2d3539ccd3b82bd915ec060028d4ab350ad203dbffa20028c1e483af5b"
-"checksum parity-updater 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum parity-version 2.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum parity-updater 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum parity-version 2.3.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum parity-wasm 0.31.3 (registry+https://github.com/rust-lang/crates.io-index)" = "511379a8194230c2395d2f5fa627a5a7e108a9f976656ce723ae68fca4097bfc"
-"checksum parity-whisper 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum parity-whisper 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum parity-wordlist 1.2.1 (registry+https://github.com/rust-lang/crates.io-index)" = "cf13102febd98f4ad416a526b42deb82daf482626ba6ab10d0ebf8f45327514c"
 "checksum parking_lot 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)" = "f0802bff09003b291ba756dc7e79313e51cc31667e94afbe847def490424cde5"
 "checksum parking_lot_core 0.3.1 (registry+https://github.com/rust-lang/crates.io-index)" = "ad7f7e6ebdc79edff6fdcb87a55b620174f7a989e3eb31b65231f4af57f00b8c"
 "checksum patricia-trie 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "10438ba40c2f6e9ceca55277d8e7f6a5dafd58cabd802e6d97e16f02aab83a03"
-"checksum patricia-trie-ethereum 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum patricia-trie-ethereum 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum percent-encoding 1.0.1 (registry+https://github.com/rust-lang/crates.io-index)" = "31010dd2e1ac33d5b46a5b413495239882813e0369f8ed8a5e266f173602f831"
 "checksum phf 0.7.23 (registry+https://github.com/rust-lang/crates.io-index)" = "cec29da322b242f4c3098852c77a0ca261c9c01b806cae85a5572a1eb94db9a6"
 "checksum phf_codegen 0.7.23 (registry+https://github.com/rust-lang/crates.io-index)" = "7d187f00cd98d5afbcd8898f6cf181743a449162aeb329dcd2f3849009e605ad"
 "checksum phf_generator 0.7.23 (registry+https://github.com/rust-lang/crates.io-index)" = "03dc191feb9b08b0dc1330d6549b795b9d81aec19efe6b4a45aec8d4caee0c4b"
 "checksum phf_shared 0.7.23 (registry+https://github.com/rust-lang/crates.io-index)" = "b539898d22d4273ded07f64a05737649dc69095d92cb87c7097ec68e3f150b93"
 "checksum plain_hasher 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "95fa6386b1d34aaf0adb9b7dd2885dbe7c34190e6263785e5a7ec2b19044a90f"
-"checksum price-info 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum price-info 1.12.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum primal 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)" = "0e31b86efadeaeb1235452171a66689682783149a6249ff334a2c5d8218d00a4"
 "checksum primal-bit 0.2.4 (registry+https://github.com/rust-lang/crates.io-index)" = "686a64e2f50194c64942992af5799e6b6e8775b8f88c607d72ed0a2fd58b9b21"
 "checksum primal-check 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)" = "8e65f96c0a171f887198c274392c99a116ef65aa7f53f3b6d4902f493965c2d1"
@@ -4155,15 +4149,15 @@ dependencies = [
 "checksum regex 1.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "37e7cbbd370869ce2e8dff25c7018702d10b21a20ef7135316f8daecd6c25b7f"
 "checksum regex-syntax 0.5.6 (registry+https://github.com/rust-lang/crates.io-index)" = "7d707a4fa2637f2dca2ef9fd02225ec7661fe01a53623c1e6515b6916511f7a7"
 "checksum regex-syntax 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)" = "4e47a2ed29da7a9e1960e1639e7a982e6edc6d49be308a3b02daf511504a16d1"
-"checksum registrar 0.0.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum registrar 0.0.1 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum relay 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "1576e382688d7e9deecea24417e350d3062d97e32e45d70b1cde65994ff1489a"
 "checksum remove_dir_all 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)" = "3488ba1b9a2084d38645c4c08276a1752dcbf2c7130d74f1569681ad5d2799c5"
 "checksum ring 0.13.5 (registry+https://github.com/rust-lang/crates.io-index)" = "2c4db68a2e35f3497146b7e4563df7d4773a2433230c5e4b448328e31740458a"
 "checksum rlp 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "16d1effe9845d54f90e7be8420ee49e5c94623140b97ee4bc6fb5bfddb745720"
-"checksum rlp_compress 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum rlp_derive 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum rlp_compress 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum rlp_derive 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum rpassword 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)" = "b273c91bd242ca03ad6d71c143b6f17a48790e61f21a6c78568fa2b6774a24a4"
-"checksum rpc-cli 1.4.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum rpc-cli 1.4.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum rprompt 1.0.3 (registry+https://github.com/rust-lang/crates.io-index)" = "1601f32bc5858aae3cbfa1c645c96c4d820cc5c16be0194f089560c00b6eb625"
 "checksum rustc-demangle 0.1.9 (registry+https://github.com/rust-lang/crates.io-index)" = "bcfe5b13211b4d78e5c2cadfebd7769197d95c639c35a50057eb4c05de811395"
 "checksum rustc-hex 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "0ceb8ce7a5e520de349e1fa172baeba4a9e8d5ef06c47471863530bc4972ee1e"
@@ -4178,7 +4172,7 @@ dependencies = [
 "checksum sct 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "cb8f61f9e6eadd062a71c380043d28036304a4706b3c4dd001ff3387ed00745a"
 "checksum semver 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)" = "1d7eb9ef2c18661902cc47e535f9bc51b78acd254da71d375c2f6720d9a40403"
 "checksum semver-parser 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = "388a1df253eca08550bef6c72392cfe7c30914bf41df5269b68cbd6ff8f570a3"
-"checksum serde 1.0.81 (registry+https://github.com/rust-lang/crates.io-index)" = "c91eb5b0190ae87b4e2e39cbba6e3bed3ac6186935fe265f0426156c4c49961b"
+"checksum serde 1.0.82 (registry+https://github.com/rust-lang/crates.io-index)" = "6fa52f19aee12441d5ad11c9a00459122bd8f98707cadf9778c540674f1935b6"
 "checksum serde_derive 1.0.58 (registry+https://github.com/rust-lang/crates.io-index)" = "ac38f51a52a556cd17545798e29536885fb1a3fa63d6399f5ef650f4a7d35901"
 "checksum serde_json 1.0.33 (registry+https://github.com/rust-lang/crates.io-index)" = "c37ccd6be3ed1fdf419ee848f7c758eb31b054d7cd3ae3600e3bae0adf569811"
 "checksum sha1 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "cc30b1e1e8c40c121ca33b86c23308a090d19974ef001b4bf6e61fd1a0fb095c"
@@ -4194,8 +4188,8 @@ dependencies = [
 "checksum smallvec 0.6.7 (registry+https://github.com/rust-lang/crates.io-index)" = "b73ea3738b47563803ef814925e69be00799a8c07420be8b996f8e98fb2336db"
 "checksum socket2 0.3.8 (registry+https://github.com/rust-lang/crates.io-index)" = "c4d11a52082057d87cb5caa31ad812f4504b97ab44732cd8359df2e9ff9f48e7"
 "checksum stable_deref_trait 1.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "dba1a27d3efae4351c8051072d619e3ade2820635c3958d826bfea39d59b54c8"
-"checksum stats 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
-"checksum stop-guard 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum stats 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
+"checksum stop-guard 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum string 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "98998cced76115b1da46f63388b909d118a37ae0be0f82ad35773d4a4bc9d18d"
 "checksum strsim 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = "bb4f380125926a99e52bc279241539c018323fab05ad6368b56f93d9369ff550"
 "checksum syn 0.13.11 (registry+https://github.com/rust-lang/crates.io-index)" = "14f9bf6292f3a61d2c716723fdb789a41bbe104168e6f496dc6497e531ea1b9b"
@@ -4239,13 +4233,13 @@ dependencies = [
 "checksum transient-hashmap 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)" = "aeb4b191d033a35edfce392a38cdcf9790b6cebcb30fa690c312c29da4dc433e"
 "checksum trezor-sys 1.0.0 (git+https://github.com/paritytech/trezor-sys)" = "<none>"
 "checksum triehash 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "cd9cb3a626dd9a19a1b5f84087143b19409db793d902c5ddee4b6212020713f1"
-"checksum triehash-ethereum 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum triehash-ethereum 0.2.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum try-lock 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ee2aa4715743892880f70885373966c83d73ef1b0838a664ef0c76fffd35e7c2"
 "checksum try-lock 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = "e604eb7b43c06650e854be16a2a03155743d3752dd1c943f6829e26b7a36e382"
 "checksum typenum 1.10.0 (registry+https://github.com/rust-lang/crates.io-index)" = "612d636f949607bdf9b123b4a6f6d966dedf3ff669f7f045890d3a4a73948169"
 "checksum ucd-util 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)" = "535c204ee4d8434478593480b8f86ab45ec9aae0e83c568ca81abf0fd0e88f86"
 "checksum uint 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)" = "754ba11732b9161b94c41798e5197e5e75388d012f760c42adb5000353e98646"
-"checksum unexpected 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum unexpected 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum unicase 1.4.2 (registry+https://github.com/rust-lang/crates.io-index)" = "7f4765f83163b74f957c797ad9253caf97f103fb064d3999aea9568d09fc8a33"
 "checksum unicase 2.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "9d3218ea14b4edcaccfa0df0a64a3792a2c32cc706f1b336e48867f9d3147f90"
 "checksum unicode-bidi 0.3.4 (registry+https://github.com/rust-lang/crates.io-index)" = "49f2bd0c6468a8230e1db229cff8029217cf623c767ea5d60bfbd42729ea54d5"
@@ -4256,18 +4250,18 @@ dependencies = [
 "checksum unreachable 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "382810877fe448991dfc7f0dd6e3ae5d58088fd0ea5e35189655f84e6814fa56"
 "checksum untrusted 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)" = "55cd1f4b4e96b46aeb8d4855db4a7a9bd96eeeb5c6a1ab54593328761642ce2f"
 "checksum url 1.7.2 (registry+https://github.com/rust-lang/crates.io-index)" = "dd4e7c0d531266369519a4aa4f399d748bd37043b00bde1e4ff1f60a120b355a"
-"checksum using_queue 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum using_queue 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum utf8-ranges 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)" = "796f7e48bef87609f7ade7e06495a87d5cd06c7866e6a5cbfceffc558a243737"
 "checksum validator 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)" = "236a5eda3df2c877872e98dbc55d497d943792e6405d8fc65bd4f8a5e3b53c99"
 "checksum validator_derive 0.8.0 (registry+https://github.com/rust-lang/crates.io-index)" = "d360d6f5754972c0c1da14fb3d5580daa31aee566e1e45e2f8d3bf5950ecd3e9"
 "checksum vec_map 0.8.1 (registry+https://github.com/rust-lang/crates.io-index)" = "05c78687fb1a80548ae3250346c3db86a80a7cdd77bda190189f2d0a0987c81a"
 "checksum vergen 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "8c3365f36c57e5df714a34be40902b27a992eeddb9996eca52d0584611cf885d"
 "checksum version_check 0.1.5 (registry+https://github.com/rust-lang/crates.io-index)" = "914b1a6776c4c929a602fafd8bc742e06365d4bcbe48c30f9cca5824f70dc9dd"
-"checksum vm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum vm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum void 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)" = "6a02e4885ed3bc0f2de90ea6dd45ebcbb66dacffe03547fadbb0eeae2770887d"
 "checksum want 0.0.4 (registry+https://github.com/rust-lang/crates.io-index)" = "a05d9d966753fa4b5c8db73fcab5eed4549cfe0e1e4e66911e5564a0085c35d1"
 "checksum want 0.0.6 (registry+https://github.com/rust-lang/crates.io-index)" = "797464475f30ddb8830cc529aaaae648d581f99e2036a928877dfde027ddf6b3"
-"checksum wasm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git)" = "<none>"
+"checksum wasm 0.1.0 (git+https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git?branch=develop)" = "<none>"
 "checksum wasmi 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)" = "9b4a6d379e9332b1b1f52c5a87f2481c85c7c931d8ec411963dfb8f26b1ec1e3"
 "checksum webpki 0.18.1 (registry+https://github.com/rust-lang/crates.io-index)" = "17d7967316d8411ca3b01821ee6c332bde138ba4363becdb492f12e514daa17f"
 "checksum webpki-roots 0.15.0 (registry+https://github.com/rust-lang/crates.io-index)" = "85d1f408918fd590908a70d36b7ac388db2edc221470333e4d6e5b598e44cabf"

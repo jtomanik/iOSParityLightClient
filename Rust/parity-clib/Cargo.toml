@@ -20,8 +20,9 @@ doc = false
 cbindgen = "0.6"
 
 [dependencies]
-panic_hook = { path = "../util/panic_hook" }
-parity-ethereum = { git = "https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git", branch = "master" }
+panic_hook = { git = "https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git", branch = "develop", features = [] }
+ethcore-logger = { git = "https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git", branch = "develop", features = [] }
+parity-ethereum = { git = "https://github.com/jtomanik/Experimental-Parity-Lib-for-iOS.git", branch = "develop", features = [] }
 log = { version = "0.4", features = ["std"] }
 
 [patch.crates-io]
