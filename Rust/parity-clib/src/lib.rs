@@ -26,7 +26,7 @@ mod logger;
 
 use std::os::raw::{c_char, c_void, c_int};
 use std::{panic, ptr, str};
-use std::ffi::{CStr, CString};
+use std::ffi::{CStr};
 use helpers::{LoggingCallback, ForeginCallbackObject};
 use logger::setup_log;
 
@@ -75,7 +75,10 @@ pub unsafe extern fn parity_start_ios(output: *mut *mut c_void,
 }
 
 #[no_mangle]
-pub unsafe extern fn parity_rpc_ios_query(client: *mut c_void, query: *const c_char, reply_bytes: *mut *mut c_char, reply_length: *mut usize)  -> c_int {
+pub unsafe extern fn parity_rpc_ios_query(client: *mut c_void,
+										  query: *const c_char,
+										  callback_owner: *mut c_void,
+										  callback: LoggingCallback)  -> c_int {
 	panic::catch_unwind(|| {
 
 		if client.is_null() || query.is_null() {
@@ -86,23 +89,13 @@ pub unsafe extern fn parity_rpc_ios_query(client: *mut c_void, query: *const c_c
 		let query = CStr::from_ptr(query).to_string_lossy().into_owned();
 
 		if let Some(output) = local_client.rpc_query_sync(&query) {
-			let output_bytes = output.as_bytes();
-			let output_length = output_bytes.len();
-			let c_output = CString::new(output_bytes).unwrap();
-			let output_pointer = c_output.into_raw();
-			*reply_bytes = output_pointer as *mut c_char;
-			*reply_length = output_length;
+			let foreign_callback_object = ForeginCallbackObject { owner: callback_owner, callback: callback };
+			foreign_callback_object.call_with(&output);
 			0
 		} else {
 			1
 		}
 	}).unwrap_or(1)
-}
-
-#[no_mangle]
-pub unsafe extern fn parity_rpc_ios_release(reply: *mut c_char) {
-	if reply.is_null() { return }
-	CString::from_raw(reply);
 }
 
 #[no_mangle]

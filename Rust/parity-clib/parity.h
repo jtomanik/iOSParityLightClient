@@ -37,10 +37,8 @@ void parity_destroy(void *client);
 
 int parity_rpc_ios_query(void *client,
                          const char *query,
-                         char **reply_bytes,
-                         uintptr_t *reply_length);
-
-void parity_rpc_ios_release(char *reply);
+                         void *callback_owner,
+                         LoggingCallback callback);
 
 void parity_set_panic_hook(void *owner, LoggingCallback callback);
 
