@@ -26,8 +26,11 @@ class LogViewController: UIViewController {
 
 
     private func addLog(text: String) {
-        print(text)
-        logTextView.text = logTextView.text + "\n\(text)"
+//        print(text)
+        DispatchQueue.main.async { [logTextView] in
+            let oldText = logTextView?.text ?? ""
+            logTextView?.text = "\(oldText)\n\(text)"
+        }
     }
 
 }

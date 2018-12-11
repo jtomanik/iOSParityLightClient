@@ -32,8 +32,9 @@ class RequestViewController: UIViewController {
     }
 
     private func showResponse(json: String) {
-        responseTextView.text = json
+        DispatchQueue.main.async { [responseTextView] in
+            responseTextView?.text = json
+        }
     }
-
 }
 

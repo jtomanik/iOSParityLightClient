@@ -18,6 +18,7 @@ class SettingsViewController: UIViewController {
         didSet {
             startButton.isEnabled = !isParityRunning
             stopButton.isEnabled = isParityRunning
+            launchArgumentsTextField.isEnabled = !isParityRunning
         }
     }
 

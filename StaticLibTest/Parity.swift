@@ -58,9 +58,11 @@ final class Parity {
         }
 
         let selfPointer = Unmanaged.passUnretained(self).toOpaque()
-        parity_logger_start(selfPointer, closure)
         parity_set_panic_hook(selfPointer, closure)
-        let result = parity_start_ios(&parityClientPointer, args)
+        let result = parity_start_ios(&parityClientPointer,
+                                      args,
+                                      selfPointer,
+                                      closure)
         // check if result is 0
     }
 
@@ -90,7 +92,7 @@ final class Parity {
         }
         let data = Data(bytes: pointer, count: Int(replyLength))
         if let string = String(data: data, encoding: .utf8) {
-            print(string)
+//            print(string)
             logCallback?(string)
         }
     }

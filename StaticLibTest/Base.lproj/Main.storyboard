@@ -110,7 +110,7 @@
                                     <action selector="didTapQuery:" destination="SeP-ED-drm" eventType="touchUpInside" id="Rui-49-tdB"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="JSON request" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9o3-Yh-5yf">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="{&quot;method&quot;:&quot;web3_clientVersion&quot;,&quot;params&quot;:[],&quot;id&quot;:1,&quot;jsonrpc&quot;:&quot;2.0&quot;}" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9o3-Yh-5yf">
                                 <rect key="frame" x="0.0" y="20" width="375" height="298.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
