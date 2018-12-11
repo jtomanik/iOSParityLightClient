@@ -26,11 +26,7 @@ final class Parity {
 
     private var parityClientPointer: UnsafeMutableRawPointer? = nil
     private var parityResponseDataPointer: UnsafeMutablePointer<Int8>? = nil
-    private var parityResponseDataLength: UInt = 0 {
-        didSet {
-            releaseQueryResponse()
-        }
-    }
+    private var parityResponseDataLength: UInt = 0
     private var parityResponseResultCode: Int32 = 0
 
     private init(){}
@@ -80,36 +76,41 @@ final class Parity {
             return
         }
 
+        let closure: LoggingCallback = { owner, pointer, length in
+            guard let owner = owner else { return }
+
+            let parity = Unmanaged<Parity>.fromOpaque(owner).takeUnretainedValue()
+            parity.responseCallback(pointer, length)
+        }
+
+        let selfPointer = Unmanaged.passUnretained(self).toOpaque()
+
         parityResponseResultCode = parity_rpc_ios_query(client,
                                           query,
-                                          &parityResponseDataPointer,
-                                          &parityResponseDataLength)
+                                          selfPointer,
+                                          closure)
     }
 
-    func loggingCallback(_ replyPointer: UnsafePointer<Int8>?, _ replyLength: UInt) {
+    private func loggingCallback(_ replyPointer: UnsafePointer<Int8>?, _ replyLength: UInt) {
         guard let pointer = replyPointer else {
             return
         }
         let data = Data(bytes: pointer, count: Int(replyLength))
         if let string = String(data: data, encoding: .utf8) {
-//            print(string)
+            //print(string)
             logCallback?(string)
         }
     }
 
-    private func releaseQueryResponse() {
-        guard let dataPointer = parityResponseDataPointer,
-            parityResponseDataLength > 0 else {
-                parityResponseDataPointer = nil
-                parityResponseDataLength = 0
-                return
+    private func responseCallback(_ replyPointer: UnsafePointer<Int8>?, _ replyLength: UInt) {
+        guard let pointer = replyPointer else {
+            return
         }
-        let data = Data(bytes: dataPointer, count: Int(parityResponseDataLength))
+        let data = Data(bytes: pointer, count: Int(replyLength))
         if let string = String(data: data, encoding: .utf8) {
-            print(string)
+            //print(string)
             responseCallback?(string)
         }
-        parity_rpc_ios_release(dataPointer)
     }
 
     private func getDirectoryPath() -> String {

@@ -26,12 +26,14 @@ class RequestViewController: UIViewController {
     }
 
     @IBAction func didTapQuery(_ sender: Any) {
+        responseTextView.text = ""
         if let query = requestTextView.text {
             Parity.shared.rpc(query: query)
         }
     }
 
     private func showResponse(json: String) {
+        //print(text)
         DispatchQueue.main.async { [responseTextView] in
             responseTextView?.text = json
         }
