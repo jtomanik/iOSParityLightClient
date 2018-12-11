@@ -19,6 +19,7 @@
 
 extern crate parity_ethereum;
 extern crate panic_hook;
+extern crate ethcore_logger;
 
 mod helpers;
 mod logger;
@@ -27,6 +28,7 @@ use std::os::raw::{c_char, c_void, c_int};
 use std::{panic, ptr, str};
 use std::ffi::{CStr, CString};
 use helpers::{LoggingCallback, ForeginCallbackObject};
+use logger::setup_log;
 
 #[cfg(feature = "malloc")]
 use std::alloc::System;
@@ -35,10 +37,11 @@ use std::alloc::System;
 #[global_allocator]
 static A: System = System;
 
-pub use self::logger::parity_logger_start;
-
 #[no_mangle]
-pub unsafe extern fn parity_start_ios(output: *mut *mut c_void, args: *const c_char) -> c_int {
+pub unsafe extern fn parity_start_ios(output: *mut *mut c_void,
+									  args: *const c_char,
+									  callback_owner: *mut c_void,
+									  callback: LoggingCallback) -> c_int {
 	panic::catch_unwind(|| {
 		*output = ptr::null_mut();
 		let argument_string = CStr::from_ptr(args).to_string_lossy().into_owned();
@@ -48,8 +51,10 @@ pub unsafe extern fn parity_start_ios(output: *mut *mut c_void, args: *const c_c
 			parity_ethereum::Configuration::parse_cli(&arguments).unwrap_or_else(|e| e.exit())
 		};
 
+		let logger = setup_log(callback_owner, callback) .expect("Logger is initialized only once; qed");
+
 		let on_client_restart_cb = |_ : String| {};
-		let action = match parity_ethereum::start(config, on_client_restart_cb, || {}) {
+		let action = match parity_ethereum::start(config, logger, on_client_restart_cb, || {}) {
 			Ok(action) => action,
 			Err(msg) => {
 				println!("{}", msg);

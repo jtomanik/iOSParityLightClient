@@ -25,11 +25,15 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#define INITIALIZED 2
+
+#define INITIALIZING 1
+
+#define UNINITIALIZED 0
+
 typedef void (*LoggingCallback)(void*, const char*, uintptr_t);
 
 void parity_destroy(void *client);
-
-int parity_logger_start(void *owner, LoggingCallback callback);
 
 int parity_rpc_ios_query(void *client,
                          const char *query,
@@ -40,7 +44,10 @@ void parity_rpc_ios_release(char *reply);
 
 void parity_set_panic_hook(void *owner, LoggingCallback callback);
 
-int parity_start_ios(void **output, const char *args);
+int parity_start_ios(void **output,
+                     const char *args,
+                     void *callback_owner,
+                     LoggingCallback callback);
 
 #endif /* _PARITY_H_INCLUDED_ */
 
