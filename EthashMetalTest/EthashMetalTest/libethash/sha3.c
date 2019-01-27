@@ -12,21 +12,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "ethash.h"
 
 /******** The Keccak-f[1600] permutation ********/
 
 /*** Constants. ***/
-static const uint8_t rho[24] = \
+static const ethash_uint8_t rho[24] = \
 { 1,  3,   6, 10, 15, 21,
     28, 36, 45, 55,  2, 14,
     27, 41, 56,  8, 25, 43,
     62, 18, 39, 61, 20, 44};
-static const uint8_t pi[24] = \
+static const ethash_uint8_t pi[24] = \
 {10,  7, 11, 17, 18, 3,
     5, 16,  8, 21, 24, 4,
     15, 23, 19, 13, 12, 2,
     20, 14, 22,  9, 6,  1};
-static const uint64_t RC[24] = \
+static const ethash_uint64_t RC[24] = \
 {1ULL, 0x8082ULL, 0x800000000000808aULL, 0x8000000080008000ULL,
     0x808bULL, 0x80000001ULL, 0x8000000080008081ULL, 0x8000000000008009ULL,
     0x8aULL, 0x88ULL, 0x80008009ULL, 0x8000000aULL,
@@ -45,10 +46,10 @@ REPEAT5(e; v += s;)
 
 /*** Keccak-f[1600] ***/
 static inline void keccakf(void* state) {
-    uint64_t* a = (uint64_t*)state;
-    uint64_t b[5] = {0};
-    uint64_t t = 0;
-    uint8_t x, y;
+    ethash_uint64_t* a = (ethash_uint64_t*)state;
+    ethash_uint64_t b[5] = {0};
+    ethash_uint64_t t = 0;
+    ethash_uint8_t x, y;
     
     for (int i = 0; i < 24; i++) {
         // Theta
@@ -87,12 +88,12 @@ static inline void keccakf(void* state) {
 _(for (size_t i = 0; i < L; i += ST) { S; })
 #define mkapply_ds(NAME, S)						\
 static inline void NAME(uint8_t* dst,			\
-const uint8_t* src,						\
+const ethash_uint8_t* src,						\
 size_t len) {								\
 FOR(i, 1, len, S);							\
 }
 #define mkapply_sd(NAME, S)						\
-static inline void NAME(const uint8_t* src,	\
+static inline void NAME(const ethash_uint8_t* src,	\
 uint8_t* dst,								\
 size_t len) {								\
 FOR(i, 1, len, S);							\
@@ -114,13 +115,13 @@ L -= rate;									\
 }
 
 /** The sponge-based hash construction. **/
-static inline int hash(uint8_t* out, size_t outlen,
-                       const uint8_t* in, size_t inlen,
-                       size_t rate, uint8_t delim) {
+static inline int hash(ethash_uint8_t* out, size_t outlen,
+                       const ethash_uint8_t* in, size_t inlen,
+                       size_t rate, ethash_uint8_t delim) {
     if ((out == NULL) || ((in == NULL) && inlen != 0) || (rate >= Plen)) {
         return -1;
     }
-    uint8_t a[Plen] = {0};
+    ethash_uint8_t a[Plen] = {0};
     // Absorb input.
     foldP(in, inlen, xorin);
     // Xor in the DS and pad frame.
@@ -139,7 +140,7 @@ static inline int hash(uint8_t* out, size_t outlen,
 
 #define defsha3(bits)													\
 int sha3_##bits(uint8_t* out, size_t outlen,						\
-const uint8_t* in, size_t inlen) {								\
+const ethash_uint8_t* in, size_t inlen) {								\
 if (outlen > (bits/8)) {										\
 return -1;                                                  \
 }																\

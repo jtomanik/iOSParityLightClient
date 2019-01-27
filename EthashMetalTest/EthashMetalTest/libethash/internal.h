@@ -8,12 +8,12 @@ extern "C" {
 
 #include <stdint.h>
 
-    static inline uint8_t ethash_h256_get(ethash_h256_t const* hash, unsigned int i)
+    static inline ethash_uint8_t ethash_h256_get(ethash_h256_t const* hash, unsigned int i)
     {
         return hash->b[i];
     }
 
-    static inline void ethash_h256_set(ethash_h256_t* hash, unsigned int i, uint8_t v)
+    static inline void ethash_h256_set(ethash_h256_t* hash, unsigned int i, ethash_uint8_t v)
     {
         hash->b[i] = v;
     }
@@ -32,11 +32,11 @@ extern "C" {
      * @return              Newly allocated ethash_light handler or NULL in case of
      *                      ERRNOMEM or invalid parameters used for @ref ethash_compute_cache_nodes()
      */
-    ethash_light_ptr ethash_light_new_internal(uint64_t cache_size, ethash_h256_t const* seed);
+    ethash_light_ptr ethash_light_new_internal(ethash_uint64_t cache_size, ethash_h256_t const* seed);
 
     struct ethash_full {
         FILE* file;
-        uint64_t file_size;
+        ethash_uint64_t file_size;
         ethash_node_t* data;
     };
 
@@ -61,19 +61,19 @@ extern "C" {
     void ethash_full_new_internal(
                                   char const* dirname,
                                   ethash_h256_t const seed_hash,
-                                  uint64_t full_size,
+                                  ethash_uint64_t full_size,
                                   ethash_light_ptr const light,
                                   ethash_callback_t callback
                                   );
 
     void ethash_calculate_dag_item(
                                    ethash_node_t* const ret,
-                                   uint32_t node_index,
+                                   ethash_uint32_t node_index,
                                    ethash_light_ptr const cache
                                    );
 
-    uint64_t ethash_get_datasize(uint64_t const block_number);
-    uint64_t ethash_get_cachesize(uint64_t const block_number);
+    ethash_uint64_t ethash_get_datasize(ethash_uint64_t const block_number);
+    ethash_uint64_t ethash_get_cachesize(ethash_uint64_t const block_number);
 
     /**
      * Compute the memory data for a full node's memory
@@ -86,7 +86,7 @@ extern "C" {
      */
     bool ethash_compute_full_data(
                                   void* mem,
-                                  uint64_t full_size,
+                                  ethash_uint64_t full_size,
                                   ethash_light_ptr const light,
                                   ethash_callback_t callback
                                   );
