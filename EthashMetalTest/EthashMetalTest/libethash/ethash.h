@@ -1,16 +1,16 @@
 /*
  This file is part of ethash.
-
+ 
  ethash is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
-
+ 
  ethash is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.
-
+ 
  You should have received a copy of the GNU General Public License
  along with ethash.  If not, see <http://www.gnu.org/licenses/>.
  */
@@ -50,10 +50,10 @@ extern "C" {
     typedef unsigned char ethash_uint8_t;
     typedef unsigned int ethash_uint32_t;
     typedef unsigned long long ethash_uint64_t;
-
+    
     /// Type of a seedhash/blockhash e.t.c.
     typedef struct ethash_h256 { ethash_uint8_t b[32]; } ethash_h256_t;
-
+    
     // convenience macro to statically initialize an h256_t
     // usage:
     // ethash_h256_t a = ethash_h256_static_init(1, 2, 3, ... )
@@ -61,31 +61,31 @@ extern "C" {
     // will simply be unitialized (not guranteed to be 0)
 #define ethash_h256_static_init(...)			\
 { {__VA_ARGS__} }
-
+    
     typedef struct ethash_light {
         void* cache;
         uint64_t cache_size;
         uint64_t block_number;
     } ethash_light_t;
     typedef struct ethash_light* ethash_light_ptr;
-
+    
     struct ethash_full;
     typedef struct ethash_full* ethash_full_t;
-
+    
     typedef int(*ethash_callback_t)(unsigned);
-
+    
     typedef struct ethash_return_value {
         ethash_h256_t result;
         ethash_h256_t mix_hash;
         bool success;
     } ethash_return_value_t;
-
+    
     typedef union ethash_node {
         uint8_t bytes[NODE_WORDS * 4];
         uint32_t words[NODE_WORDS];
         uint64_t double_words[NODE_WORDS / 2];
     } ethash_node_t;
-
+    
     /**
      * Allocate and initialize a new ethash_light handler
      *
@@ -112,7 +112,7 @@ extern "C" {
                                                ethash_h256_t const header_hash,
                                                ethash_uint64_t nonce
                                                );
-
+    
     /**
      * Allocate and initialize a new ethash_full handler
      *
@@ -133,7 +133,7 @@ extern "C" {
                          const char * custom_dir_name,
                          ethash_callback_t callback
                          );
-
+    
     /**
      * Frees a previously allocated ethash_full handler
      * @param full    The light handler to free
@@ -160,15 +160,15 @@ extern "C" {
      * Get the size of the DAG data
      */
     ethash_uint64_t ethash_full_dag_size(ethash_full_t full);
-
-
-
+    
+    
+    
     //MARK: My
-
+    
     ethash_uint64_t ethash_get_epoch_number(ethash_uint64_t const block_number);
     ethash_uint64_t ethash_get_datasize(ethash_uint64_t const block_number);
     ethash_uint64_t ethash_get_cachesize(ethash_uint64_t const block_number);
-
+    
     /**
      * Calculate the seedhash for a given block number
      */
@@ -193,7 +193,7 @@ extern "C" {
                                                ethash_h256_t const header_hash,
                                                ethash_uint64_t nonce
                                                );
-
+    
 #ifdef __cplusplus
 }
 #endif

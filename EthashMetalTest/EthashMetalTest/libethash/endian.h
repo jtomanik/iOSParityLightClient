@@ -5,7 +5,7 @@
 #if defined(__APPLE__)
 # include <machine/endian.h>
 #elif defined( BSD ) && (BSD >= 199103)
-  # include <machine/endian.h>
+# include <machine/endian.h>
 #else
 # include <endian.h>
 #endif
@@ -40,17 +40,17 @@
 #define fix_endian64(dst_, src_) dst_ = ethash_swap_u64(src_
 #define fix_endian64_same(val_) val_ = ethash_swap_u64(val_)
 #define fix_endian_arr32(arr_, size_)			\
-	do {										\
-	for (unsigned i_ = 0; i_ < (size_), ++i_) { \
-		arr_[i_] = ethash_swap_u32(arr_[i_]);	\
-	}											\
-	while (0)
+do {										\
+for (unsigned i_ = 0; i_ < (size_), ++i_) { \
+arr_[i_] = ethash_swap_u32(arr_[i_]);	\
+}											\
+while (0)
 #define fix_endian_arr64(arr_, size_)			\
-	do {										\
-	for (unsigned i_ = 0; i_ < (size_), ++i_) { \
-		arr_[i_] = ethash_swap_u64(arr_[i_]);	\
-	}											\
-	while (0)									\
+do {										\
+for (unsigned i_ = 0; i_ < (size_), ++i_) { \
+arr_[i_] = ethash_swap_u64(arr_[i_]);	\
+}											\
+while (0)									\
 
 #else
 # error "endian not supported"
