@@ -91,6 +91,19 @@ struct Ethash {
         }
 
         print("Starting Ethash")
+        let fullSize = ethash_get_datasize(blockNumber)
+        print("ETHASH block number is: \(light.pointee.block_number)")
+        print("ETHASH cache size is: \(light.pointee.cache_size)")
+        print("ETHASH full size is: \(fullSize)")
+        print("ETHASH hash is: \(hash)")
+        print("ETHASH nonce is: \(nonce)")
+        let returnPointer = UnsafeMutablePointer<ethash_return_value_t>.allocate(capacity: 1)
+        let result = ethash_hash(returnPointer,
+                                 nil,
+                                 light,
+                                 fullSize,
+                                 hash,
+                                 nonce)
 
         DispatchQueue.global(qos: .userInitiated).async { [rounds, hash, nonce] in
             var result = ethash_return_value_t()

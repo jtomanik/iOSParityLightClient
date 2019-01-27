@@ -86,85 +86,6 @@ extern "C" {
         uint64_t double_words[NODE_WORDS / 2];
     } ethash_node_t;
     
-    /**
-     * Allocate and initialize a new ethash_light handler
-     *
-     * @param block_number   The block number for which to create the handler
-     * @return               Newly allocated ethash_light handler or NULL in case of
-     *                       ERRNOMEM or invalid parameters used for @ref ethash_compute_cache_nodes()
-     */
-    ethash_light_ptr ethash_light_new(ethash_uint64_t block_number);
-    /**
-     * Frees a previously allocated ethash_light handler
-     * @param light        The light handler to free
-     */
-    void ethash_light_delete(ethash_light_ptr light);
-    /**
-     * Calculate the light client data
-     *
-     * @param light          The light client handler
-     * @param header_hash    The header hash to pack into the mix
-     * @param nonce          The nonce to pack into the mix
-     * @return               an object of ethash_return_value_t holding the return values
-     */
-    ethash_return_value_t ethash_light_compute(
-                                               ethash_light_ptr light,
-                                               ethash_h256_t const header_hash,
-                                               ethash_uint64_t nonce
-                                               );
-    
-    /**
-     * Allocate and initialize a new ethash_full handler
-     *
-     * @param light         The light handler containing the cache.
-     * @param callback      A callback function with signature of @ref ethash_callback_t
-     *                      It accepts an unsigned with which a progress of DAG calculation
-     *                      can be displayed. If all goes well the callback should return 0.
-     *                      If a non-zero value is returned then DAG generation will stop.
-     *                      Be advised. A progress value of 100 means that DAG creation is
-     *                      almost complete and that this function will soon return succesfully.
-     *                      It does not mean that the function has already had a succesfull return.
-     * @return              Newly allocated ethash_full handler or NULL in case of
-     *                      ERRNOMEM or invalid parameters used for @ref ethash_compute_full_data()
-     */
-    //ethash_full_t ethash_full_new(
-    void ethash_full_new(
-                         ethash_light_ptr light,
-                         const char * custom_dir_name,
-                         ethash_callback_t callback
-                         );
-    
-    /**
-     * Frees a previously allocated ethash_full handler
-     * @param full    The light handler to free
-     */
-    void ethash_full_delete(ethash_full_t full);
-    /**
-     * Calculate the full client data
-     *
-     * @param full           The full client handler
-     * @param header_hash    The header hash to pack into the mix
-     * @param nonce          The nonce to pack into the mix
-     * @return               An object of ethash_return_value to hold the return value
-     */
-    ethash_return_value_t ethash_full_compute(
-                                              ethash_full_t full,
-                                              ethash_h256_t const header_hash,
-                                              ethash_uint64_t nonce
-                                              );
-    /**
-     * Get a pointer to the full DAG data
-     */
-    void const* ethash_full_dag(ethash_full_t full);
-    /**
-     * Get the size of the DAG data
-     */
-    ethash_uint64_t ethash_full_dag_size(ethash_full_t full);
-    
-    
-    
-    //MARK: My
-    
     ethash_uint64_t ethash_get_epoch_number(ethash_uint64_t const block_number);
     ethash_uint64_t ethash_get_datasize(ethash_uint64_t const block_number);
     ethash_uint64_t ethash_get_cachesize(ethash_uint64_t const block_number);
@@ -173,7 +94,7 @@ extern "C" {
      * Calculate the seedhash for a given block number
      */
     ethash_h256_t ethash_get_seedhash(ethash_uint64_t block_number);
-    
+
     ethash_uint32_t ethash_get_cache_node_number(ethash_uint64_t const block_number);
     bool ethash_compute_cache_nodes(
                                     ethash_node_t* const nodes,
@@ -193,6 +114,14 @@ extern "C" {
                                                ethash_h256_t const header_hash,
                                                ethash_uint64_t nonce
                                                );
+    bool ethash_hash(
+                            ethash_return_value_t* ret,
+                            ethash_node_t const* full_nodes,
+                            ethash_light_ptr const light,
+                            ethash_uint64_t full_size,
+                            ethash_h256_t const header_hash,
+                            ethash_uint64_t const nonce
+                            );
     
 #ifdef __cplusplus
 }
