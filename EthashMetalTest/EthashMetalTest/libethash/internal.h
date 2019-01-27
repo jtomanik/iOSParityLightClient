@@ -5,56 +5,24 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-    
+
 #include <stdint.h>
-    
+
     static inline uint8_t ethash_h256_get(ethash_h256_t const* hash, unsigned int i)
     {
         return hash->b[i];
     }
-    
+
     static inline void ethash_h256_set(ethash_h256_t* hash, unsigned int i, uint8_t v)
     {
         hash->b[i] = v;
     }
-    
+
     static inline void ethash_h256_reset(ethash_h256_t* hash)
     {
         memset(hash, 0, 32);
     }
-    
-    // Returns if hash is less than or equal to boundary (2^256/difficulty)
-    static inline bool ethash_check_difficulty(
-                                               ethash_h256_t const* hash,
-                                               ethash_h256_t const* boundary
-                                               )
-    {
-        // Boundary is big endian
-        for (int i = 0; i < 32; i++) {
-            if (ethash_h256_get(hash, i) == ethash_h256_get(boundary, i)) {
-                continue;
-            }
-            return ethash_h256_get(hash, i) < ethash_h256_get(boundary, i);
-        }
-        return true;
-    }
-    
-    /**
-     *  Difficulty quick check for POW preverification
-     *
-     * @param header_hash      The hash of the header
-     * @param nonce            The block's nonce
-     * @param mix_hash         The mix digest hash
-     * @param boundary         The boundary is defined as (2^256 / difficulty)
-     * @return                 true for succesful pre-verification and false otherwise
-     */
-    bool ethash_quick_check_difficulty(
-                                       ethash_h256_t const* header_hash,
-                                       uint64_t const nonce,
-                                       ethash_h256_t const* mix_hash,
-                                       ethash_h256_t const* boundary
-                                       );
-    
+
     /**
      * Allocate and initialize a new ethash_light handler. Internal version
      *
@@ -65,29 +33,13 @@ extern "C" {
      *                      ERRNOMEM or invalid parameters used for @ref ethash_compute_cache_nodes()
      */
     ethash_light_ptr ethash_light_new_internal(uint64_t cache_size, ethash_h256_t const* seed);
-    
-    /**
-     * Calculate the light client data. Internal version.
-     *
-     * @param light          The light client handler
-     * @param full_size      The size of the full data in bytes.
-     * @param header_hash    The header hash to pack into the mix
-     * @param nonce          The nonce to pack into the mix
-     * @return               The resulting hash.
-     */
-    ethash_return_value_t ethash_light_compute_internal(
-                                                        ethash_light_ptr light,
-                                                        uint64_t full_size,
-                                                        ethash_h256_t const header_hash,
-                                                        uint64_t nonce
-                                                        );
-    
+
     struct ethash_full {
         FILE* file;
         uint64_t file_size;
         ethash_node_t* data;
     };
-    
+
     /**
      * Allocate and initialize a new ethash_full handler. Internal version.
      *
@@ -113,23 +65,16 @@ extern "C" {
                                   ethash_light_ptr const light,
                                   ethash_callback_t callback
                                   );
-    
+
     void ethash_calculate_dag_item(
                                    ethash_node_t* const ret,
                                    uint32_t node_index,
                                    ethash_light_ptr const cache
                                    );
-    
-    void ethash_quick_hash(
-                           ethash_h256_t* return_hash,
-                           ethash_h256_t const* header_hash,
-                           const uint64_t nonce,
-                           ethash_h256_t const* mix_hash
-                           );
-    
+
     uint64_t ethash_get_datasize(uint64_t const block_number);
     uint64_t ethash_get_cachesize(uint64_t const block_number);
-    
+
     /**
      * Compute the memory data for a full node's memory
      *
@@ -145,7 +90,7 @@ extern "C" {
                                   ethash_light_ptr const light,
                                   ethash_callback_t callback
                                   );
-    
+
 #ifdef __cplusplus
 }
 #endif
