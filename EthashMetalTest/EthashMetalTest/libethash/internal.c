@@ -120,7 +120,7 @@ void ethash_calculate_dag_item(
     SHA3_512(ret->bytes, ret->bytes, sizeof(ethash_node_t));
 }
 
-static bool ethash_hash(
+bool ethash_hash(
                         ethash_return_value_t* ret,
                         ethash_node_t const* full_nodes,
                         ethash_light_ptr const light,

@@ -64,8 +64,8 @@ extern "C" {
     
     typedef struct ethash_light {
         void* cache;
-        uint64_t cache_size;
-        uint64_t block_number;
+        ethash_uint64_t cache_size;
+        ethash_uint64_t block_number;
     } ethash_light_t;
     typedef struct ethash_light* ethash_light_ptr;
     
@@ -81,9 +81,9 @@ extern "C" {
     } ethash_return_value_t;
     
     typedef union ethash_node {
-        uint8_t bytes[NODE_WORDS * 4];
-        uint32_t words[NODE_WORDS];
-        uint64_t double_words[NODE_WORDS / 2];
+        ethash_uint8_t bytes[NODE_WORDS * 4];
+        ethash_uint32_t words[NODE_WORDS];
+        ethash_uint64_t double_words[NODE_WORDS / 2];
     } ethash_node_t;
     
     ethash_uint64_t ethash_get_epoch_number(ethash_uint64_t const block_number);
