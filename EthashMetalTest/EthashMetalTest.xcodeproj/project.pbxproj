@@ -22,9 +22,7 @@
 		7A6E48B121FA4D2800C450AC /* EthashMetalTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EthashMetalTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		7A6E48B721FA4DEE00C450AC /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
 		7A6E48BB21FA4DEE00C450AC /* sha3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha3.c; sourceTree = "<group>"; };
-		7A6E48BD21FA4DEE00C450AC /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		7A6E48BF21FA4DEE00C450AC /* data_sizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = data_sizes.h; sourceTree = "<group>"; };
-		7A6E48C121FA4DEE00C450AC /* fnv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fnv.h; sourceTree = "<group>"; };
 		7A6E48C521FA4DEE00C450AC /* sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha3.h; sourceTree = "<group>"; };
 		7A6E48C821FA4DEE00C450AC /* internal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = internal.c; sourceTree = "<group>"; };
 		7A6E48C921FA4DEE00C450AC /* ethash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ethash.h; sourceTree = "<group>"; };
@@ -42,7 +40,6 @@
 		7A8E17BE21F9E010004F8A5D /* Ethash.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Ethash.metal; sourceTree = "<group>"; };
 		7ADF737921FCB5B9004BD5EF /* Ethash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ethash.swift; sourceTree = "<group>"; };
 		7ADF737D21FCBAED004BD5EF /* endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = endian.h; sourceTree = "<group>"; };
-		7ADF737E21FCBCF5004BD5EF /* mmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmap.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +59,9 @@
 				7A6E48C921FA4DEE00C450AC /* ethash.h */,
 				7A6E48B721FA4DEE00C450AC /* internal.h */,
 				7A6E48C821FA4DEE00C450AC /* internal.c */,
-				7A6E48C121FA4DEE00C450AC /* fnv.h */,
 				7A6E48BF21FA4DEE00C450AC /* data_sizes.h */,
 				7A6E48C521FA4DEE00C450AC /* sha3.h */,
 				7A6E48BB21FA4DEE00C450AC /* sha3.c */,
-				7A6E48BD21FA4DEE00C450AC /* util.h */,
-				7ADF737E21FCBCF5004BD5EF /* mmap.h */,
 				7ADF737D21FCBAED004BD5EF /* endian.h */,
 			);
 			path = libethash;
