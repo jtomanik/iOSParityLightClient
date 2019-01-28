@@ -16,24 +16,29 @@
 
 /******** The Keccak-f[1600] permutation ********/
 
+#define KECCAK_ROUNDS 24
+
 /*** Constants. ***/
-static const ethash_uint8_t rho[24] = \
-{ 1,  3,   6, 10, 15, 21,
-    28, 36, 45, 55,  2, 14,
-    27, 41, 56,  8, 25, 43,
-    62, 18, 39, 61, 20, 44};
-static const ethash_uint8_t pi[24] = \
-{10,  7, 11, 17, 18, 3,
-    5, 16,  8, 21, 24, 4,
-    15, 23, 19, 13, 12, 2,
-    20, 14, 22,  9, 6,  1};
-static const ethash_uint64_t RC[24] = \
-{1ULL, 0x8082ULL, 0x800000000000808aULL, 0x8000000080008000ULL,
-    0x808bULL, 0x80000001ULL, 0x8000000080008081ULL, 0x8000000000008009ULL,
-    0x8aULL, 0x88ULL, 0x80008009ULL, 0x8000000aULL,
-    0x8000808bULL, 0x800000000000008bULL, 0x8000000000008089ULL, 0x8000000000008003ULL,
-    0x8000000000008002ULL, 0x8000000000000080ULL, 0x800aULL, 0x800000008000000aULL,
-    0x8000000080008081ULL, 0x8000000000008080ULL, 0x80000001ULL, 0x8000000080008008ULL};
+static const ethash_uint8_t rho[24] = {
+     1,  3,  6, 10, 15, 21, 28, 36,
+    45, 55,  2, 14, 27, 41, 56,  8,
+    25, 43, 62, 18, 39, 61, 20, 44
+};
+
+static const ethash_uint8_t pi[24] = {
+    10,  7, 11, 17, 18,  3,  5, 16,
+     8, 21, 24,  4, 15, 23, 19, 13,
+    12,  2, 20, 14, 22,  9,  6,  1
+};
+
+static const ethash_uint64_t RC[24] = {
+    0x0000000000000001, 0x0000000000008082, 0x800000000000808a, 0x8000000080008000,
+    0x000000000000808b, 0x0000000080000001, 0x8000000080008081, 0x8000000000008009,
+    0x000000000000008a, 0x0000000000000088, 0x0000000080008009, 0x000000008000000a,
+    0x000000008000808b, 0x800000000000008b, 0x8000000000008089, 0x8000000000008003,
+    0x8000000000008002, 0x8000000000000080, 0x000000000000800a, 0x800000008000000a,
+    0x8000000080008081, 0x8000000000008080, 0x0000000080000001, 0x8000000080008008
+};
 
 /*** Helper macros to unroll the permutation. ***/
 #define rol(x, s) (((x) << s) | ((x) >> (64 - s)))
@@ -51,7 +56,7 @@ static inline void keccakf(void* state) {
     ethash_uint64_t t = 0;
     ethash_uint8_t x, y;
     
-    for (int i = 0; i < 24; i++) {
+    for (int i = 0; i < KECCAK_ROUNDS; i++) {
         // Theta
         FOR5(x, 1,
              b[x] = 0;
@@ -84,19 +89,26 @@ static inline void keccakf(void* state) {
 /*** Some helper macros. ***/
 
 #define _(S) do { S } while (0)
-#define FOR(i, ST, L, S)							\
+
+#define FOR(i, ST, L, S)		\
 _(for (size_t i = 0; i < L; i += ST) { S; })
-#define mkapply_ds(NAME, S)						\
-static inline void NAME(uint8_t* dst,			\
-const ethash_uint8_t* src,						\
-size_t len) {								\
-FOR(i, 1, len, S);							\
+
+#define mkapply_ds(NAME, S)		\
+static inline void NAME(        \
+ethash_uint8_t* dst,			\
+const ethash_uint8_t* src,		\
+size_t len                      \
+) {								\
+FOR(i, 1, len, S);				\
 }
-#define mkapply_sd(NAME, S)						\
-static inline void NAME(const ethash_uint8_t* src,	\
-uint8_t* dst,								\
-size_t len) {								\
-FOR(i, 1, len, S);							\
+
+#define mkapply_sd(NAME, S)		\
+static inline void NAME(        \
+const ethash_uint8_t* src,	    \
+uint8_t* dst,					\
+size_t len                      \
+) {								\
+FOR(i, 1, len, S);				\
 }
 
 mkapply_ds(xorin, dst[i] ^= src[i])  // xorin
@@ -106,18 +118,22 @@ mkapply_sd(setout, dst[i] = src[i])  // setout
 #define Plen 200
 
 // Fold P*F over the full blocks of an input.
-#define foldP(I, L, F)								\
-while (L >= rate) {							\
-F(a, I, rate);								\
-P(a);										\
-I += rate;									\
-L -= rate;									\
+#define foldP(I, L, F)			\
+while (L >= rate) {				\
+F(a, I, rate);					\
+P(a);							\
+I += rate;						\
+L -= rate;						\
 }
 
 /** The sponge-based hash construction. **/
-static inline int hash(ethash_uint8_t* out, size_t outlen,
-                       const ethash_uint8_t* in, size_t inlen,
-                       size_t rate, ethash_uint8_t delim) {
+static inline int hash(
+                       const ethash_uint8_t* in,
+                       size_t inlen,
+                       ethash_uint8_t* out,
+                       size_t outlen,
+                       size_t rate,
+                       ethash_uint8_t delim) {
     if ((out == NULL) || ((in == NULL) && inlen != 0) || (rate >= Plen)) {
         return -1;
     }
@@ -138,15 +154,28 @@ static inline int hash(ethash_uint8_t* out, size_t outlen,
     return 0;
 }
 
-#define defsha3(bits)													\
-int sha3_##bits(uint8_t* out, size_t outlen,						\
-const ethash_uint8_t* in, size_t inlen) {								\
-if (outlen > (bits/8)) {										\
-return -1;                                                  \
-}																\
-return hash(out, outlen, in, inlen, 200 - (bits / 4), 0x01);	\
+int sha3_256(
+             const ethash_uint8_t* in,
+             size_t inlen,
+             uint8_t* out,
+             size_t outlen
+)
+{
+    if (outlen > (256/8)) {
+        return -1;
+    }
+    return hash(in, inlen, out, outlen, 200 - (256 / 4), 0x01);
 }
 
-/*** FIPS202 SHA3 FOFs ***/
-defsha3(256)
-defsha3(512)
+int sha3_512(
+             const ethash_uint8_t* in,
+             size_t inlen,
+             uint8_t* out,
+             size_t outlen
+             )
+{
+    if (outlen > (512/8)) {
+        return -1;
+    }
+    return hash(in, inlen, out, outlen, 200 - (512 / 4), 0x01);
+}

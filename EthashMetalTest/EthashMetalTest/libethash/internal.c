@@ -26,12 +26,10 @@
 #include <errno.h>
 #include <math.h>
 #include "ethash.h"
-#include "fnv.h"
 #include "internal.h"
 #include "data_sizes.h"
 #include "sha3.h"
 #include "endian.h"
-#include "mmap.h"
 
 ethash_uint64_t ethash_get_epoch_number(ethash_uint64_t const block_number)
 {
@@ -196,54 +194,27 @@ ethash_h256_t ethash_get_seedhash(ethash_uint64_t block_number)
     return ret;
 }
 
-ethash_light_ptr ethash_light_new_internal(ethash_uint64_t cache_size, ethash_h256_t const* seed)
+ethash_light_ptr ethash_light_new(ethash_uint64_t block_number)
 {
-    struct ethash_light *ret;
-    ret = calloc(sizeof(*ret), 1);
+    ethash_h256_t seedhash = ethash_get_seedhash(block_number);
+    ethash_uint64_t cache_size = ethash_get_cachesize(block_number);
+    ethash_light_ptr ret;
+    ret = calloc(sizeof(ethash_light_t), 1);
     if (!ret) {
         return NULL;
     }
     ret->cache = malloc((size_t)cache_size);
     if (!ret->cache) {
-        goto fail_free_light;
+        free(ret);
+        return NULL;
     }
     ethash_node_t* nodes = (ethash_node_t*)ret->cache;
-    if (!ethash_compute_cache_nodes(nodes, cache_size, seed)) {
-        goto fail_free_cache_mem;
+    if (!ethash_compute_cache_nodes(nodes, cache_size, &seedhash)) {
+        free(ret->cache);
+        free(ret);
+        return NULL;
     }
     ret->cache_size = cache_size;
-    return ret;
-
-fail_free_cache_mem:
-    free(ret->cache);
-fail_free_light:
-    free(ret);
-    return NULL;
-}
-
-ethash_light_ptr ethash_light_new(ethash_uint64_t block_number)
-{
-    ethash_h256_t seedhash = ethash_get_seedhash(block_number);
-//    ethash_uint64_t cache_size = ethash_get_cachesize(block_number);
-    ethash_light_ptr ret;
-    ret = ethash_light_new_internal(ethash_get_cachesize(block_number), &seedhash);
-//    //    ret = calloc(sizeof(*ret), 1);
-//    ret = calloc(sizeof(ethash_light_t), 1);
-//    if (!ret) {
-//        return NULL;
-//    }
-//    ret->cache = malloc((size_t)cache_size);
-//    if (!ret->cache) {
-//        free(ret);
-//        return NULL;
-//    }
-//    ethash_node_t* nodes = (ethash_node_t*)ret->cache;
-//    if (!ethash_compute_cache_nodes(nodes, cache_size, &seedhash)) {
-//        free(ret->cache);
-//        free(ret);
-//        return NULL;
-//    }
-//    ret->cache_size = cache_size;
     ret->block_number = block_number;
     return ret;
 }
@@ -282,21 +253,6 @@ void ethash_light_delete(ethash_light_ptr light)
     free(light);
 }
 
-ethash_return_value_t ethash_light_compute_internal(
-                                                    ethash_light_ptr light,
-                                                    ethash_uint64_t full_size,
-                                                    ethash_h256_t const header_hash,
-                                                    ethash_uint64_t nonce
-                                                    )
-{
-    ethash_return_value_t ret;
-    ret.success = true;
-    if (!ethash_hash(&ret, NULL, light, full_size, header_hash, nonce)) {
-        ret.success = false;
-    }
-    return ret;
-}
-
 ethash_return_value_t ethash_light_compute(
                                            ethash_light_ptr light,
                                            ethash_h256_t const header_hash,
@@ -304,13 +260,7 @@ ethash_return_value_t ethash_light_compute(
                                            )
 {
     ethash_uint64_t full_size = ethash_get_datasize(light->block_number);
-    return ethash_light_compute_internal(light, full_size, header_hash, nonce);
-//
-//    ethash_return_value_t ret;
-//    ret.success = ethash_hash(&ret, NULL, light, full_size, header_hash, nonce);
-//    //    ret.success = true;
-//    //    if (!ethash_hash(&ret, NULL, light, full_size, header_hash, nonce)) {
-//    //        ret.success = false;
-//    //    }
-//    return ret;
+    ethash_return_value_t ret;
+    ret.success = ethash_hash(&ret, NULL, light, full_size, header_hash, nonce);
+    return ret;
 }
