@@ -72,9 +72,9 @@ struct Ethash {
             print("Cache generation success")
             if let lastNode = cacheArray.last,
                 lastNode == lastCacheNode {
-                print("last cache node correct")
+                print("OK: last cache node correct")
             } else {
-                print("last cache node incorrect!")
+                print("ERR: last cache node incorrect!")
             }
         } else {
             print("Cache generation error")
@@ -130,16 +130,16 @@ struct Ethash {
             let m1 = self.mix_hash
             let check1 = result.mix_hash == self.mix_hash
             if check1 {
-                print("mix hash correct")
+                print("OK: mix hash correct")
             } else {
                 print("\(m1.b.0)")
                 print("\(result.mix_hash.b.0)")
-                print("mix hash incorrect!")
+                print("ERR: mix hash incorrect!")
             }
             if result.result == self.boundary {
-                print("boundary correct")
+                print("OK: boundary correct")
             } else {
-                print("boundary incorrect!")
+                print("ERR: boundary incorrect!")
             }
         } else {
             print("compute result: error")
