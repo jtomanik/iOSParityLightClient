@@ -122,7 +122,16 @@ extern "C" {
                             ethash_h256_t const header_hash,
                             ethash_uint64_t const nonce
                             );
-    
+
+    ethash_h256_t ethash_keccak_256(
+                                     ethash_uint8_t const* in,
+                                     size_t const size
+                                     );
+
+    ethash_node_t ethash_keccak_512(
+                                     ethash_uint8_t const* in,
+                                     size_t const size
+                                     );
 #ifdef __cplusplus
 }
 #endif

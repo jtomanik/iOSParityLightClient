@@ -10,17 +10,17 @@ extern "C" {
     
     struct ethash_h256;
     
-    int sha3_256(
+    int keccak_256(
                  const ethash_uint8_t* in,
                  size_t inlen,
-                 uint8_t* out,
+                 ethash_uint8_t* out,
                  size_t outlen
                  );
 
-    int sha3_512(
+    int keccak_512(
                  const ethash_uint8_t* in,
                  size_t inlen,
-                 uint8_t* out,
+                 ethash_uint8_t* out,
                  size_t outlen
                  );
     
@@ -29,7 +29,7 @@ extern "C" {
                                 ethash_uint8_t const* data,
                                 size_t const size)
     {
-        sha3_256(data, size, (ethash_uint8_t*)ret, 32);
+        keccak_256(data, size, (ethash_uint8_t*)ret, 32);
     }
     
     static inline void SHA3_512(
@@ -37,7 +37,7 @@ extern "C" {
                                 ethash_uint8_t const* data,
                                 size_t const size)
     {
-        sha3_512(data, size, ret, 64);
+        keccak_512(data, size, ret, 64);
     }
     
 #ifdef __cplusplus

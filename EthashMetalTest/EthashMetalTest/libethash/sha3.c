@@ -154,10 +154,10 @@ static inline int hash(
     return 0;
 }
 
-int sha3_256(
+int keccak_256(
              const ethash_uint8_t* in,
              size_t inlen,
-             uint8_t* out,
+             ethash_uint8_t* out,
              size_t outlen
 )
 {
@@ -167,10 +167,10 @@ int sha3_256(
     return hash(in, inlen, out, outlen, 200 - (256 / 4), 0x01);
 }
 
-int sha3_512(
+int keccak_512(
              const ethash_uint8_t* in,
              size_t inlen,
-             uint8_t* out,
+             ethash_uint8_t* out,
              size_t outlen
              )
 {
