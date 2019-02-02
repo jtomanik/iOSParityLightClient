@@ -14,6 +14,8 @@ struct Ethash {
     private let rounds = 10 // 30000
     private let blockNumber: UInt64 = 486382
 
+    private let tests = EthashTests()
+
     private let lastCacheNode: ethash_node = {
         var node = ethash_node(bytes: (
             13, 117, 10, 189, 65, 30, 132, 78, 179, 242, 149, 203, 147, 147, 115, 104,
@@ -46,11 +48,6 @@ struct Ethash {
     private let nonce: UInt64 = 0xd7b3ac70a301a249
 
     init() {
-    }
-
-    func testUnits() {
-        testSHA3()
-        testSeedComputation()
     }
 
     func testCPU() {
@@ -155,127 +152,17 @@ struct Ethash {
         print("End")
     }
 
-    func getEpoch(forBlock block: UInt64) -> UInt64 {
-        let test = ethash_get_epoch_number(block)
-        return test
+    func testUnits() {
+        tests.testUnits()
     }
 
-    func testSHA3() {
-        // SHA3_256
-        testEmptyKeccak256()
-        testStringKeccak256()
-    }
-
-    private func testEmptyKeccak256() {
-        let inputString = ""
-        let data = inputString.data(using: String.Encoding.ascii)!
-
-        var expected = ethash_h256_t()
-        expected.b = (
-            0xc5, 0xd2, 0x46, 0x01, 0x86, 0xf7, 0x23, 0x3c, 0x92, 0x7e, 0x7d, 0xb2, 0xdc, 0xc7, 0x03, 0xc0,
-            0xe5, 0x00, 0xb6, 0x53, 0xca, 0x82, 0x27, 0x3b, 0x7b, 0xfa, 0xd8, 0x04, 0x5d, 0x85, 0xa4, 0x70)
-
-        let result = data.withUnsafeBytes { (pointer) -> ethash_h256_t in
-            ethash_keccak_256(pointer, data.count)
+    private func dumpDAGCahce(cache: [ethash_node_t]) {
+        guard let first = cache.first,
+        let last = cache.last else {
+            return
         }
-
-        if result == expected {
-            print("SHA3 256 test1 ok")
-        } else {
-            print("SHA3 256 test1 error")
-        }
-    }
-
-    private func testStringKeccak256() {
-        let inputString = "abc"
-        let data = inputString.data(using: String.Encoding.ascii)!
-
-        var expected = ethash_h256_t()
-        expected.b = (
-            0x4e, 0x03, 0x65, 0x7a, 0xea, 0x45, 0xa9, 0x4f, 0xc7, 0xd4, 0x7b, 0xa8, 0x26, 0xc8, 0xd6, 0x67,
-            0xc0, 0xd1, 0xe6, 0xe3, 0x3a, 0x64, 0xa0, 0x36, 0xec, 0x44, 0xf5, 0x8f, 0xa1, 0x2d, 0x6c, 0x45)
-
-        let result = data.withUnsafeBytes { (pointer) -> ethash_h256_t in
-            ethash_keccak_256(pointer, data.count)
-        }
-
-        if result == expected {
-            print("SHA3 256 test2 ok")
-        } else {
-            print(result.b)
-            print("SHA3 256 test2 error")
-        }
-    }
-
-    private func testSeedComputation() {
-        testSeedForBlockZero()
-        testSeedForRefferenceBlock()
-        testSeedComputationAfterOlder()
-        testSeedComputationAfterNewer()
-    }
-
-    private func testSeedForBlockZero() {
-        let blockNumber: ethash_uint64_t = 0
-        var expected = ethash_h256_t()
-        expected.b = (
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-        let result = ethash_get_seedhash(blockNumber)
-        if result == expected {
-            print("TEST: Seed number for block \(blockNumber) correct")
-        } else {
-            print(result.b)
-            print("SHA3 256 test2 error")
-        }
-    }
-
-    private func testSeedForRefferenceBlock() {
-        let blockNumber: ethash_uint64_t = 486382
-        var expected = ethash_h256_t()
-        expected.b = (
-            241, 175,  44, 134,  39, 121, 245, 239, 228, 236,  43, 160, 195, 152,  46,   7,
-            199,   5, 253, 147, 241, 206,  98,  43,   3, 104,  17,  40, 192,  79, 106, 162)
-        let result = ethash_get_seedhash(blockNumber)
-        if result == expected {
-            print("TEST: Seed number for block \(blockNumber) correct")
-        } else {
-            print(result.b)
-            print("SHA3 256 test2 error")
-        }
-    }
-
-    private func testSeedComputationAfterOlder() {
-        let blockNumber1: ethash_uint64_t = 50000
-        let blockNumber2: ethash_uint64_t = 486382
-        var expected = ethash_h256_t()
-        expected.b = (
-            241, 175,  44, 134,  39, 121, 245, 239, 228, 236,  43, 160, 195, 152,  46,   7,
-            199,   5, 253, 147, 241, 206,  98,  43,   3, 104,  17,  40, 192,  79, 106, 162)
-        let _ = ethash_get_seedhash(blockNumber1)
-        let result = ethash_get_seedhash(blockNumber2)
-        if result == expected {
-            print("TEST: Seed number for block \(blockNumber) after older block correct")
-        } else {
-            print(result.b)
-            print("SHA3 256 test2 error")
-        }
-    }
-
-    private func testSeedComputationAfterNewer() {
-        let blockNumber1: ethash_uint64_t = 972764
-        let blockNumber2: ethash_uint64_t = 486382
-        var expected = ethash_h256_t()
-        expected.b = (
-            241, 175,  44, 134,  39, 121, 245, 239, 228, 236,  43, 160, 195, 152,  46,   7,
-            199,   5, 253, 147, 241, 206,  98,  43,   3, 104,  17,  40, 192,  79, 106, 162)
-        let _ = ethash_get_seedhash(blockNumber1)
-        let result = ethash_get_seedhash(blockNumber2)
-        if result == expected {
-            print("TEST: Seed number for block \(blockNumber) after newer block correct")
-        } else {
-            print(result.b)
-            print("SHA3 256 test2 error")
-        }
+        print(first.bytes)
+        print(last.bytes)
     }
 }
 
