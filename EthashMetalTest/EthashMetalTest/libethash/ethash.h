@@ -132,6 +132,11 @@ extern "C" {
                                      ethash_uint8_t const* in,
                                      size_t const size
                                      );
+    void ethash_calculate_dag_item(
+                                   ethash_node_t* const ret,
+                                   ethash_uint32_t node_index,
+                                   ethash_light_ptr const light
+                                   );
 #ifdef __cplusplus
 }
 #endif

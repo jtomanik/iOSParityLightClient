@@ -40,6 +40,13 @@ extern "C" {
         memset(hash, 0, 32);
     }
 
+    static inline void ethash_node_reset(
+                                         ethash_node_t* node
+                                         )
+    {
+        memset(node, 0, 64);
+    }
+
     ethash_light_ptr ethash_light_new_internal(
                                                ethash_uint64_t cache_size,
                                                ethash_h256_t const* seed

@@ -268,7 +268,6 @@ ethash_return_value_t ethash_light_compute(
 ethash_h256_t ethash_keccak_256(ethash_uint8_t const* in, size_t const size) {
     ethash_h256_t ret;
     ethash_h256_reset(&ret);
-//    SHA3_256(&ret, (uint8_t*)&in, size);
     int result;
     result = keccak_256(in, size, (ethash_uint8_t*)&ret, sizeof(ethash_h256_t));
     return ret;
@@ -276,6 +275,8 @@ ethash_h256_t ethash_keccak_256(ethash_uint8_t const* in, size_t const size) {
 
 ethash_node_t ethash_keccak_512(ethash_uint8_t const* in, size_t const size) {
     ethash_node_t ret;
-    SHA3_512(ret.bytes, (uint8_t*)&in, size);
+    ethash_node_reset(&ret);
+    int result;
+    result = keccak_512(in, size, (ethash_uint8_t*)&ret, sizeof(ethash_node_t));
     return ret;
 }
