@@ -26,22 +26,23 @@
 #include <stddef.h>
 
 #define ETHASH_REVISION 23
-#define ETHASH_DATASET_BYTES_INIT 1073741824U // 2**30
-#define ETHASH_DATASET_BYTES_GROWTH 8388608U  // 2**23
-#define ETHASH_CACHE_BYTES_INIT 1073741824U // 2**24
-#define ETHASH_CACHE_BYTES_GROWTH 131072U  // 2**17
-#define ETHASH_EPOCH_LENGTH 30000U
-#define ETHASH_MIX_BYTES 128
-#define ETHASH_HASH_BYTES 64
-#define ETHASH_DATASET_PARENTS 256
-#define ETHASH_CACHE_ROUNDS 3
-#define ETHASH_ACCESSES 64
+#define ETHASH_DATASET_BYTES_INIT 1073741824U // bytes in dataset at genesis 2**30
+#define ETHASH_DATASET_BYTES_GROWTH 8388608U  // dataset growth per epoch 2**23
+#define ETHASH_CACHE_BYTES_INIT 1073741824U // bytes in cache at genesis 2**24
+#define ETHASH_CACHE_BYTES_GROWTH 131072U  // cache growth per epoch 2**17
+#define ETHASH_EPOCH_LENGTH 30000U // blocks per epoch
+#define ETHASH_WORD_BYTES 4 // bytes in word, 32 bits
+#define ETHASH_MIX_BYTES 128 // width of mix, 1024 bits
+#define ETHASH_HASH_BYTES 64 // hash length in bytes, 512bits
+#define ETHASH_DATASET_PARENTS 256 // number of parents of each dataset element
+#define ETHASH_CACHE_ROUNDS 3 // number of rounds in cache production
+#define ETHASH_ACCESSES 64 // number of accesses in hashimoto loop
 #define ETHASH_DAG_MAGIC_NUM_SIZE 8
 #define ETHASH_DAG_MAGIC_NUM 0xFEE1DEADBADDCAFE
 
 // compile time settings
-#define NODE_WORDS (64/4)
-#define MIX_WORDS (ETHASH_MIX_BYTES/4)
+#define NODE_WORDS (ETHASH_HASH_BYTES / ETHASH_WORD_BYTES)
+#define MIX_WORDS (ETHASH_MIX_BYTES / ETHASH_WORD_BYTES)
 #define MIX_NODES (MIX_WORDS / NODE_WORDS)
 
 #ifdef __cplusplus
@@ -63,14 +64,14 @@ extern "C" {
 { {__VA_ARGS__} }
     
     typedef struct ethash_light {
-        void* cache;
+        const void *cache;
         ethash_uint64_t cache_size;
         ethash_uint64_t block_number;
     } ethash_light_t;
-    typedef struct ethash_light* ethash_light_ptr;
+    typedef struct ethash_light *ethash_light_ptr;
     
     struct ethash_full;
-    typedef struct ethash_full* ethash_full_t;
+    typedef struct ethash_full *ethash_full_t;
     
     typedef int(*ethash_callback_t)(unsigned);
     
@@ -86,56 +87,52 @@ extern "C" {
         ethash_uint64_t double_words[NODE_WORDS / 2];
     } ethash_node_t;
     
-    ethash_uint64_t ethash_get_epoch_number(ethash_uint64_t const block_number);
-    ethash_uint64_t ethash_get_datasize(ethash_uint64_t const block_number);
-    ethash_uint64_t ethash_get_cachesize(ethash_uint64_t const block_number);
-    
-    /**
-     * Calculate the seedhash for a given block number
-     */
-    ethash_h256_t ethash_get_seedhash(ethash_uint64_t block_number);
+    ethash_uint64_t ethash_get_epoch_number(const ethash_uint64_t block_number);
+    ethash_uint64_t ethash_get_datasize(const ethash_uint64_t block_number);
+    ethash_uint64_t ethash_get_cachesize(const ethash_uint64_t block_number);
+    ethash_h256_t ethash_get_seedhash(const ethash_uint64_t block_number);
+    ethash_uint32_t ethash_get_cache_node_number(const ethash_uint64_t block_number);
 
-    ethash_uint32_t ethash_get_cache_node_number(ethash_uint64_t const block_number);
     bool ethash_compute_cache_nodes(
-                                    ethash_node_t* const nodes,
-                                    ethash_uint64_t cache_size,
-                                    ethash_h256_t const* seed
+                                    ethash_node_t *const nodes,
+                                    const ethash_uint64_t cache_size,
+                                    const ethash_h256_t *const seed
                                     );
-    ethash_light_ptr ethash_light_new(ethash_uint64_t block_number);
+    ethash_light_ptr ethash_light_new(const ethash_uint64_t block_number);
     ethash_light_ptr ethash_light_new_with_cache(
-                                                 ethash_uint64_t block_number,
-                                                 ethash_node_t* const nodes,
-                                                 ethash_uint64_t cache_size
+                                                 const ethash_uint64_t block_number,
+                                                 const ethash_node_t *const nodes,
+                                                 const ethash_uint64_t cache_size
                                                  );
     void ethash_light_delete_without_cache(ethash_light_ptr light);
     void ethash_light_delete(ethash_light_ptr light);
     ethash_return_value_t ethash_light_compute(
                                                ethash_light_ptr light,
-                                               ethash_h256_t const header_hash,
-                                               ethash_uint64_t nonce
+                                               const ethash_h256_t header_hash,
+                                               const ethash_uint64_t nonce
                                                );
     bool ethash_hash(
-                            ethash_return_value_t* ret,
-                            ethash_node_t const* full_nodes,
-                            ethash_light_ptr const light,
-                            ethash_uint64_t full_size,
-                            ethash_h256_t const header_hash,
-                            ethash_uint64_t const nonce
+                            ethash_return_value_t *const ret,
+                            const ethash_node_t *full_nodes,
+                            const ethash_light_ptr light,
+                            const ethash_uint64_t full_size,
+                            const ethash_h256_t header_hash,
+                            const ethash_uint64_t nonce
                             );
 
     ethash_h256_t ethash_keccak_256(
-                                     ethash_uint8_t const* in,
-                                     size_t const size
+                                     const ethash_uint8_t *const in,
+                                     const size_t size
                                      );
 
     ethash_node_t ethash_keccak_512(
-                                     ethash_uint8_t const* in,
-                                     size_t const size
+                                     const ethash_uint8_t *const in,
+                                     const size_t size
                                      );
     void ethash_calculate_dag_item(
-                                   ethash_node_t* const ret,
-                                   ethash_uint32_t node_index,
-                                   ethash_light_ptr const light
+                                   ethash_node_t *const ret,
+                                   const ethash_uint32_t node_index,
+                                   const ethash_light_ptr light
                                    );
 #ifdef __cplusplus
 }

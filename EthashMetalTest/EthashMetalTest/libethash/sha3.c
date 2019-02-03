@@ -126,6 +126,14 @@ I += rate;						\
 L -= rate;						\
 }
 
+static inline void mem_clear_200(ethash_uint8_t *b)
+{
+    ethash_uint32_t* buffer = (ethash_uint32_t *)b;
+    for (ethash_uint32_t i = 0; i < 200 / ETHASH_WORD_BYTES; i++) {
+        buffer[i] = 0;
+    }
+}
+
 /** The sponge-based hash construction. **/
 static inline int hash(
                        const ethash_uint8_t* in,
@@ -150,7 +158,8 @@ static inline int hash(
     // Squeeze output.
     foldP(out, outlen, setout);
     setout(a, out, outlen);
-    memset(a, 0, 200);
+//    memset(a, 0, 200);
+    mem_clear_200(a);
     return 0;
 }
 

@@ -11,7 +11,7 @@ extern "C" {
 
 #define FNV_PRIME 0x01000193
 
-    static inline ethash_uint32_t fnv_hash(ethash_uint32_t const x, ethash_uint32_t const y)
+    static inline ethash_uint32_t fnv_hash(const ethash_uint32_t x, const ethash_uint32_t y)
     {
         return x * FNV_PRIME ^ y;
     }
@@ -48,19 +48,19 @@ extern "C" {
     }
 
     ethash_light_ptr ethash_light_new_internal(
-                                               ethash_uint64_t cache_size,
+                                               const ethash_uint64_t cache_size,
                                                ethash_h256_t const* seed
                                                );
 
     void ethash_calculate_dag_item(
                                    ethash_node_t* const ret,
-                                   ethash_uint32_t node_index,
+                                   const ethash_uint32_t node_index,
                                    ethash_light_ptr const cache
                                    );
 
-    ethash_uint64_t ethash_get_datasize(ethash_uint64_t const block_number);
+    ethash_uint64_t ethash_get_datasize(const ethash_uint64_t block_number);
     
-    ethash_uint64_t ethash_get_cachesize(ethash_uint64_t const block_number);
+    ethash_uint64_t ethash_get_cachesize(const ethash_uint64_t block_number);
 
 #ifdef __cplusplus
 }
