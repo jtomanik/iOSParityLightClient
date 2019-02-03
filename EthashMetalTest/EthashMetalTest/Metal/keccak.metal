@@ -97,24 +97,6 @@ namespace keccak {
     #define FOR(i, ST, L, S)          \
     _(for (size_t i = 0; i < L; i += ST) { S; })
 
-    #define mkapply_ds(NAME, S)       \
-    static inline void NAME(          \
-    MEMSPACE ethash_uint8_t *dst,       \
-    MEMSPACE const ethash_uint8_t *src, \
-    size_t len                        \
-    ) {                               \
-    FOR(i, 1, len, S);                \
-    }
-
-    #define mkapply_sd(NAME, S)       \
-    static inline void NAME(          \
-    MEMSPACE const ethash_uint8_t *src, \
-    MEMSPACE uint8_t *dst,              \
-    size_t len                        \
-    ) {                               \
-    FOR(i, 1, len, S);                \
-    }
-
     static inline void xorin(
                              thread ethash_uint8_t *const dst,
                              MEMSPACE const ethash_uint8_t *const src,
@@ -139,12 +121,11 @@ namespace keccak {
 
     static inline void mem_clear_200(thread ethash_uint8_t *b)
     {
-        thread ethash_uint32_t* buffer = (thread ethash_uint32_t *)b;
+        thread ethash_uint32_t *buffer = (thread ethash_uint32_t *)b;
         for (ethash_uint32_t i = 0; i < 200 / ETHASH_WORD_BYTES; i++) {
             buffer[i] = 0;
         }
     }
-
 
     /** The sponge-based hash construction. **/
     static inline int hash(

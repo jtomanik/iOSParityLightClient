@@ -50,8 +50,8 @@ v = 0;										\
 REPEAT5(e; v += s;)
 
 /*** Keccak-f[1600] ***/
-static inline void keccakf(void* state) {
-    ethash_uint64_t* a = (ethash_uint64_t*)state;
+static inline void keccakf(void *state) {
+    ethash_uint64_t *a = (ethash_uint64_t *)state;
     ethash_uint64_t b[5] = {0};
     ethash_uint64_t t = 0;
     ethash_uint8_t x, y;
@@ -111,8 +111,8 @@ size_t len                      \
 FOR(i, 1, len, S);				\
 }
 
-mkapply_ds(xorin, dst[i] ^= src[i])  // xorin
-mkapply_sd(setout, dst[i] = src[i])  // setout
+//mkapply_ds(xorin, dst[i] ^= src[i])  // xorin
+//mkapply_sd(setout, dst[i] = src[i])  // setout
 
 #define P keccakf
 #define Plen 200
@@ -126,9 +126,31 @@ I += rate;						\
 L -= rate;						\
 }
 
+static inline void xorin(
+                         ethash_uint8_t *const dst,
+                         const ethash_uint8_t *const src,
+                         const size_t len)
+{
+    for (size_t i = 0; i < len; i += 1)
+    {
+        dst[i] ^= src[i];
+    }
+}
+
+static inline void setout(
+                          const ethash_uint8_t *const src,
+                          uint8_t *const dst,
+                          const size_t len)
+{
+    for (size_t i = 0; i < len; i += 1)
+    {
+        dst[i] = src[i];
+    }
+}
+
 static inline void mem_clear_200(ethash_uint8_t *b)
 {
-    ethash_uint32_t* buffer = (ethash_uint32_t *)b;
+    ethash_uint32_t *buffer = (ethash_uint32_t *)b;
     for (ethash_uint32_t i = 0; i < 200 / ETHASH_WORD_BYTES; i++) {
         buffer[i] = 0;
     }
@@ -136,18 +158,25 @@ static inline void mem_clear_200(ethash_uint8_t *b)
 
 /** The sponge-based hash construction. **/
 static inline int hash(
-                       const ethash_uint8_t* in,
+                       const ethash_uint8_t *in,
                        size_t inlen,
-                       ethash_uint8_t* out,
+                       ethash_uint8_t *out,
                        size_t outlen,
                        size_t rate,
-                       ethash_uint8_t delim) {
+                       ethash_uint8_t delim)
+{
     if ((out == NULL) || ((in == NULL) && inlen != 0) || (rate >= Plen)) {
         return -1;
     }
     ethash_uint8_t a[Plen] = {0};
     // Absorb input.
-    foldP(in, inlen, xorin);
+    // Fold P * xorin over the full blocks of an input.
+    while (inlen >= rate) {
+        xorin(a, in, rate);
+        P(a);
+        in += rate;
+        inlen -= rate;
+    }
     // Xor in the DS and pad frame.
     a[inlen] ^= delim;
     a[rate - 1] ^= 0x80;
@@ -156,35 +185,50 @@ static inline int hash(
     // Apply P
     P(a);
     // Squeeze output.
-    foldP(out, outlen, setout);
+    // Fold P * setout over the full blocks of an input.
+    while (outlen >= rate) {
+        setout(a, out, rate);
+        P(a);
+        out += rate;
+        outlen -= rate;
+    }
     setout(a, out, outlen);
-//    memset(a, 0, 200);
     mem_clear_200(a);
     return 0;
 }
 
 int keccak_256(
-             const ethash_uint8_t* in,
-             size_t inlen,
-             ethash_uint8_t* out,
-             size_t outlen
+             const ethash_uint8_t *const in,
+             const size_t inlen,
+             ethash_uint8_t *const out,
+             const size_t outlen
 )
 {
     if (outlen > (256/8)) {
         return -1;
     }
-    return hash(in, inlen, out, outlen, 200 - (256 / 4), 0x01);
+
+    const ethash_uint8_t *mutable_in = in;
+    ethash_uint8_t *mutable_out = out;
+    size_t mutable_inlen = inlen;
+    size_t mutable_outlen = outlen;
+    return hash(mutable_in, mutable_inlen, mutable_out, mutable_outlen, 200 - (256 / 4), 0x01);
 }
 
 int keccak_512(
-             const ethash_uint8_t* in,
-             size_t inlen,
-             ethash_uint8_t* out,
-             size_t outlen
+             const ethash_uint8_t *const in,
+             const size_t inlen,
+             ethash_uint8_t *const out,
+             const size_t outlen
              )
 {
     if (outlen > (512/8)) {
         return -1;
     }
-    return hash(in, inlen, out, outlen, 200 - (512 / 4), 0x01);
+
+    const ethash_uint8_t *mutable_in = in;
+    ethash_uint8_t *mutable_out = out;
+    size_t mutable_inlen = inlen;
+    size_t mutable_outlen = outlen;
+    return hash(mutable_in, mutable_inlen, mutable_out, mutable_outlen, 200 - (512 / 4), 0x01);
 }

@@ -277,6 +277,6 @@ ethash_node_t ethash_keccak_512(const ethash_uint8_t *const in, const size_t siz
     ethash_node_t ret;
     ethash_node_reset(&ret);
     int result;
-    result = keccak_512(in, size, (ethash_uint8_t*)&ret, sizeof(ethash_node_t));
+    result = keccak_512(in, size, (ethash_uint8_t *)&ret, sizeof(ethash_node_t));
     return ret;
 }
