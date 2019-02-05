@@ -12,10 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var gpu: EthashGPU?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        gpu = EthashGPU()
+        gpu?.testUnits()
+        
         let eth = Ethash()
         eth.testUnits()
         eth.testCPU()
