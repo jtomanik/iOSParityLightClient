@@ -7,8 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A6E48CD21FA4DEE00C450AC /* sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E48BB21FA4DEE00C450AC /* sha3.c */; };
-		7A6E48D221FA4DEE00C450AC /* internal.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A6E48C821FA4DEE00C450AC /* internal.c */; };
+		7A3C87132207B35B00D8CFF4 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3C87122207B35B00D8CFF4 /* Metal.framework */; };
+		7A884BE82205BB4F00B9D69C /* EthashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884BE72205BB4F00B9D69C /* EthashTests.swift */; };
+		7A884BEA2205BDE500B9D69C /* EthashGPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884BE92205BDE500B9D69C /* EthashGPU.swift */; };
+		7A884BEB2205BFD500B9D69C /* Ethash.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E17BE21F9E010004F8A5D /* Ethash.metal */; };
+		7A884C052207869700B9D69C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C042207869700B9D69C /* main.swift */; };
+		7A884C0B220786F200B9D69C /* EthashGPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884BE92205BDE500B9D69C /* EthashGPU.swift */; };
+		7A884C0D22078A4D00B9D69C /* Ethash.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E17BE21F9E010004F8A5D /* Ethash.metal */; };
+		7A884C0E22078A4E00B9D69C /* Ethash.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E17BE21F9E010004F8A5D /* Ethash.metal */; };
+		7A884C1B22078DA300B9D69C /* internal.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C1822078DA300B9D69C /* internal.c */; };
+		7A884C1D22078DA300B9D69C /* sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C1922078DA300B9D69C /* sha3.c */; };
+		7A884C2222078E0700B9D69C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C2122078E0700B9D69C /* Common.swift */; };
+		7A884C2322078E0700B9D69C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C2122078E0700B9D69C /* Common.swift */; };
 		7A8E17A821F9D6AD004F8A5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E17A721F9D6AD004F8A5D /* AppDelegate.swift */; };
 		7A8E17AA21F9D6AD004F8A5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E17A921F9D6AD004F8A5D /* ViewController.swift */; };
 		7A8E17AD21F9D6AD004F8A5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8E17AB21F9D6AD004F8A5D /* Main.storyboard */; };
@@ -17,17 +27,37 @@
 		7ADF737A21FCB5B9004BD5EF /* Ethash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADF737921FCB5B9004BD5EF /* Ethash.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7A884C002207869700B9D69C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		7A6E48AF21FA3A2100C450AC /* helpers.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = helpers.metal; sourceTree = "<group>"; };
+		7A3C87122207B35B00D8CFF4 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
 		7A6E48B121FA4D2800C450AC /* EthashMetalTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EthashMetalTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		7A6E48B721FA4DEE00C450AC /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
-		7A6E48BB21FA4DEE00C450AC /* sha3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha3.c; sourceTree = "<group>"; };
-		7A6E48BF21FA4DEE00C450AC /* data_sizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = data_sizes.h; sourceTree = "<group>"; };
-		7A6E48C521FA4DEE00C450AC /* sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha3.h; sourceTree = "<group>"; };
-		7A6E48C821FA4DEE00C450AC /* internal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = internal.c; sourceTree = "<group>"; };
-		7A6E48C921FA4DEE00C450AC /* ethash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ethash.h; sourceTree = "<group>"; };
-		7A6E48D321FA5FEF00C450AC /* cache.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = cache.metal; sourceTree = "<group>"; };
 		7A6E48D521FA606100C450AC /* Ethash.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ethash.txt; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
+		7A884BE72205BB4F00B9D69C /* EthashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthashTests.swift; sourceTree = "<group>"; };
+		7A884BE92205BDE500B9D69C /* EthashGPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthashGPU.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7A884BF12205CE8C00B9D69C /* TestMetalLib.metallib */ = {isa = PBXFileReference; explicitFileType = "archive.metal-library"; includeInIndex = 0; path = TestMetalLib.metallib; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A884BFD220764EF00B9D69C /* Ethash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ethash.h; sourceTree = "<group>"; };
+		7A884C022207869700B9D69C /* GPUEthashTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GPUEthashTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A884C042207869700B9D69C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7A884C0F22078D1400B9D69C /* GPUEthashTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GPUEthashTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		7A884C1322078DA300B9D69C /* ethash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ethash.h; sourceTree = "<group>"; };
+		7A884C1422078DA300B9D69C /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
+		7A884C1522078DA300B9D69C /* data_sizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = data_sizes.h; sourceTree = "<group>"; };
+		7A884C1622078DA300B9D69C /* endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = endian.h; sourceTree = "<group>"; };
+		7A884C1722078DA300B9D69C /* sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha3.h; sourceTree = "<group>"; };
+		7A884C1822078DA300B9D69C /* internal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = internal.c; sourceTree = "<group>"; };
+		7A884C1922078DA300B9D69C /* sha3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha3.c; sourceTree = "<group>"; };
+		7A884C2122078E0700B9D69C /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7A8E17A421F9D6AD004F8A5D /* EthashMetalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthashMetalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8E17A721F9D6AD004F8A5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A8E17A921F9D6AD004F8A5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,14 +65,21 @@
 		7A8E17AE21F9D6AF004F8A5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A8E17B121F9D6AF004F8A5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A8E17B321F9D6AF004F8A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A8E17B921F9D6DF004F8A5D /* Metal.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Metal.metal; sourceTree = "<group>"; };
 		7A8E17BC21F9DD5F004F8A5D /* keccak.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = keccak.metal; sourceTree = "<group>"; };
 		7A8E17BE21F9E010004F8A5D /* Ethash.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Ethash.metal; sourceTree = "<group>"; };
+		7AA6E91A2208F4AC00CCDFCD /* sha3expanded.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sha3expanded.c; sourceTree = "<group>"; };
 		7ADF737921FCB5B9004BD5EF /* Ethash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ethash.swift; sourceTree = "<group>"; };
-		7ADF737D21FCBAED004BD5EF /* endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = endian.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7A884BFF2207869700B9D69C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A3C87132207B35B00D8CFF4 /* Metal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A8E17A121F9D6AD004F8A5D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,25 +90,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7A6E48B521FA4D3400C450AC /* libethash */ = {
+		7A3C87112207B35B00D8CFF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7A6E48C921FA4DEE00C450AC /* ethash.h */,
-				7A6E48B721FA4DEE00C450AC /* internal.h */,
-				7A6E48C821FA4DEE00C450AC /* internal.c */,
-				7A6E48BF21FA4DEE00C450AC /* data_sizes.h */,
-				7A6E48C521FA4DEE00C450AC /* sha3.h */,
-				7A6E48BB21FA4DEE00C450AC /* sha3.c */,
-				7ADF737D21FCBAED004BD5EF /* endian.h */,
+				7A3C87122207B35B00D8CFF4 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A884BF22205CE8C00B9D69C /* TestMetalLib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestMetalLib;
+			sourceTree = "<group>";
+		};
+		7A884C032207869700B9D69C /* GPUEthashTest */ = {
+			isa = PBXGroup;
+			children = (
+				7A884C042207869700B9D69C /* main.swift */,
+				7A884C0F22078D1400B9D69C /* GPUEthashTest-Bridging-Header.h */,
+			);
+			path = GPUEthashTest;
+			sourceTree = "<group>";
+		};
+		7A884C1222078DA300B9D69C /* libethash */ = {
+			isa = PBXGroup;
+			children = (
+				7AA6E91A2208F4AC00CCDFCD /* sha3expanded.c */,
+				7A884C1322078DA300B9D69C /* ethash.h */,
+				7A884C1422078DA300B9D69C /* internal.h */,
+				7A884C1522078DA300B9D69C /* data_sizes.h */,
+				7A884C1622078DA300B9D69C /* endian.h */,
+				7A884C1722078DA300B9D69C /* sha3.h */,
+				7A884C1822078DA300B9D69C /* internal.c */,
+				7A884C1922078DA300B9D69C /* sha3.c */,
 			);
 			path = libethash;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		7A8E179B21F9D6AD004F8A5D = {
 			isa = PBXGroup;
 			children = (
 				7A8E17A621F9D6AD004F8A5D /* EthashMetalTest */,
+				7A884BF22205CE8C00B9D69C /* TestMetalLib */,
+				7A884C032207869700B9D69C /* GPUEthashTest */,
 				7A8E17A521F9D6AD004F8A5D /* Products */,
+				7A3C87112207B35B00D8CFF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				7A8E17A421F9D6AD004F8A5D /* EthashMetalTest.app */,
+				7A884BF12205CE8C00B9D69C /* TestMetalLib.metallib */,
+				7A884C022207869700B9D69C /* GPUEthashTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,8 +153,8 @@
 		7A8E17A621F9D6AD004F8A5D /* EthashMetalTest */ = {
 			isa = PBXGroup;
 			children = (
+				7A884C1222078DA300B9D69C /* libethash */,
 				7ADF737B21FCB5BF004BD5EF /* Ethash */,
-				7A6E48B521FA4D3400C450AC /* libethash */,
 				7A8E17BB21F9D73D004F8A5D /* Metal */,
 				7A8E17A721F9D6AD004F8A5D /* AppDelegate.swift */,
 				7A8E17A921F9D6AD004F8A5D /* ViewController.swift */,
@@ -103,11 +170,9 @@
 		7A8E17BB21F9D73D004F8A5D /* Metal */ = {
 			isa = PBXGroup;
 			children = (
-				7A8E17B921F9D6DF004F8A5D /* Metal.metal */,
-				7A8E17BC21F9DD5F004F8A5D /* keccak.metal */,
-				7A6E48AF21FA3A2100C450AC /* helpers.metal */,
+				7A884BFD220764EF00B9D69C /* Ethash.h */,
 				7A8E17BE21F9E010004F8A5D /* Ethash.metal */,
-				7A6E48D321FA5FEF00C450AC /* cache.metal */,
+				7A8E17BC21F9DD5F004F8A5D /* keccak.metal */,
 				7A6E48D521FA606100C450AC /* Ethash.txt */,
 			);
 			path = Metal;
@@ -117,6 +182,9 @@
 			isa = PBXGroup;
 			children = (
 				7ADF737921FCB5B9004BD5EF /* Ethash.swift */,
+				7A884BE92205BDE500B9D69C /* EthashGPU.swift */,
+				7A884BE72205BB4F00B9D69C /* EthashTests.swift */,
+				7A884C2122078E0700B9D69C /* Common.swift */,
 			);
 			path = Ethash;
 			sourceTree = "<group>";
@@ -124,6 +192,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7A884BF02205CE8C00B9D69C /* TestMetalLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A884BF52205CE8C00B9D69C /* Build configuration list for PBXNativeTarget "TestMetalLib" */;
+			buildPhases = (
+				7A884BEF2205CE8C00B9D69C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestMetalLib;
+			productName = TestMetalLib;
+			productReference = 7A884BF12205CE8C00B9D69C /* TestMetalLib.metallib */;
+			productType = "com.apple.product-type.metal-library";
+		};
+		7A884C012207869700B9D69C /* GPUEthashTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A884C062207869700B9D69C /* Build configuration list for PBXNativeTarget "GPUEthashTest" */;
+			buildPhases = (
+				7A884BFE2207869700B9D69C /* Sources */,
+				7A884BFF2207869700B9D69C /* Frameworks */,
+				7A884C002207869700B9D69C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GPUEthashTest;
+			productName = GPUEthashTest;
+			productReference = 7A884C022207869700B9D69C /* GPUEthashTest */;
+			productType = "com.apple.product-type.tool";
+		};
 		7A8E17A321F9D6AD004F8A5D /* EthashMetalTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A8E17B621F9D6AF004F8A5D /* Build configuration list for PBXNativeTarget "EthashMetalTest" */;
@@ -151,6 +251,13 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Jakub Tomanik";
 				TargetAttributes = {
+					7A884BF02205CE8C00B9D69C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					7A884C012207869700B9D69C = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
 					7A8E17A321F9D6AD004F8A5D = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1000;
@@ -171,6 +278,8 @@
 			projectRoot = "";
 			targets = (
 				7A8E17A321F9D6AD004F8A5D /* EthashMetalTest */,
+				7A884BF02205CE8C00B9D69C /* TestMetalLib */,
+				7A884C012207869700B9D69C /* GPUEthashTest */,
 			);
 		};
 /* End PBXProject section */
@@ -189,15 +298,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7A884BEF2205CE8C00B9D69C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A884C0E22078A4E00B9D69C /* Ethash.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A884BFE2207869700B9D69C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A884C2322078E0700B9D69C /* Common.swift in Sources */,
+				7A884C052207869700B9D69C /* main.swift in Sources */,
+				7A884C0D22078A4D00B9D69C /* Ethash.metal in Sources */,
+				7A884C0B220786F200B9D69C /* EthashGPU.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A8E17A021F9D6AD004F8A5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A884C1B22078DA300B9D69C /* internal.c in Sources */,
+				7A884BE82205BB4F00B9D69C /* EthashTests.swift in Sources */,
 				7A8E17AA21F9D6AD004F8A5D /* ViewController.swift in Sources */,
+				7A884BEB2205BFD500B9D69C /* Ethash.metal in Sources */,
 				7A8E17A821F9D6AD004F8A5D /* AppDelegate.swift in Sources */,
+				7A884BEA2205BDE500B9D69C /* EthashGPU.swift in Sources */,
+				7A884C1D22078DA300B9D69C /* sha3.c in Sources */,
+				7A884C2222078E0700B9D69C /* Common.swift in Sources */,
 				7ADF737A21FCB5B9004BD5EF /* Ethash.swift in Sources */,
-				7A6E48D221FA4DEE00C450AC /* internal.c in Sources */,
-				7A6E48CD21FA4DEE00C450AC /* sha3.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +355,71 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7A884BF62205CE8C00B9D69C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAV4QTNJ2K;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
+				SUPPORTED_PLATFORMS = "macosx iphoneos";
+				VALID_ARCHS = "arm64 arm64e x86_64";
+			};
+			name = Debug;
+		};
+		7A884BF72205CE8C00B9D69C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAV4QTNJ2K;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
+				SUPPORTED_PLATFORMS = "macosx iphoneos";
+				VALID_ARCHS = "arm64 arm64e x86_64";
+			};
+			name = Release;
+		};
+		7A884C072207869700B9D69C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAV4QTNJ2K;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "GPUEthashTest/GPUEthashTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		7A884C082207869700B9D69C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAV4QTNJ2K;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "GPUEthashTest/GPUEthashTest-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 		7A8E17B421F9D6AF004F8A5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -386,6 +583,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7A884BF52205CE8C00B9D69C /* Build configuration list for PBXNativeTarget "TestMetalLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A884BF62205CE8C00B9D69C /* Debug */,
+				7A884BF72205CE8C00B9D69C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A884C062207869700B9D69C /* Build configuration list for PBXNativeTarget "GPUEthashTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A884C072207869700B9D69C /* Debug */,
+				7A884C082207869700B9D69C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7A8E179F21F9D6AD004F8A5D /* Build configuration list for PBXProject "EthashMetalTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
