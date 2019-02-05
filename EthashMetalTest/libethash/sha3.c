@@ -126,6 +126,16 @@ I += rate;						\
 L -= rate;						\
 }
 
+static inline void xorin( ethash_uint8_t* dst, const ethash_uint8_t* src, size_t len )
+{
+    do {
+        for (size_t i = 0; i < len; i += 1)
+        {
+            dst[i] ^= src[i];
+        }
+    } while (0);
+}
+
 static inline void xorin(
                          ethash_uint8_t *const dst,
                          const ethash_uint8_t *const src,
