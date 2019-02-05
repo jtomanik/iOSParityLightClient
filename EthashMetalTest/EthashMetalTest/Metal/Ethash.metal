@@ -17,14 +17,15 @@ using namespace metal;
 #include "keccak.metal"
 
 kernel void ethash_keccak(
-                          device const ethash_uint8_t *const in [[ buffer(0) ]],
-                          constant ethash_uint32_t &size  [[ buffer(1) ]],
-                          device ethash_h256_t *const ret [[ buffer(2) ]]
+                          device ethash_uint8_t *in [[ buffer(0) ]],
+                          device ethash_uint32_t &size  [[ buffer(1) ]],
+                          device ethash_h256_t *ret [[ buffer(2) ]],
+                          device ethash_int32_t *result  [[ buffer(3) ]],
+                          ethash_uint32_t id [[ thread_position_in_grid ]]
                           )
 {
-    device const ethash_uint8_t *const data = in;
-    const size_t data_len = (size_t)size;
-    device ethash_uint8_t *const byte_out = (device ethash_uint8_t *const)ret;
+    *result = -1;
     const size_t out_bytes = sizeof(ethash_h256_t);
-    int result = keccak::keccak_256(data, data_len, byte_out, out_bytes);
+//    const size_t out_bytes = ETHASH_SHORT_HASH_BYTES;
+    *result = keccak::keccak_256(in, size, (device ethash_uint8_t *)ret, out_bytes);
 }

@@ -102,10 +102,12 @@ namespace keccak {
                              MEMSPACE const ethash_uint8_t *const src,
                              const size_t len)
     {
-        for (size_t i = 0; i < len; i += 1)
-        {
-            dst[i] ^= src[i];
-        }
+        do {
+            for (size_t i = 0; i < len; i += 1)
+            {
+                dst[i] ^= src[i];
+            }
+        } while (0);
     }
 
     static inline void setout(
@@ -113,22 +115,24 @@ namespace keccak {
                               MEMSPACE uint8_t *const dst,
                               const size_t len)
     {
-        for (size_t i = 0; i < len; i += 1)
-        {
-            dst[i] = src[i];
-        }
+        do {
+            for (size_t i = 0; i < len; i += 1)
+            {
+                dst[i] = src[i];
+            }
+        } while(0);
     }
 
     static inline void mem_clear_200(thread ethash_uint8_t *b)
     {
         thread ethash_uint32_t *buffer = (thread ethash_uint32_t *)b;
-        for (ethash_uint32_t i = 0; i < 200 / ETHASH_WORD_BYTES; i++) {
+        for (ethash_uint32_t i = 0; i < (200 / ETHASH_WORD_BYTES); i++) {
             buffer[i] = 0;
         }
     }
 
     /** The sponge-based hash construction. **/
-    static inline int hash(
+    static inline ethash_int32_t hash(
                            MEMSPACE const ethash_uint8_t *in,
                            size_t inlen,
                            MEMSPACE ethash_uint8_t *out,
@@ -168,7 +172,7 @@ namespace keccak {
         return 0;
     }
 
-    int keccak_256(
+    ethash_int32_t keccak_256(
                    MEMSPACE const ethash_uint8_t *const in,
                    const size_t inlen,
                    MEMSPACE ethash_uint8_t *const out,
@@ -185,7 +189,7 @@ namespace keccak {
         return hash(mutable_in, mutable_inlen, mutable_out, mutable_outlen, 200 - (256 / 4), 0x01);
     }
 
-    //int keccak_512(
+    //ethash_int32_tkeccak_512(
     //               MEMSPACE const ethash_uint8_t *const in,
     //               const size_t inlen,
     //               MEMSPACE ethash_uint8_t *const out,

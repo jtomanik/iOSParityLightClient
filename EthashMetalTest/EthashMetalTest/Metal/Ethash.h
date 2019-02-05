@@ -17,6 +17,7 @@
 #define ETHASH_EPOCH_LENGTH 30000U // blocks per epoch
 #define ETHASH_WORD_BYTES 4 // bytes in word, 32 bits
 #define ETHASH_MIX_BYTES 128 // width of mix, 1024 bits
+#define ETHASH_SHORT_HASH_BYTES 32 // hash length in bytes, 256bits
 #define ETHASH_HASH_BYTES 64 // hash length in bytes, 512bits
 #define ETHASH_DATASET_PARENTS 256 // number of parents of each dataset element
 #define ETHASH_CACHE_ROUNDS 3 // number of rounds in cache production
@@ -35,10 +36,11 @@
 
 typedef unsigned char ethash_uint8_t;
 typedef unsigned int ethash_uint32_t;
+typedef signed int ethash_int32_t;
 typedef size_t ethash_uint64_t;
 static_assert(sizeof(ethash_uint64_t) == 8, "Invalid uint64 size");
 
 /// Type of a seedhash/blockhash e.t.c.
-typedef struct ethash_h256 { ethash_uint8_t b[32]; } ethash_h256_t;
+typedef struct ethash_h256 { ethash_uint8_t b[ETHASH_SHORT_HASH_BYTES]; } ethash_h256_t;
 
 #endif /* Ethash */
