@@ -33,8 +33,9 @@
 #define NULL nullptr
 
 #define MEMSPACE device
+#define MEMORY_BUS_BYTES 4
 
-typedef unsigned char ethash_uint8_t;
+typedef uint8_t ethash_uint8_t;
 typedef unsigned int ethash_uint32_t;
 typedef signed int ethash_int32_t;
 typedef size_t ethash_uint64_t;

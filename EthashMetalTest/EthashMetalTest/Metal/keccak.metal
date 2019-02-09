@@ -95,38 +95,64 @@ namespace keccak {
     #define _(S) do { S } while (0)
 
     #define FOR(i, ST, L, S)          \
-    _(for (size_t i = 0; i < L; i += ST) { S; })
+    _(for (ethash_uint64_t i = 0; i < L; i += ST) { S; })
 
     static inline void xorin(
                              thread ethash_uint8_t *const dst,
                              MEMSPACE const ethash_uint8_t *const src,
-                             const size_t len)
+                             const ethash_uint64_t len)
     {
-        do {
-            for (size_t i = 0; i < len; i += 1)
-            {
-                dst[i] ^= src[i];
-            }
-        } while (0);
+        if (len % MEMORY_BUS_BYTES == 0) {
+            MEMSPACE ethash_uint32_t *in_buffer = (MEMSPACE ethash_uint32_t *)src;
+            thread ethash_uint32_t *out_buffer = (thread ethash_uint32_t *)dst;
+            ethash_uint64_t len_32 = len / MEMORY_BUS_BYTES;
+            
+            do {
+                for (ethash_uint64_t i = 0; i < len_32; i += 1)
+                {
+                    out_buffer[i] ^= in_buffer[i];
+                }
+            } while (0);
+        } else {
+            do {
+                for (ethash_uint64_t i = 0; i < len; i += 1)
+                {
+                    dst[i] ^= src[i];
+                }
+            } while (0);
+        }
     }
 
     static inline void setout(
                               thread const ethash_uint8_t *const src,
-                              MEMSPACE uint8_t *const dst,
-                              const size_t len)
+                              MEMSPACE ethash_uint8_t *const dst,
+                              const ethash_uint64_t len)
     {
-        do {
-            for (size_t i = 0; i < len; i += 1)
-            {
-                dst[i] = src[i];
-            }
-        } while(0);
+        if (len % MEMORY_BUS_BYTES == 0) {
+            thread ethash_uint32_t *in_buffer = (thread ethash_uint32_t *)src;
+            MEMSPACE ethash_uint32_t *out_buffer = (MEMSPACE ethash_uint32_t *)dst;
+            ethash_uint64_t len_32 = len / MEMORY_BUS_BYTES;
+
+            do {
+                for (ethash_uint64_t i = 0; i < len_32; i += 1)
+                {
+                    out_buffer[i] = in_buffer[i];
+                }
+            } while (0);
+        } else {
+            do {
+                for (ethash_uint64_t i = 0; i < len; i += 1)
+                {
+                    dst[i] = src[i];
+                }
+            } while(0);
+        }
     }
 
     static inline void mem_clear_200(thread ethash_uint8_t *b)
     {
         thread ethash_uint32_t *buffer = (thread ethash_uint32_t *)b;
-        for (ethash_uint32_t i = 0; i < (200 / ETHASH_WORD_BYTES); i++) {
+        for (ethash_uint32_t i = 0; i < (Plen / ETHASH_WORD_BYTES); i++) {
             buffer[i] = 0;
         }
     }
@@ -134,10 +160,10 @@ namespace keccak {
     /** The sponge-based hash construction. **/
     static inline ethash_int32_t hash(
                            MEMSPACE const ethash_uint8_t *in,
-                           size_t inlen,
+                           ethash_uint64_t inlen,
                            MEMSPACE ethash_uint8_t *out,
-                           size_t outlen,
-                           size_t rate,
+                           ethash_uint64_t outlen,
+                           ethash_uint64_t rate,
                            ethash_uint8_t delim)
     {
         if ((out == NULL) || ((in == NULL) && inlen != 0) || (rate >= Plen)) {
@@ -174,9 +200,9 @@ namespace keccak {
 
     ethash_int32_t keccak_256(
                    MEMSPACE const ethash_uint8_t *const in,
-                   const size_t inlen,
+                   const ethash_uint64_t inlen,
                    MEMSPACE ethash_uint8_t *const out,
-                   const size_t outlen
+                   const ethash_uint64_t outlen
                    )
     {
         if (outlen > (256/8)) {
@@ -184,16 +210,16 @@ namespace keccak {
         }
         MEMSPACE const ethash_uint8_t *mutable_in = in;
         MEMSPACE ethash_uint8_t *mutable_out = out;
-        size_t mutable_inlen = inlen;
-        size_t mutable_outlen = outlen;
-        return hash(mutable_in, mutable_inlen, mutable_out, mutable_outlen, 200 - (256 / 4), 0x01);
+        ethash_uint64_t mutable_inlen = inlen;
+        ethash_uint64_t mutable_outlen = outlen;
+        return hash(mutable_in, mutable_inlen, mutable_out, mutable_outlen, Plen - (256 / 4), 0x01);
     }
 
     //ethash_int32_tkeccak_512(
     //               MEMSPACE const ethash_uint8_t *const in,
-    //               const size_t inlen,
+    //               const ethash_uint64_t inlen,
     //               MEMSPACE ethash_uint8_t *const out,
-    //               const size_t outlen
+    //               const ethash_uint64_t outlen
     //               )
     //{
     //    if (outlen > (512/8)) {
