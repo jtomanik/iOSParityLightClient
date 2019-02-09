@@ -79,12 +79,14 @@ class EthashGPU {
         // return buffer
         let hash_buffer = require(device.makeBuffer(length: Int(ETHASH_SHORT_HASH_BYTES), options: .storageModeShared),
                                   orDie: "Failed to allocate the buffer")
+        let hash_buffer_pointer = hash_buffer.contents().bindMemory(to: ethash_h256_t.self, capacity: 1)
         commandEncoder.setBuffer(hash_buffer, offset: 0, index: 2)
 
         // result return buffer
         let result_buffer = require(device.makeBuffer(length: MemoryLayout<ethash_int32_t>.stride, options: .storageModeShared),
                                   orDie: "Failed to allocate the buffer")
-        commandEncoder.setBuffer(hash_buffer, offset: 0, index: 3)
+        let result_buffer_pointer = result_buffer.contents().bindMemory(to: ethash_int32_t.self, capacity: 1)
+        commandEncoder.setBuffer(result_buffer, offset: 0, index: 3)
 
         commandEncoder.dispatchThreadgroups(numThreadgroups, threadsPerThreadgroup: threadsPerGroup)
         commandEncoder.endEncoding()
@@ -92,17 +94,10 @@ class EthashGPU {
         commandBuffer.commit()
         commandBuffer.waitUntilCompleted()
 
-        let hashPointer = hash_buffer.contents().bindMemory(to: ethash_h256_t.self, capacity: 1)
-        let resultPointer = result_buffer.contents().bindMemory(to: ethash_int32_t.self, capacity: 1)
+        print("result: \(result_buffer_pointer.pointee)")
 
-        let test = MemoryLayout<ethash_h256_t>.alignment
-        let test2 = MemoryLayout<ethash_h256_t>.stride
-        let test3 = MemoryLayout<ethash_h256_t>.size
-
-        print("\(test) x \(test2) x \(test3)")
-
-        if resultPointer.pointee == 0 {
-            return hashPointer.pointee
+        if result_buffer_pointer.pointee == 0 {
+            return hash_buffer_pointer.pointee
         } else {
             return nil
         }
@@ -143,9 +138,3 @@ fileprivate func require<T>(_ expr: @autoclosure () throws -> T?, orDie message:
     }
     fatalError()
 }
-
-//fileprivate func require<T>(_ expr: @autoclosure () -> T?, orDie message: @autoclosure () -> String) -> T
-//{
-//    if let result = try expr() { return result }
-//    else { print(message()) }
-//}
