@@ -92,11 +92,6 @@ namespace keccak {
     #define P keccakf
     #define Plen 200
 
-    #define _(S) do { S } while (0)
-
-    #define FOR(i, ST, L, S)          \
-    _(for (ethash_uint64_t i = 0; i < L; i += ST) { S; })
-
     static inline void xorin(
                              thread ethash_uint8_t *const dst,
                              MEMSPACE const ethash_uint8_t *const src,
@@ -106,7 +101,7 @@ namespace keccak {
             MEMSPACE ethash_uint32_t *in_buffer = (MEMSPACE ethash_uint32_t *)src;
             thread ethash_uint32_t *out_buffer = (thread ethash_uint32_t *)dst;
             ethash_uint64_t len_32 = len / MEMORY_BUS_BYTES;
-            
+
             do {
                 for (ethash_uint64_t i = 0; i < len_32; i += 1)
                 {
@@ -198,6 +193,8 @@ namespace keccak {
         return 0;
     }
 
+    //MARK: Interface
+
     ethash_int32_t keccak_256(
                    MEMSPACE const ethash_uint8_t *const in,
                    const ethash_uint64_t inlen,
@@ -215,18 +212,20 @@ namespace keccak {
         return hash(mutable_in, mutable_inlen, mutable_out, mutable_outlen, Plen - (256 / 4), 0x01);
     }
 
-    //ethash_int32_tkeccak_512(
-    //               MEMSPACE const ethash_uint8_t *const in,
-    //               const ethash_uint64_t inlen,
-    //               MEMSPACE ethash_uint8_t *const out,
-    //               const ethash_uint64_t outlen
-    //               )
-    //{
-    //    if (outlen > (512/8)) {
-    //        return -1;
-    //    }
-    //    return hash(in, inlen, out, outlen, 200 - (512 / 4), 0x01);
-    //}
-    //
-
+    ethash_int32_t keccak_512(
+                   MEMSPACE const ethash_uint8_t *const in,
+                   const ethash_uint64_t inlen,
+                   MEMSPACE ethash_uint8_t *const out,
+                   const ethash_uint64_t outlen
+                   )
+    {
+        if (outlen > (512/8)) {
+            return -1;
+        }
+        MEMSPACE const ethash_uint8_t *mutable_in = in;
+        MEMSPACE ethash_uint8_t *mutable_out = out;
+        ethash_uint64_t mutable_inlen = inlen;
+        ethash_uint64_t mutable_outlen = outlen;
+        return hash(mutable_in, mutable_inlen, mutable_out, mutable_outlen, Plen - (512 / 4), 0x01);
+    }
 }
