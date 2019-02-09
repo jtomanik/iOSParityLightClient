@@ -8,6 +8,9 @@
 
 import Foundation
 
+let cpu = EthashTests()
+cpu.testUnits()
+
 let gpu = EthashGPU()
 gpu?.testUnits()
 
