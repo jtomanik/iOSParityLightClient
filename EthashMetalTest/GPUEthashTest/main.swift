@@ -8,9 +8,12 @@
 
 import Foundation
 
-let cpu = EthashTests()
-cpu.testUnits()
+//let cpu = EthashTests(backend: EthashCPU())
+//cpu?.testUnits()
 
-let gpu = EthashGPU()
-gpu?.testUnits()
+let cpu = EthashTests(backend: EthashCPP())
+cpu?.testUnits()
+
+//let gpu = EthashTests(backend: EthashGPU())
+//gpu?.testUnits()
 

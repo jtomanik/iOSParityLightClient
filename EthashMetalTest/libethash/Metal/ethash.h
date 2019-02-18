@@ -12,7 +12,6 @@
 #include "../Ethash.h"
 
 #define NULL nullptr
-#define MEMSPACE device
 #define MEMORY_BUS_BYTES 4
 
 static_assert(sizeof(ethash_uint64_t) == 8, "Invalid uint64 size");

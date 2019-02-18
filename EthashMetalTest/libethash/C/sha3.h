@@ -24,22 +24,6 @@ extern "C" {
                  const size_t outlen
                  );
     
-    static inline void SHA3_256(
-                                struct ethash_h256 *const ret,
-                                const ethash_uint8_t *const data,
-                                const size_t size)
-    {
-        keccak_256(data, size, (ethash_uint8_t*)ret, 32);
-    }
-    
-    static inline void SHA3_512(
-                                ethash_uint8_t *const ret,
-                                const ethash_uint8_t *const data,
-                                const size_t size)
-    {
-        keccak_512(data, size, ret, 64);
-    }
-    
 #ifdef __cplusplus
 }
 #endif

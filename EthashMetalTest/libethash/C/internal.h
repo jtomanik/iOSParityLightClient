@@ -9,13 +9,6 @@ extern "C" {
 
 #include <stdint.h>
 
-#define FNV_PRIME 0x01000193
-
-    static inline ethash_uint32_t fnv_hash(const ethash_uint32_t x, const ethash_uint32_t y)
-    {
-        return x * FNV_PRIME ^ y;
-    }
-
     static inline ethash_uint8_t ethash_h256_get(
                                                  ethash_h256_t const* hash,
                                                  unsigned int i

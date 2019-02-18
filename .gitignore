@@ -4,3 +4,6 @@ Rust/parity-clib/target
 Rust/parity-clib/.idea
 Rust/parity-clib/cmake-build-debug
 lib
+Rust/parity-clib/parity-light-lib/target
+StaticLibTest.xcworkspace/xcuserdata
+EthashMetalTest/EthashMetalTest.xcodeproj/xcuserdata
