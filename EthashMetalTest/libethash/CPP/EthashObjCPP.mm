@@ -39,16 +39,20 @@
     return cpp_ethash_compute_cache_nodes(nodes, cache_size, seed);
 }
 
-+ (ethash_light_ptr) ethashNewLightClientFor:(ethash_uint64_t)block_number withCache:(ethash_node_t *)nodes ofSize:(ethash_uint64_t)cache_size {
++ (ethash_light_t *) ethashNewLightClientFor:(ethash_uint64_t)block_number withCache:(ethash_node_t *)nodes ofSize:(ethash_uint64_t)cache_size {
     return cpp_ethash_light_new_with_cache(block_number, nodes, cache_size);
 }
 
-+ (void) ethashCalculateDAGItemFor:(ethash_uint32_t)nodeIndex andLightClient:(ethash_light_ptr)light returning:(ethash_node_t *) ret {
++ (void) ethashCalculateDAGItemFor:(ethash_uint32_t)nodeIndex andLightClient:(ethash_light_t *)light returning:(ethash_node_t *) ret {
     cpp_ethash_calculate_dag_item(ret, nodeIndex, light);
 }
 
-+ (void) ethashLightCompute:(ethash_light_ptr)light forHeader:(ethash_h256_t)header_hash andNonce:(ethash_uint64_t)nonce returning:(ethash_return_value_t *)ret {
-    *ret = cpp_ethash_light_compute(light, header_hash, nonce);
++ (void) ethashLightCompute:(ethash_light_t *)light forHeader:(ethash_h256_t)header_hash andNonce:(ethash_uint64_t)nonce returning:(ethash_return_value_t *)ret {
+    cpp_ethash_light_compute(light, header_hash, nonce, ret);
+}
+
++ (void) ethashGenerateCacheFor:(ethash_uint64_t *)blocknumber returning:(ethash_node_t *)ret {
+    
 }
 
 @end

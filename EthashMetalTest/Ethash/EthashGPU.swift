@@ -33,6 +33,7 @@ class EthashGPU {
 }
 
 extension EthashGPU: EthashBackend {
+
     var name: String {
         return "GPU"
     }
@@ -50,17 +51,23 @@ extension EthashGPU: EthashBackend {
             _ = gpuSeedhash(for: other)
         }
         callback(gpuSeedhash(for: blocknumber))
-//        callback(nil)
     }
 
     func generateCache(for blocknumber: ethash_uint64_t, callback: (([ethash_node_t]?) -> Void)) {
-        callback(nil)
+        callback(gpuGenerateCache(for: blocknumber))
     }
 
     func calculateDAGItem(for blocknumber: ethash_uint64_t, callback: ((ethash_node_t?) -> Void)) {
         callback(nil)
     }
 
+    func calculateDAGItem(for blocknumber: ethash_uint64_t, nodeIndex index: UInt32, callback: ((ethash_node_t?) -> Void)) {
+        callback(nil)
+    }
+
+    func calculateLightClient(for blocknumber: ethash_uint64_t, hash: ethash_h256_t, nonce: ethash_uint64_t, callback: @escaping ((ethash_return_value_t?) -> Void)) {
+        callback(nil)
+    }
 
 }
 
@@ -142,9 +149,11 @@ extension EthashGPU {
         }
     }
 
-    private func gpuSeedhash(for block: ethash_uint64_t) -> ethash_h256_t? {
-        var copy = block
-        let data = Data.init(bytes: &copy, count: MemoryLayout<ethash_uint64_t>.size)
+    private func gpuSeedhash(for blocknumber: ethash_uint64_t) -> ethash_h256_t? {
+        return nil
+        
+        var block = blocknumber
+        let data = Data.init(bytes: &block, count: MemoryLayout<ethash_uint64_t>.size)
 
         let threadsPerGroup = MTLSize(width:1, height:1, depth:1)
         let numThreadgroups = MTLSize(width:1, height:1, depth:1)
@@ -154,9 +163,8 @@ extension EthashGPU {
         let commandEncoder = command.0
         let commandBuffer = command.1
 
-        commandEncoder.setInputBuffer(withBlocknumber: block, atIndex: 0)
+        commandEncoder.setInputBuffer(withBlocknumber: blocknumber, atIndex: 0)
         let hash_buffer_pointer: UnsafeMutablePointer<ethash_h256_t> = commandEncoder.makeReturnBuffer(atIndex: 2)
-//        let result_buffer_pointer: UnsafeMutablePointer<ethash_int32_t> = commandEncoder.makeReturnBuffer(atIndex: 2)
 
         commandEncoder.dispatchThreadgroups(numThreadgroups, threadsPerThreadgroup: threadsPerGroup)
         commandEncoder.endEncoding()
@@ -171,6 +179,35 @@ extension EthashGPU {
 //        } else {
 //            return nil
 //        }
+    }
+
+    private func gpuGenerateCache(for blocknumber: ethash_uint64_t) -> [ethash_node_t]? {
+        var block = blocknumber
+        let data = Data.init(bytes: &block, count: MemoryLayout<ethash_uint64_t>.size)
+
+        let threadsPerGroup = MTLSize(width:1, height:1, depth:1)
+        let numThreadgroups = MTLSize(width:1, height:1, depth:1)
+        // let threadExecutionWidth = computePipelineState.threadExecutionWidth // 64
+
+        let command = makeCommandEntities(forFunction: "ethash_compute_cache_nodes")
+        let commandEncoder = command.0
+        let commandBuffer = command.1
+
+        let cacheElements = ethash_get_cache_node_number(blocknumber)
+//        let nodeCachePointer = UnsafeMutablePointer<ethash_node_t>.allocate(capacity: Int(cacheElements))
+
+        commandEncoder.setInputBuffer(withBlocknumber: blocknumber, atIndex: 0)
+        let nodeCachePointer: UnsafeMutablePointer<ethash_node_t> = commandEncoder.makeReturnBuffer(withCapacity: Int(cacheElements), atIndex: 2)
+        
+        commandEncoder.dispatchThreadgroups(numThreadgroups, threadsPerThreadgroup: threadsPerGroup)
+        commandEncoder.endEncoding()
+
+        commandBuffer.commit()
+        commandBuffer.waitUntilCompleted()
+
+//        let cache = Array(UnsafeBufferPointer(start: nodeCachePointer, count: Int(cacheElements)))
+        //let cache = Array(UnsafeBufferPointer(start: nodeCachePointer, count: Int(cacheElements)))
+        return [nodeCachePointer.pointee]
     }
 }
 
@@ -214,9 +251,18 @@ extension MTLComputeCommandEncoder {
     }
 
     func makeReturnBuffer<T>(atIndex index: Int) -> UnsafeMutablePointer<T> {
+//        let return_buffer = require(device.makeBuffer(length: MemoryLayout<T>.stride, options: .storageModeShared),
+//                                    orDie: "Failed to allocate the buffer")
+//        let return_buffer_pointer = return_buffer.contents().bindMemory(to: T.self, capacity: 1)
+//        self.setBuffer(return_buffer, offset: 0, index: index)
+//        return return_buffer_pointer
+        return makeReturnBuffer(withCapacity: 1, atIndex: index)
+    }
+
+    func makeReturnBuffer<T>(withCapacity capacity: Int, atIndex index: Int) -> UnsafeMutablePointer<T> {
         let return_buffer = require(device.makeBuffer(length: MemoryLayout<T>.stride, options: .storageModeShared),
                                     orDie: "Failed to allocate the buffer")
-        let return_buffer_pointer = return_buffer.contents().bindMemory(to: T.self, capacity: 1)
+        let return_buffer_pointer = return_buffer.contents().bindMemory(to: T.self, capacity: capacity)
         self.setBuffer(return_buffer, offset: 0, index: index)
         return return_buffer_pointer
     }

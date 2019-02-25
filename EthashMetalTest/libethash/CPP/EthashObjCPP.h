@@ -20,9 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (void) ethashGetCacheSizeFor:(ethash_uint64_t *)blocknumber returning:(ethash_uint64_t *)ret;
 + (void) ethashGetCacheNodeNumberFor:(ethash_uint64_t *)blocknumber returning:(ethash_uint32_t *)ret;
 + (bool) ethashComputeCacheNodes:(ethash_node_t *)nodes cacheSize:(ethash_uint64_t)cache_size andSeed:(ethash_h256_t *)seed;
-+ (ethash_light_ptr) ethashNewLightClientFor:(ethash_uint64_t)block_number withCache:(ethash_node_t *)nodes ofSize:(ethash_uint64_t)cache_size;
-+ (void) ethashCalculateDAGItemFor:(ethash_uint32_t)nodeIndex andLightClient:(ethash_light_ptr)light returning:(ethash_node_t *) ret;
-+ (void) ethashLightCompute:(ethash_light_ptr)light forHeader:(ethash_h256_t)header_hash andNonce:(ethash_uint64_t)nonce returning:(ethash_return_value_t *)ret;
++ (ethash_light_t *) ethashNewLightClientFor:(ethash_uint64_t)block_number withCache:(ethash_node_t *)nodes ofSize:(ethash_uint64_t)cache_size;
++ (void) ethashCalculateDAGItemFor:(ethash_uint32_t)nodeIndex andLightClient:(ethash_light_t *)light returning:(ethash_node_t *) ret;
++ (void) ethashLightCompute:(ethash_light_t *)light forHeader:(ethash_h256_t)header_hash andNonce:(ethash_uint64_t)nonce returning:(ethash_return_value_t *)ret;
 @end
 
 NS_ASSUME_NONNULL_END

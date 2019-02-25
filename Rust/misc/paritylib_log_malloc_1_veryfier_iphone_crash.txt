@@ -1,0 +1,341 @@
+:(
+Docs directory /var/mobile/Containers/Data/Application/6100E4F8-7FBE-432F-94E6-F9ED2EDF4285/Documents
+Chain spec directory /var/containers/Bundle/Application/6F7B5BEE-DEB2-4C15-BB2F-2451391BEDA7/StaticLibTest.app/custom_foundation.json
+2018-10-29 10:18:05  Starting Parity-Ethereum/v2.2.0-unstable-96f909a3e-20181028/aarch64-ios/rustc1.30.0
+2018-10-29 10:18:05  Keys path /var/mobile/Containers/Data/Application/6100E4F8-7FBE-432F-94E6-F9ED2EDF4285/Documents/keys/ethereum
+2018-10-29 10:18:05  DB path /var/mobile/Containers/Data/Application/6100E4F8-7FBE-432F-94E6-F9ED2EDF4285/Documents/chains_light/ethereum/db/906a34e69aec8c0d
+2018-10-29 10:18:05  Running in experimental Light Client mode.
+2018-10-29 10:18:05  Inserting hardcoded block #6467585 in chain
+2018-10-29 10:18:05  Debug API is not available in light client mode.
+parity_start returned 0
+returned pointer: Optional(0x000000028023c1c0)
+2018-10-29 10:18:05  Public node URL: enode://2559ff15d6a4441870e1ac7fe3e232be3e6dcd20be1781eccf4f43df02fbabfcd82613d065fcd15d11daaf7f81c0f3aa2ec44656660da84ee4fd34ca7c1df677@10.121.244.92:30303
+2018-10-29 10:18:10  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   2/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:18:15  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   3/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:18:20  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   2/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:18:25  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   2/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:18:30  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   3/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:18:35  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   2/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:18:40  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   3/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:18:45  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   3/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:18:50  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   3/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:18:55  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   3/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:19:00  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   5/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:19:05  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   3/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:19:10  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   4/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:19:15  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   3/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-29 10:19:20  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   3/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+StaticLibTest(8409,0x16fecb000) malloc: can't allocate region
+*** mach_vm_map(size=2147483648) failed (error code=3)
+StaticLibTest(8409,0x16fecb000) malloc: *** set a breakpoint in malloc_error_break to debug
+(lldb) 
+
+libsystem_malloc.dylib`malloc_error_break:
+->  0x211f72af4 <+0>:  stp    x29, x30, [sp, #-0x10]!
+    0x211f72af8 <+4>:  mov    x29, sp
+    0x211f72afc <+8>:  nop    
+    0x211f72b00 <+12>: ldp    x29, x30, [sp], #0x10
+    0x211f72b04 <+16>: ret    
+
+StaticLibTest`std::panicking::try::do_call::h61dcbbfa21c892df (.llvm.199164114816439967):
+    0x100d19688 <+0>:  sub    sp, sp, #0x50             ; =0x50 
+    0x100d1968c <+4>:  stp    x29, x30, [sp, #0x40]
+    0x100d19690 <+8>:  add    x29, sp, #0x40            ; =0x40 
+    0x100d19694 <+12>: ldp    q0, q1, [x0]
+    0x100d19698 <+16>: ldp    q2, q3, [x0, #0x20]
+    0x100d1969c <+20>: stp    q2, q3, [sp, #0x20]
+    0x100d196a0 <+24>: stp    q0, q1, [sp]
+    0x100d196a4 <+28>: mov    x0, sp
+    0x100d196a8 <+32>: bl     0x100e74898               ; std::sys_common::backtrace::__rust_begin_short_backtrace::ha7373b72e23cd3dc
+>    0x100d196ac <+36>: ldp    x29, x30, [sp, #0x40]
+    0x100d196b0 <+40>: add    sp, sp, #0x50             ; =0x50 
+    0x100d196b4 <+44>: ret    
+
+StaticLibTest`__rust_maybe_catch_panic:
+    0x1024782c4 <+0>:   sub    sp, sp, #0x40             ; =0x40 
+    0x1024782c8 <+4>:   stp    x22, x21, [sp, #0x10]
+    0x1024782cc <+8>:   stp    x20, x19, [sp, #0x20]
+    0x1024782d0 <+12>:  stp    x29, x30, [sp, #0x30]
+    0x1024782d4 <+16>:  add    x29, sp, #0x30            ; =0x30 
+    0x1024782d8 <+20>:  mov    x19, x3
+    0x1024782dc <+24>:  mov    x20, x2
+    0x1024782e0 <+28>:  mov    x8, x0
+    0x1024782e4 <+32>:  mov    x0, x1
+    0x1024782e8 <+36>:  blr    x8
+>    0x1024782ec <+40>:  mov    w0, #0x0
+    0x1024782f0 <+44>:  ldp    x29, x30, [sp, #0x30]
+    0x1024782f4 <+48>:  ldp    x20, x19, [sp, #0x20]
+    0x1024782f8 <+52>:  ldp    x22, x21, [sp, #0x10]
+    0x1024782fc <+56>:  add    sp, sp, #0x40             ; =0x40 
+    0x102478300 <+60>:  ret    
+    0x102478304 <+64>:  ldp    x21, x22, [x0, #0x20]
+    0x102478308 <+68>:  stp    xzr, xzr, [x0, #0x20]
+    0x10247830c <+72>:  bl     0x10249608c               ; symbol stub for: _Unwind_DeleteException
+    0x102478310 <+76>:  stp    x21, x22, [sp]
+    0x102478314 <+80>:  cbz    x21, 0x102478328          ; <+100> [inlined] _$LT$core..option..Option$LT$T$GT$$GT$::unwrap::h61f9b8f9e51d87c0 at gcc.rs:101
+    0x102478318 <+84>:  str    x21, [x20]
+    0x10247831c <+88>:  str    x22, [x19]
+    0x102478320 <+92>:  orr    w0, wzr, #0x1
+    0x102478324 <+96>:  b      0x1024782f0               ; <+44> at lib.rs:111
+    0x102478328 <+100>: adrp   x0, 2969
+    0x10247832c <+104>: add    x0, x0, #0x650            ; =0x650 
+    0x102478330 <+108>: bl     0x102481e9c               ; core::panicking::panic::h3bfbdd68e26dba7d at panicking.rs:44
+    0x102478334 <+112>: brk    #0x1
+    0x102478338 <+116>: mov    x19, x0
+    0x10247833c <+120>: mov    x0, sp
+    0x102478340 <+124>: bl     0x10247877c               ; core::ptr::drop_in_place::h440b0309fd9248b5 at ptr.rs:59
+    0x102478344 <+128>: mov    x0, x19
+    0x102478348 <+132>: bl     0x1024960e0               ; symbol stub for: _Unwind_Resume
+    0x10247834c <+136>: brk    #0x1
+
+StaticLibTest`_$LT$F$u20$as$u20$alloc..boxed..FnBox$LT$A$GT$$GT$::call_box::h9c381ade1a35d32a:
+    0x100d357b4 <+0>:   sub    sp, sp, #0xe0             ; =0xe0 
+    0x100d357b8 <+4>:   stp    x24, x23, [sp, #0xa0]
+    0x100d357bc <+8>:   stp    x22, x21, [sp, #0xb0]
+    0x100d357c0 <+12>:  stp    x20, x19, [sp, #0xc0]
+    0x100d357c4 <+16>:  stp    x29, x30, [sp, #0xd0]
+    0x100d357c8 <+20>:  add    x29, sp, #0xd0            ; =0xd0 
+    0x100d357cc <+24>:  mov    x19, x0
+    0x100d357d0 <+28>:  ldp    q0, q1, [x0]
+    0x100d357d4 <+32>:  stp    q0, q1, [sp]
+    0x100d357d8 <+36>:  ldp    q0, q2, [x0, #0x20]
+    0x100d357dc <+40>:  ldr    q3, [x0, #0x40]
+    0x100d357e0 <+44>:  stp    q2, q3, [sp, #0x30]
+    0x100d357e4 <+48>:  str    q0, [sp, #0x20]
+    0x100d357e8 <+52>:  mov    x0, sp
+    0x100d357ec <+56>:  bl     0x10245f930               ; std::thread::Thread::cname::h0b38850014c3ea1f [inlined] _$LT$core..ptr..NonNull$LT$T$GT$$GT$::as_ref::h702aef39d328097b at sync.rs:521
+    0x100d357f0 <+60>:  cbz    x0, 0x100d357f8           ; <+68>
+    0x100d357f4 <+64>:  bl     0x1024428e0               ; std::sys::unix::thread::Thread::set_name::h7fcce9d11e2e9dc1 at thread.rs:124
+    0x100d357f8 <+68>:  add    x8, sp, #0x60             ; =0x60 
+    0x100d357fc <+72>:  bl     0x102453354               ; std::sys::unix::thread::guard::current::he26503e3a0d87267 at thread.rs:211
+    0x100d35800 <+76>:  ldr    x1, [sp]
+    0x100d35804 <+80>:  add    x0, sp, #0x60             ; =0x60 
+    0x100d35808 <+84>:  bl     0x1024628f0               ; std::sys_common::thread_info::set::h8e69577a365c174d at thread_info.rs:46
+    0x100d3580c <+88>:  stp    xzr, xzr, [sp, #0x50]
+    0x100d35810 <+92>:  ldur   q0, [sp, #0x38]
+    0x100d35814 <+96>:  str    q0, [sp, #0x90]
+    0x100d35818 <+100>: ldur   q0, [sp, #0x28]
+    0x100d3581c <+104>: str    q0, [sp, #0x80]
+    0x100d35820 <+108>: ldur   q0, [sp, #0x18]
+    0x100d35824 <+112>: str    q0, [sp, #0x70]
+    0x100d35828 <+116>: ldur   q0, [sp, #0x8]
+    0x100d3582c <+120>: str    q0, [sp, #0x60]
+    0x100d35830 <+124>: adr    x0, #-0x1c1a8             ; std::panicking::try::do_call::h61dcbbfa21c892df (.llvm.199164114816439967)
+    0x100d35834 <+128>: nop    
+    0x100d35838 <+132>: add    x1, sp, #0x60             ; =0x60 
+    0x100d3583c <+136>: add    x2, sp, #0x50             ; =0x50 
+    0x100d35840 <+140>: add    x3, sp, #0x58             ; =0x58 
+    0x100d35844 <+144>: bl     0x1024782c4               ; __rust_maybe_catch_panic at lib.rs:97
+>    0x100d35848 <+148>: cbz    w0, 0x100d35894           ; <+224>
+    0x100d3584c <+152>: mov    x0, #-0x1
+    0x100d35850 <+156>: bl     0x102469e3c               ; std::panicking::update_panic_count::h77e395256561affe at panicking.rs:236
+    0x100d35854 <+160>: ldp    x20, x21, [sp, #0x50]
+    0x100d35858 <+164>: ldr    x22, [sp, #0x48]
+    0x100d3585c <+168>: ldr    x8, [x22, #0x10]
+    0x100d35860 <+172>: cbz    x8, 0x100d358a8           ; <+244>
+    0x100d35864 <+176>: ldr    x0, [x22, #0x18]
+    0x100d35868 <+180>: cbz    x0, 0x100d358a8           ; <+244>
+    0x100d3586c <+184>: ldr    x8, [x22, #0x20]
+    0x100d35870 <+188>: ldr    x8, [x8]
+    0x100d35874 <+192>: blr    x8
+    0x100d35878 <+196>: ldr    x8, [x22, #0x20]
+    0x100d3587c <+200>: ldr    x1, [x8, #0x8]
+    0x100d35880 <+204>: cbz    x1, 0x100d358a8           ; <+244>
+    0x100d35884 <+208>: ldr    x0, [x22, #0x18]
+    0x100d35888 <+212>: ldr    x2, [x8, #0x10]
+    0x100d3588c <+216>: bl     0x100cd4b50               ; __rust_dealloc
+    0x100d35890 <+220>: b      0x100d358a8               ; <+244>
+    0x100d35894 <+224>: mov    x21, #0x0
+    0x100d35898 <+228>: mov    x20, #0x0
+    0x100d3589c <+232>: ldr    x22, [sp, #0x48]
+    0x100d358a0 <+236>: ldr    x8, [x22, #0x10]
+    0x100d358a4 <+240>: cbnz   x8, 0x100d35864           ; <+176>
+    0x100d358a8 <+244>: mov    x8, sp
+    0x100d358ac <+248>: add    x0, x8, #0x48             ; =0x48 
+    0x100d358b0 <+252>: orr    w8, wzr, #0x1
+    0x100d358b4 <+256>: stp    x8, x20, [x22, #0x10]
+    0x100d358b8 <+260>: str    x21, [x22, #0x20]
+    0x100d358bc <+264>: ldr    x8, [sp, #0x48]
+    0x100d358c0 <+268>: ldxr   x9, [x8]
+    0x100d358c4 <+272>: subs   x9, x9, #0x1              ; =0x1 
+    0x100d358c8 <+276>: stlxr  w10, x9, [x8]
+    0x100d358cc <+280>: cbnz   w10, 0x100d358c0          ; <+268>
+    0x100d358d0 <+284>: b.ne   0x100d358dc               ; <+296>
+    0x100d358d4 <+288>: dmb    ishld
+    0x100d358d8 <+292>: bl     0x100fcf554               ; _$LT$alloc..sync..Arc$LT$T$GT$$GT$::drop_slow::h3efb354739ac116d
+    0x100d358dc <+296>: mov    w1, #0x50
+    0x100d358e0 <+300>: orr    w2, wzr, #0x8
+    0x100d358e4 <+304>: mov    x0, x19
+    0x100d358e8 <+308>: bl     0x100cd4b50               ; __rust_dealloc
+    0x100d358ec <+312>: ldp    x29, x30, [sp, #0xd0]
+    0x100d358f0 <+316>: ldp    x20, x19, [sp, #0xc0]
+    0x100d358f4 <+320>: ldp    x22, x21, [sp, #0xb0]
+    0x100d358f8 <+324>: ldp    x24, x23, [sp, #0xa0]
+    0x100d358fc <+328>: add    sp, sp, #0xe0             ; =0xe0 
+    0x100d35900 <+332>: ret    
+    0x100d35904 <+336>: mov    x23, x20
+    0x100d35908 <+340>: mov    x20, x0
+    0x100d3590c <+344>: ldp    x0, x1, [x22, #0x18]
+    0x100d35910 <+348>: bl     0x100d395c4               ; alloc::alloc::box_free::h008d277b2471c586
+    0x100d35914 <+352>: orr    w8, wzr, #0x1
+    0x100d35918 <+356>: stp    x8, x23, [x22, #0x10]
+    0x100d3591c <+360>: str    x21, [x22, #0x20]
+    0x100d35920 <+364>: b      0x100d3594c               ; <+408>
+    0x100d35924 <+368>: mov    x20, x0
+    0x100d35928 <+372>: b      0x100d3594c               ; <+408>
+    0x100d3592c <+376>: mov    x20, x0
+    0x100d35930 <+380>: b      0x100d35940               ; <+396>
+    0x100d35934 <+384>: mov    x20, x0
+    0x100d35938 <+388>: mov    x0, sp
+    0x100d3593c <+392>: bl     0x100d31c8c               ; core::ptr::drop_in_place::hcd6f99da9d577378 (.llvm.199164114816439967)
+    0x100d35940 <+396>: mov    x8, sp
+    0x100d35944 <+400>: orr    x0, x8, #0x8
+    0x100d35948 <+404>: bl     0x100d2dcf4               ; core::ptr::drop_in_place::h8518d8e3a7f43fc5
+    0x100d3594c <+408>: mov    x8, sp
+    0x100d35950 <+412>: add    x0, x8, #0x48             ; =0x48 
+    0x100d35954 <+416>: bl     0x100d2de90               ; core::ptr::drop_in_place::h857fa1cd0927f2d4 (.llvm.199164114816439967)
+    0x100d35958 <+420>: mov    x0, x19
+    0x100d3595c <+424>: bl     0x100d39630               ; alloc::alloc::box_free::h43582c9b1e5168b7
+    0x100d35960 <+428>: mov    x0, x20
+    0x100d35964 <+432>: bl     0x1024960e0               ; symbol stub for: _Unwind_Resume
+    0x100d35968 <+436>: brk    #0x1
+    0x100d3596c <+440>: mov    x20, x0
+    0x100d35970 <+444>: b      0x100d35958               ; <+420>
+
+StaticLibTest`std::sys::unix::thread::Thread::new::thread_start::hde1e7916b2f16dc8:
+    0x102442874 <+0>:   sub    sp, sp, #0x30             ; =0x30 
+    0x102442878 <+4>:   stp    x20, x19, [sp, #0x10]
+    0x10244287c <+8>:   stp    x29, x30, [sp, #0x20]
+    0x102442880 <+12>:  add    x29, sp, #0x20            ; =0x20 
+    0x102442884 <+16>:  mov    x19, x0
+    0x102442888 <+20>:  str    xzr, [sp, #0x8]
+    0x10244288c <+24>:  ldr    x0, [x0]
+    0x102442890 <+28>:  ldr    x8, [x19, #0x8]
+    0x102442894 <+32>:  ldr    x8, [x8, #0x18]
+    0x102442898 <+36>:  blr    x8
+ >   0x10244289c <+40>:  orr    w1, wzr, #0x10
+    0x1024428a0 <+44>:  orr    w2, wzr, #0x8
+    0x1024428a4 <+48>:  mov    x0, x19
+    0x1024428a8 <+52>:  bl     0x100cd4b50               ; __rust_dealloc
+    0x1024428ac <+56>:  mov    x0, #0x0
+    0x1024428b0 <+60>:  ldp    x29, x30, [sp, #0x20]
+    0x1024428b4 <+64>:  ldp    x20, x19, [sp, #0x10]
+    0x1024428b8 <+68>:  add    sp, sp, #0x30             ; =0x30 
+    0x1024428bc <+72>:  ret    
+    0x1024428c0 <+76>:  mov    x20, x0
+    0x1024428c4 <+80>:  add    x0, sp, #0x8              ; =0x8 
+    0x1024428c8 <+84>:  bl     0x102464054               ; core::ptr::drop_in_place::h58e460690740c93b at ptr.rs:59
+    0x1024428cc <+88>:  mov    x0, x19
+    0x1024428d0 <+92>:  bl     0x10246455c               ; alloc::alloc::box_free::h9fdae49a40918e45 [inlined] alloc::alloc::dealloc::h7e6c594cbe2dd520 at alloc.rs:206
+    0x1024428d4 <+96>:  mov    x0, x20
+    0x1024428d8 <+100>: bl     0x1024960e0               ; symbol stub for: _Unwind_Resume
+    0x1024428dc <+104>: brk    #0x1
+StaticLibTest`std::sys::unix::thread::Thread::new::thread_start::hde1e7916b2f16dc8:
+    0x102442874 <+0>:   sub    sp, sp, #0x30             ; =0x30 
+    0x102442878 <+4>:   stp    x20, x19, [sp, #0x10]
+    0x10244287c <+8>:   stp    x29, x30, [sp, #0x20]
+    0x102442880 <+12>:  add    x29, sp, #0x20            ; =0x20 
+    0x102442884 <+16>:  mov    x19, x0
+    0x102442888 <+20>:  str    xzr, [sp, #0x8]
+    0x10244288c <+24>:  ldr    x0, [x0]
+    0x102442890 <+28>:  ldr    x8, [x19, #0x8]
+ >   0x102442894 <+32>:  ldr    x8, [x8, #0x18]
+    0x102442898 <+36>:  blr    x8
+    0x10244289c <+40>:  orr    w1, wzr, #0x10
+    0x1024428a0 <+44>:  orr    w2, wzr, #0x8
+    0x1024428a4 <+48>:  mov    x0, x19
+    0x1024428a8 <+52>:  bl     0x100cd4b50               ; __rust_dealloc
+    0x1024428ac <+56>:  mov    x0, #0x0
+    0x1024428b0 <+60>:  ldp    x29, x30, [sp, #0x20]
+    0x1024428b4 <+64>:  ldp    x20, x19, [sp, #0x10]
+    0x1024428b8 <+68>:  add    sp, sp, #0x30             ; =0x30 
+    0x1024428bc <+72>:  ret    
+    0x1024428c0 <+76>:  mov    x20, x0
+    0x1024428c4 <+80>:  add    x0, sp, #0x8              ; =0x8 
+    0x1024428c8 <+84>:  bl     0x102464054               ; core::ptr::drop_in_place::h58e460690740c93b at ptr.rs:59
+    0x1024428cc <+88>:  mov    x0, x19
+    0x1024428d0 <+92>:  bl     0x10246455c               ; alloc::alloc::box_free::h9fdae49a40918e45 [inlined] alloc::alloc::dealloc::h7e6c594cbe2dd520 at alloc.rs:206
+    0x1024428d4 <+96>:  mov    x0, x20
+    0x1024428d8 <+100>: bl     0x1024960e0               ; symbol stub for: _Unwind_Resume
+    0x1024428dc <+104>: brk    #0x1
+
+StaticLibTest`std::sys::unix::thread::Thread::new::thread_start::hde1e7916b2f16dc8:
+    0x102442874 <+0>:   sub    sp, sp, #0x30             ; =0x30 
+    0x102442878 <+4>:   stp    x20, x19, [sp, #0x10]
+    0x10244287c <+8>:   stp    x29, x30, [sp, #0x20]
+    0x102442880 <+12>:  add    x29, sp, #0x20            ; =0x20 
+    0x102442884 <+16>:  mov    x19, x0
+  >  0x102442888 <+20>:  str    xzr, [sp, #0x8]
+    0x10244288c <+24>:  ldr    x0, [x0]
+    0x102442890 <+28>:  ldr    x8, [x19, #0x8]
+    0x102442894 <+32>:  ldr    x8, [x8, #0x18]
+    0x102442898 <+36>:  blr    x8
+    0x10244289c <+40>:  orr    w1, wzr, #0x10
+    0x1024428a0 <+44>:  orr    w2, wzr, #0x8
+    0x1024428a4 <+48>:  mov    x0, x19
+    0x1024428a8 <+52>:  bl     0x100cd4b50               ; __rust_dealloc
+    0x1024428ac <+56>:  mov    x0, #0x0
+    0x1024428b0 <+60>:  ldp    x29, x30, [sp, #0x20]
+    0x1024428b4 <+64>:  ldp    x20, x19, [sp, #0x10]
+    0x1024428b8 <+68>:  add    sp, sp, #0x30             ; =0x30 
+    0x1024428bc <+72>:  ret    
+    0x1024428c0 <+76>:  mov    x20, x0
+    0x1024428c4 <+80>:  add    x0, sp, #0x8              ; =0x8 
+    0x1024428c8 <+84>:  bl     0x102464054               ; core::ptr::drop_in_place::h58e460690740c93b at ptr.rs:59
+    0x1024428cc <+88>:  mov    x0, x19
+    0x1024428d0 <+92>:  bl     0x10246455c               ; alloc::alloc::box_free::h9fdae49a40918e45 [inlined] alloc::alloc::dealloc::h7e6c594cbe2dd520 at alloc.rs:206
+    0x1024428d4 <+96>:  mov    x0, x20
+    0x1024428d8 <+100>: bl     0x1024960e0               ; symbol stub for: _Unwind_Resume
+    0x1024428dc <+104>: brk    #0x1
+
+libsystem_pthread.dylib`_pthread_body:
+    0x211fb127c <+0>:   stp    x20, x19, [sp, #-0x20]!
+    0x211fb1280 <+4>:   stp    x29, x30, [sp, #0x10]
+    0x211fb1284 <+8>:   add    x29, sp, #0x10            ; =0x10 
+    0x211fb1288 <+12>:  mov    x20, x1
+    0x211fb128c <+16>:  mov    x19, x0
+    0x211fb1290 <+20>:  bl     0x211f2d9ac               ; __thread_selfid
+    0x211fb1294 <+24>:  str    x0, [x19, #0xd8]
+    0x211fb1298 <+28>:  cmn    x0, #0x1                  ; =0x1 
+    0x211fb129c <+32>:  b.ne   0x211fb12c0               ; <+68>
+    0x211fb12a0 <+36>:  stp    x20, x21, [sp, #-0x10]!
+    0x211fb12a4 <+40>:  adrp   x20, 5
+    0x211fb12a8 <+44>:  add    x20, x20, #0x8c9          ; =0x8c9 
+    0x211fb12ac <+48>:  adrp   x21, 225707
+    0x211fb12b0 <+52>:  add    x21, x21, #0x2b0          ; =0x2b0 
+    0x211fb12b4 <+56>:  str    x20, [x21, #0x8]
+    0x211fb12b8 <+60>:  ldp    x20, x21, [sp], #0x10
+    0x211fb12bc <+64>:  brk    #0x1
+    0x211fb12c0 <+68>:  cbz    w20, 0x211fb12cc          ; <+80>
+    0x211fb12c4 <+72>:  add    x0, x19, #0xe0            ; =0xe0 
+    0x211fb12c8 <+76>:  bl     0x211f2f988               ; _thread_set_tsd_base
+    0x211fb12cc <+80>:  ldr    x8, [x19, #0xf8]
+    0x211fb12d0 <+84>:  add    w9, w8, #0x1              ; =0x1 
+    0x211fb12d4 <+88>:  cmp    w9, #0x1                  ; =0x1 
+    0x211fb12d8 <+92>:  b.ls   0x211fb1308               ; <+140>
+    0x211fb12dc <+96>:  adrp   x8, 225707
+    0x211fb12e0 <+100>: ldr    x8, [x8, #0x2f8]
+    0x211fb12e4 <+104>: cbz    x8, 0x211fb12f0           ; <+116>
+    0x211fb12e8 <+108>: mov    x0, x19
+    0x211fb12ec <+112>: bl     0x211fb2ca8               ; _pthread_introspection_hook_callout_thread_start
+    0x211fb12f0 <+116>: ldr    x8, [x19, #0x88]
+    0x211fb12f4 <+120>: ldr    x0, [x19, #0x98]
+    0x211fb12f8 <+124>: blr    x8
+ >   0x211fb12fc <+128>: mov    x1, x0
+    0x211fb1300 <+132>: mov    x0, x19
+    0x211fb1304 <+136>: bl     0x211fb18d0               ; _pthread_exit
+    0x211fb1308 <+140>: and    x8, x8, #0xffffffff
+    0x211fb130c <+144>: stp    x20, x21, [sp, #-0x10]!
+    0x211fb1310 <+148>: adrp   x20, 5
+    0x211fb1314 <+152>: add    x20, x20, #0x7bd          ; =0x7bd 
+    0x211fb1318 <+156>: adrp   x21, 225707
+    0x211fb131c <+160>: add    x21, x21, #0x2b0          ; =0x2b0 
+    0x211fb1320 <+164>: str    x20, [x21, #0x8]
+    0x211fb1324 <+168>: str    x8, [x21, #0x38]
+    0x211fb1328 <+172>: ldp    x20, x21, [sp], #0x10
+    0x211fb132c <+176>: brk    #0x1
+
+libsystem_pthread.dylib`thread_start:
+    0x211fb4d04 <+0>: bl     0x211fb122c               ; _pthread_start
+>    0x211fb4d08 <+4>: nop    
+

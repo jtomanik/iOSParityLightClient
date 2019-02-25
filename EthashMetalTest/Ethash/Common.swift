@@ -8,48 +8,34 @@
 
 import Foundation
 
+extension ethash_h256 {
+    static func toRawArray(_ instance: ethash_h256) -> [ethash_uint64_t] {
+        var tmp = instance
+        return [ethash_uint64_t](UnsafeBufferPointer(start: &tmp.double_words.0, count: MemoryLayout.size(ofValue: tmp)))
+    }
+}
+
+extension ethash_node {
+    static func toRawArray(_ instance: ethash_node) -> [ethash_uint64_t] {
+        var tmp = instance
+        return [ethash_uint64_t](UnsafeBufferPointer(start: &tmp.double_words.0, count: MemoryLayout.size(ofValue: tmp)))
+    }
+}
+
 extension ethash_h256: Equatable {
     public static func == (lhs: ethash_h256, rhs: ethash_h256) -> Bool {
         return (
-            lhs.b.0 == rhs.b.0 &&
-                lhs.b.1 == rhs.b.1 &&
-                lhs.b.2 == rhs.b.2 &&
-                lhs.b.3 == rhs.b.3 &&
-                lhs.b.4 == rhs.b.4 &&
-                lhs.b.5 == rhs.b.5 &&
-                lhs.b.6 == rhs.b.6 &&
-                lhs.b.7 == rhs.b.7 &&
-                lhs.b.8 == rhs.b.8 &&
-                lhs.b.9 == rhs.b.9 &&
-                lhs.b.10 == rhs.b.10 &&
-                lhs.b.11 == rhs.b.11 &&
-                lhs.b.12 == rhs.b.12 &&
-                lhs.b.13 == rhs.b.13 &&
-                lhs.b.14 == rhs.b.14 &&
-                lhs.b.15 == rhs.b.15 &&
-                lhs.b.16 == rhs.b.16 &&
-                lhs.b.17 == rhs.b.17 &&
-                lhs.b.18 == rhs.b.18 &&
-                lhs.b.19 == rhs.b.19 &&
-                lhs.b.20 == rhs.b.20 &&
-                lhs.b.21 == rhs.b.21 &&
-                lhs.b.22 == rhs.b.22 &&
-                lhs.b.23 == rhs.b.23 &&
-                lhs.b.24 == rhs.b.24 &&
-                lhs.b.25 == rhs.b.25 &&
-                lhs.b.26 == rhs.b.26 &&
-                lhs.b.27 == rhs.b.27 &&
-                lhs.b.28 == rhs.b.28 &&
-                lhs.b.29 == rhs.b.29 &&
-                lhs.b.30 == rhs.b.30 &&
-                lhs.b.31 == rhs.b.31
+                lhs.double_words.0 == rhs.double_words.0 &&
+                lhs.double_words.1 == rhs.double_words.1 &&
+                lhs.double_words.2 == rhs.double_words.2 &&
+                lhs.double_words.3 == rhs.double_words.3
         )
     }
 }
 extension ethash_node: Equatable {
     public static func == (lhs: ethash_node, rhs: ethash_node) -> Bool {
         return (
-            lhs.double_words.0 == rhs.double_words.0 &&
+                lhs.double_words.0 == rhs.double_words.0 &&
                 lhs.double_words.1 == rhs.double_words.1 &&
                 lhs.double_words.2 == rhs.double_words.2 &&
                 lhs.double_words.3 == rhs.double_words.3 &&
@@ -58,5 +44,45 @@ extension ethash_node: Equatable {
                 lhs.double_words.6 == rhs.double_words.6 &&
                 lhs.double_words.7 == rhs.double_words.7
         )
+    }
+}
+
+extension ethash_h256 {
+
+    static func from(bytes: (ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t, ethash_uint8_t)) -> ethash_h256 {
+        var ret = ethash_h256()
+        ret.double_words.0 = ethash_uint64_t.fromBytes(ethash_uint32_t.fromBytes(bytes.0,  bytes.1,  bytes.2,  bytes.3),
+                                                       ethash_uint32_t.fromBytes(bytes.4,  bytes.5,  bytes.6,  bytes.7))
+        ret.double_words.1 = ethash_uint64_t.fromBytes(ethash_uint32_t.fromBytes(bytes.8,  bytes.9,  bytes.10, bytes.11),
+                                                       ethash_uint32_t.fromBytes(bytes.12, bytes.13, bytes.14, bytes.15))
+        ret.double_words.2 = ethash_uint64_t.fromBytes(ethash_uint32_t.fromBytes(bytes.16, bytes.17, bytes.18, bytes.19),
+                                                       ethash_uint32_t.fromBytes(bytes.20, bytes.21, bytes.22, bytes.23))
+        ret.double_words.3 = ethash_uint64_t.fromBytes(ethash_uint32_t.fromBytes(bytes.24, bytes.25, bytes.26, bytes.27),
+                                                       ethash_uint32_t.fromBytes(bytes.28, bytes.29, bytes.30, bytes.31))
+        return ret
+    }
+}
+
+extension ethash_uint32_t {
+
+    static func fromBytes(_ a: ethash_uint8_t, _ b: ethash_uint8_t, _ c: ethash_uint8_t, _ d: ethash_uint8_t) -> ethash_uint32_t {
+        var ret: ethash_uint32_t = 0
+        let aa = UInt32(a) << 24
+        let bb = UInt32(b) << 16
+        let cc = UInt32(c) << 8
+        let dd = UInt32(d)
+        ret = aa | bb | cc | dd
+        return ret
+    }
+}
+
+extension ethash_uint64_t {
+
+    static func fromBytes(_ a: ethash_uint32_t, _ b: ethash_uint32_t) -> ethash_uint64_t {
+        var ret: ethash_uint64_t = 0
+        let aa = UInt64(a) << 32
+        let bb = UInt64(b)
+        ret = aa | bb
+        return ret
     }
 }

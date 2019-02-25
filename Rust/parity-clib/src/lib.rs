@@ -17,9 +17,12 @@
 //! Note that all the structs and functions here are documented in `parity.h`, to avoid
 //! duplicating documentation.
 
-extern crate parity_ethereum;
+extern crate paritylib_light;
 extern crate panic_hook;
 extern crate ethcore_logger;
+
+#[macro_use]
+extern crate lazy_static;
 
 mod helpers;
 mod logger;
@@ -29,6 +32,10 @@ use std::{panic, ptr, str};
 use std::ffi::{CStr};
 use helpers::{LoggingCallback, ForeginCallbackObject};
 use logger::setup_log;
+use paritylib_light::{RunningClient,
+					  RunOptionsLight,
+					  Cmd,
+					  Configuration};
 
 #[cfg(feature = "malloc")]
 use std::alloc::System;
@@ -48,29 +55,56 @@ pub unsafe extern fn parity_start_ios(output: *mut *mut c_void,
 		let arguments: Vec<&str> = argument_string.split(' ').collect();
 
 		let config = {
-			parity_ethereum::Configuration::parse_cli(&arguments).unwrap_or_else(|e| e.exit())
+			Configuration::parse_cli(&arguments).unwrap_or_else(|e| e.exit())
+		};
+
+		let command = config.into_command().unwrap();
+		let cmd = match command.cmd {
+			Cmd::Run(run_cmd) => Some(run_cmd),
+			_ => None
+		}.unwrap();
+
+		let options = RunOptionsLight {
+			cache_config: cmd.cache_config,
+			accounts_config: cmd.acc_conf,
+			dirs: cmd.dirs,
+			spec: cmd.spec,
+			pruning: cmd.pruning,
+			pruning_history: cmd.pruning_history,
+			pruning_memory: cmd.pruning_memory,
+			compaction: cmd.compaction,
+			check_seal: cmd.check_seal,
+			no_hardcoded_sync: cmd.no_hardcoded_sync,
+			gas_price_percentile: cmd.gas_price_percentile,
+			poll_lifetime: cmd.poll_lifetime,
+			geth_compatibility: cmd.geth_compatibility,
+			experimental_rpcs: cmd.experimental_rpcs,
+			net_settings: cmd.net_settings,
+			verifier_settings: cmd.verifier_settings,
+			net_config: cmd.net_conf,
+			custom_bootnodes: cmd.custom_bootnodes,
+			network_id: cmd.network_id,
+			on_demand_response_time_window: cmd.on_demand_response_time_window,
+			on_demand_request_backoff_start: cmd.on_demand_request_backoff_start,
+			on_demand_request_backoff_max: cmd.on_demand_request_backoff_max,
+			on_demand_request_backoff_rounds_max: cmd.on_demand_request_backoff_rounds_max,
+			on_demand_request_consecutive_failures: cmd.on_demand_request_consecutive_failures,
 		};
 
 		let logger = setup_log(callback_owner, callback) .expect("Logger is initialized only once; qed");
 
 		let on_client_restart_cb = |_ : String| {};
-		let action = match parity_ethereum::start(config, logger, on_client_restart_cb, || {}) {
-			Ok(action) => action,
+		let client = match paritylib_light::start(options, logger, on_client_restart_cb, || {}) {
+			Ok(client) => client,
 			Err(msg) => {
 				println!("{}", msg);
 				return 1
 			}
 		};
 
-		match action {
-			parity_ethereum::ExecutionAction::Instant(Some(s)) => { println!("{}", s); 0 },
-			parity_ethereum::ExecutionAction::Instant(None) => 0,
-			parity_ethereum::ExecutionAction::Running(client) => {
-				let pointer = Box::into_raw(Box::<parity_ethereum::RunningClient>::new(client)) as *mut c_void;
-				*output = pointer;
-				0
-			}
-		}
+		let pointer = Box::into_raw(Box::<RunningClient>::new(client)) as *mut c_void;
+		*output = pointer;
+		0
 	}).unwrap_or(1)
 }
 
@@ -85,7 +119,7 @@ pub unsafe extern fn parity_rpc_ios_query(client: *mut c_void,
 			return 2;
 		}
 
-		let local_client: &mut parity_ethereum::RunningClient = &mut *(client as *mut parity_ethereum::RunningClient);
+		let local_client: &mut RunningClient = &mut *(client as *mut RunningClient);
 		let query = CStr::from_ptr(query).to_string_lossy().into_owned();
 
 		if let Some(output) = local_client.rpc_query_sync(&query) {
@@ -101,7 +135,7 @@ pub unsafe extern fn parity_rpc_ios_query(client: *mut c_void,
 #[no_mangle]
 pub unsafe extern fn parity_destroy(client: *mut c_void) {
 	let _ = panic::catch_unwind(|| {
-		let client = Box::from_raw(client as *mut parity_ethereum::RunningClient);
+		let client = Box::from_raw(client as *mut RunningClient);
 		client.shutdown();
 	});
 }

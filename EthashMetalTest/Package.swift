@@ -1,29 +1,40 @@
-// swift-tools-version:4.0
+// swift-tools-version:4.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
 
 let package = Package(
     name: "CmdTestCpp",
     products: [
-        // Products define the executables and libraries produced by a package, and make them visible to other packages.
+        .executable(name: "test-cpp", targets: ["CmdTestCpp"]),
         .library(
-            name: "CListWrapper",
-            targets: ["CListWrapper"]),
+            name: "EthashSwift",
+            targets: ["EthashSwift"]),
         .library(
-            name: "SwiftPlusPlus",
-            targets: ["SwiftPlusPlus"]),
-        ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+            name: "EthashLibCPP",
+            targets: ["EthashLibCPP"])
     ],
+    dependencies: [],
     targets: [
         .target(
-            name: "EthashLibCPP",
-            path: "./Sources/CListWrapper"
-        ),
-        .target(
             name: "CmdTestCpp",
-            path: "./Sources/CListWrapper",
-            dependencies: ["EthashLibCPP"]),
+            dependencies: ["EthashSwift"],
+            path: "./targets/CmdTestCpp"),
+        .target(
+            name: "EthashSwift",
+            dependencies: ["EthashLibCPP"],
+            path: "./Ethash",
+            exclude: ["Ethash.swift",
+                      "EthashGPU.swift",
+                      "EthashCPU.swift"]),
+//        .target(
+//            name: "EthashLib",
+//            path: "./libethash/Core",
+//            //            exclude: "",
+//            publicHeadersPath: "."),
+        .target(
+            name: "EthashLibCPP",
+            path: "./libethash/CPP")
+//            exclude: "",
+//            publicHeadersPath: ".")
+    ]
 )

@@ -10,6 +10,7 @@
 #define Bridging_Header_h
 
 #include "../../libethash/Ethash.h"
+#include "../../libethash/common.h"
 #include "../../libethash/C/ethash.h"
 
 #endif /* Bridging_Header_h */

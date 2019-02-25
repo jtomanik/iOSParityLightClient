@@ -7,28 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A3C87132207B35B00D8CFF4 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3C87122207B35B00D8CFF4 /* Metal.framework */; };
+		7A501BC7220EB580004DF6A4 /* EthashCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A501BC6220EB580004DF6A4 /* EthashCPU.swift */; };
+		7A501BC8220F6682004DF6A4 /* Ethash.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A501BB5220EAB1B004DF6A4 /* Ethash.metal */; };
+		7A501BCB220F669D004DF6A4 /* internal.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A501BC3220EAB1B004DF6A4 /* internal.c */; };
+		7A501BCC220F669D004DF6A4 /* sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A501BC4220EAB1B004DF6A4 /* sha3.c */; };
+		7A7485BB2220139B0056249E /* internal.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A501BC3220EAB1B004DF6A4 /* internal.c */; };
+		7A7485BC2220139F0056249E /* sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A501BC4220EAB1B004DF6A4 /* sha3.c */; };
+		7A7485C0222069D40056249E /* Ethashmetal.metal in Resources */ = {isa = PBXBuildFile; fileRef = 7A7485BF222069D30056249E /* Ethashmetal.metal */; };
+		7A8007A0221469E400828AE9 /* EthashCPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A80079F221469E400828AE9 /* EthashCPP.swift */; };
+		7A8007E12214D23B00828AE9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8007E02214D23400828AE9 /* main.swift */; };
+		7A8007E32214D2BA00828AE9 /* internal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A80079922136A9000828AE9 /* internal.cpp */; };
+		7A8007E42214D2BD00828AE9 /* keccak.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A501BBC220EAB1B004DF6A4 /* keccak.cpp */; };
+		7A8007EC2214D2E300828AE9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8007EB2214D2E300828AE9 /* main.swift */; };
+		7A8007F72214D2F800828AE9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8007F62214D2F800828AE9 /* main.swift */; };
+		7A8007FB2214D32200828AE9 /* internal.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A501BC3220EAB1B004DF6A4 /* internal.c */; };
+		7A8007FC2214D32200828AE9 /* sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A501BC4220EAB1B004DF6A4 /* sha3.c */; };
+		7A8007FD2214D32800828AE9 /* Ethash.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A501BB5220EAB1B004DF6A4 /* Ethash.metal */; };
+		7A8007FE2214D33300828AE9 /* EthashGPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884BE92205BDE500B9D69C /* EthashGPU.swift */; };
+		7A8007FF2214D33800828AE9 /* EthashCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A501BC6220EB580004DF6A4 /* EthashCPU.swift */; };
+		7A8008012214D34700828AE9 /* EthashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884BE72205BB4F00B9D69C /* EthashTests.swift */; };
+		7A8008022214D34800828AE9 /* EthashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884BE72205BB4F00B9D69C /* EthashTests.swift */; };
+		7A8008032214D34900828AE9 /* EthashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884BE72205BB4F00B9D69C /* EthashTests.swift */; };
+		7A8008042214D34D00828AE9 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C2122078E0700B9D69C /* Common.swift */; };
+		7A8008052214D34E00828AE9 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C2122078E0700B9D69C /* Common.swift */; };
+		7A8008062214D35000828AE9 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C2122078E0700B9D69C /* Common.swift */; };
+		7A8008152214D5EC00828AE9 /* EthashCPP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A80079F221469E400828AE9 /* EthashCPP.swift */; };
 		7A884BE82205BB4F00B9D69C /* EthashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884BE72205BB4F00B9D69C /* EthashTests.swift */; };
-		7A884BEA2205BDE500B9D69C /* EthashGPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884BE92205BDE500B9D69C /* EthashGPU.swift */; };
-		7A884BEB2205BFD500B9D69C /* Ethash.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E17BE21F9E010004F8A5D /* Ethash.metal */; };
-		7A884C052207869700B9D69C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C042207869700B9D69C /* main.swift */; };
-		7A884C0B220786F200B9D69C /* EthashGPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884BE92205BDE500B9D69C /* EthashGPU.swift */; };
-		7A884C0D22078A4D00B9D69C /* Ethash.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E17BE21F9E010004F8A5D /* Ethash.metal */; };
-		7A884C0E22078A4E00B9D69C /* Ethash.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E17BE21F9E010004F8A5D /* Ethash.metal */; };
-		7A884C1B22078DA300B9D69C /* internal.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C1822078DA300B9D69C /* internal.c */; };
-		7A884C1D22078DA300B9D69C /* sha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C1922078DA300B9D69C /* sha3.c */; };
 		7A884C2222078E0700B9D69C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C2122078E0700B9D69C /* Common.swift */; };
-		7A884C2322078E0700B9D69C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A884C2122078E0700B9D69C /* Common.swift */; };
 		7A8E17A821F9D6AD004F8A5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E17A721F9D6AD004F8A5D /* AppDelegate.swift */; };
 		7A8E17AA21F9D6AD004F8A5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8E17A921F9D6AD004F8A5D /* ViewController.swift */; };
 		7A8E17AD21F9D6AD004F8A5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8E17AB21F9D6AD004F8A5D /* Main.storyboard */; };
 		7A8E17AF21F9D6AF004F8A5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A8E17AE21F9D6AF004F8A5D /* Assets.xcassets */; };
 		7A8E17B221F9D6AF004F8A5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A8E17B021F9D6AF004F8A5D /* LaunchScreen.storyboard */; };
-		7ADF737A21FCB5B9004BD5EF /* Ethash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADF737921FCB5B9004BD5EF /* Ethash.swift */; };
+		7AEEECD02215C4990089B6C4 /* EthashObjCPP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AEEECCF2215C4990089B6C4 /* EthashObjCPP.mm */; };
+		7AF2B13522185083007F7F10 /* EthashMetalLib_Mac.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7AF2B13422185083007F7F10 /* EthashMetalLib_Mac.metal */; };
+		7AF2B139221850CD007F7F10 /* Ethash.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7A501BB5220EAB1B004DF6A4 /* Ethash.metal */; };
+		7AF2B140221851EF007F7F10 /* EthashMetalLib-Mac.metallib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7AF2B13222185083007F7F10 /* EthashMetalLib-Mac.metallib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7AF2B13C2218517B007F7F10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A8E179C21F9D6AD004F8A5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AF2B13122185083007F7F10;
+			remoteInfo = "EthashMetalLib-Mac";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		7A884C002207869700B9D69C /* CopyFiles */ = {
+		7A8007D52214D20100828AE9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -37,26 +65,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		7A8007E72214D2E300828AE9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		7A8007F22214D2F800828AE9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		7AF2B13F221851E0007F7F10 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /Users/jakubtomanik/Documents/StaticLibTest/EthashMetalTest/targets;
+			dstSubfolderSpec = 0;
+			files = (
+				7AF2B140221851EF007F7F10 /* EthashMetalLib-Mac.metallib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7A3C87122207B35B00D8CFF4 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
+		7A501BB4220EAB1B004DF6A4 /* ethash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ethash.h; sourceTree = "<group>"; };
+		7A501BB5220EAB1B004DF6A4 /* Ethash.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Ethash.metal; sourceTree = "<group>"; };
+		7A501BB7220EAB1B004DF6A4 /* sha3expanded.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sha3expanded.c; sourceTree = "<group>"; };
+		7A501BB9220EAB1B004DF6A4 /* keccak.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = keccak.hpp; sourceTree = "<group>"; };
+		7A501BBA220EAB1B004DF6A4 /* ethash.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = ethash.hpp; sourceTree = "<group>"; };
+		7A501BBC220EAB1B004DF6A4 /* keccak.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = keccak.cpp; sourceTree = "<group>"; };
+		7A501BBE220EAB1B004DF6A4 /* ethash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ethash.h; sourceTree = "<group>"; };
+		7A501BBF220EAB1B004DF6A4 /* internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
+		7A501BC1220EAB1B004DF6A4 /* endian.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = endian.h; sourceTree = "<group>"; };
+		7A501BC2220EAB1B004DF6A4 /* sha3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sha3.h; sourceTree = "<group>"; };
+		7A501BC3220EAB1B004DF6A4 /* internal.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = internal.c; sourceTree = "<group>"; };
+		7A501BC4220EAB1B004DF6A4 /* sha3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sha3.c; sourceTree = "<group>"; };
+		7A501BC6220EB580004DF6A4 /* EthashCPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthashCPU.swift; sourceTree = "<group>"; };
 		7A6E48B121FA4D2800C450AC /* EthashMetalTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EthashMetalTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		7A6E48D521FA606100C450AC /* Ethash.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ethash.txt; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = "<none>"; };
+		7A7485BF222069D30056249E /* Ethashmetal.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Ethashmetal.metal; sourceTree = "<group>"; };
+		7A80079922136A9000828AE9 /* internal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = internal.cpp; sourceTree = "<group>"; };
+		7A80079A22136A9000828AE9 /* internal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = internal.hpp; sourceTree = "<group>"; };
+		7A80079D22136ACE00828AE9 /* mem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mem.h; sourceTree = "<group>"; };
+		7A80079F221469E400828AE9 /* EthashCPP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthashCPP.swift; sourceTree = "<group>"; };
+		7A8007D72214D20100828AE9 /* CmdTestCpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CmdTestCpp; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A8007E02214D23400828AE9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7A8007E92214D2E300828AE9 /* CmdTestC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CmdTestC; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A8007EB2214D2E300828AE9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7A8007F42214D2F800828AE9 /* CmdTestMetal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CmdTestMetal; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A8007F62214D2F800828AE9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7A8008122214D3ED00828AE9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		7A8008132214D3F900828AE9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		7A8008142214D40F00828AE9 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		7A884BE72205BB4F00B9D69C /* EthashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthashTests.swift; sourceTree = "<group>"; };
 		7A884BE92205BDE500B9D69C /* EthashGPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthashGPU.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		7A884BF12205CE8C00B9D69C /* TestMetalLib.metallib */ = {isa = PBXFileReference; explicitFileType = "archive.metal-library"; includeInIndex = 0; path = TestMetalLib.metallib; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A884BFD220764EF00B9D69C /* Ethash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ethash.h; sourceTree = "<group>"; };
-		7A884C022207869700B9D69C /* GPUEthashTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GPUEthashTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A884C042207869700B9D69C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7A884C0F22078D1400B9D69C /* GPUEthashTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GPUEthashTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		7A884C1322078DA300B9D69C /* ethash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ethash.h; sourceTree = "<group>"; };
-		7A884C1422078DA300B9D69C /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
-		7A884C1522078DA300B9D69C /* data_sizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = data_sizes.h; sourceTree = "<group>"; };
-		7A884C1622078DA300B9D69C /* endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = endian.h; sourceTree = "<group>"; };
-		7A884C1722078DA300B9D69C /* sha3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha3.h; sourceTree = "<group>"; };
-		7A884C1822078DA300B9D69C /* internal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = internal.c; sourceTree = "<group>"; };
-		7A884C1922078DA300B9D69C /* sha3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha3.c; sourceTree = "<group>"; };
 		7A884C2122078E0700B9D69C /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7A8E17A421F9D6AD004F8A5D /* EthashMetalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EthashMetalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8E17A721F9D6AD004F8A5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,18 +137,35 @@
 		7A8E17AE21F9D6AF004F8A5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A8E17B121F9D6AF004F8A5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A8E17B321F9D6AF004F8A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A8E17BC21F9DD5F004F8A5D /* keccak.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = keccak.metal; sourceTree = "<group>"; };
-		7A8E17BE21F9E010004F8A5D /* Ethash.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Ethash.metal; sourceTree = "<group>"; };
-		7AA6E91A2208F4AC00CCDFCD /* sha3expanded.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sha3expanded.c; sourceTree = "<group>"; };
-		7ADF737921FCB5B9004BD5EF /* Ethash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ethash.swift; sourceTree = "<group>"; };
+		7AEEECC5221579790089B6C4 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		7AEEECCC2215C3BD0089B6C4 /* data_sizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = data_sizes.h; sourceTree = "<group>"; };
+		7AEEECCD2215C3BD0089B6C4 /* Ethash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ethash.h; sourceTree = "<group>"; };
+		7AEEECCE2215C4990089B6C4 /* EthashObjCPP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EthashObjCPP.h; sourceTree = "<group>"; };
+		7AEEECCF2215C4990089B6C4 /* EthashObjCPP.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = EthashObjCPP.mm; sourceTree = "<group>"; };
+		7AF2B13222185083007F7F10 /* EthashMetalLib-Mac.metallib */ = {isa = PBXFileReference; explicitFileType = "archive.metal-library"; includeInIndex = 0; path = "EthashMetalLib-Mac.metallib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AF2B13422185083007F7F10 /* EthashMetalLib_Mac.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = EthashMetalLib_Mac.metal; sourceTree = "<group>"; };
+		7AF573842221F495007AB354 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7A884BFF2207869700B9D69C /* Frameworks */ = {
+		7A8007D42214D20100828AE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A3C87132207B35B00D8CFF4 /* Metal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A8007E62214D2E300828AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A8007F12214D2F800828AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,11 +187,94 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7A884BF22205CE8C00B9D69C /* TestMetalLib */ = {
+		7A501BB2220EAB1B004DF6A4 /* libethash */ = {
 			isa = PBXGroup;
 			children = (
+				7AEEECCD2215C3BD0089B6C4 /* Ethash.h */,
+				7AF573842221F495007AB354 /* common.h */,
+				7AEEECCC2215C3BD0089B6C4 /* data_sizes.h */,
+				7A80079D22136ACE00828AE9 /* mem.h */,
+				7A501BBD220EAB1B004DF6A4 /* C */,
+				7A501BB8220EAB1B004DF6A4 /* CPP */,
+				7A501BB3220EAB1B004DF6A4 /* Metal */,
+				7A501BB7220EAB1B004DF6A4 /* sha3expanded.c */,
 			);
-			path = TestMetalLib;
+			path = libethash;
+			sourceTree = "<group>";
+		};
+		7A501BB3220EAB1B004DF6A4 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				7A7485BF222069D30056249E /* Ethashmetal.metal */,
+				7A501BB4220EAB1B004DF6A4 /* ethash.h */,
+				7A501BB5220EAB1B004DF6A4 /* Ethash.metal */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		7A501BB8220EAB1B004DF6A4 /* CPP */ = {
+			isa = PBXGroup;
+			children = (
+				7AEEECCE2215C4990089B6C4 /* EthashObjCPP.h */,
+				7AEEECCF2215C4990089B6C4 /* EthashObjCPP.mm */,
+				7A501BBA220EAB1B004DF6A4 /* ethash.hpp */,
+				7A80079A22136A9000828AE9 /* internal.hpp */,
+				7A80079922136A9000828AE9 /* internal.cpp */,
+				7A501BB9220EAB1B004DF6A4 /* keccak.hpp */,
+				7A501BBC220EAB1B004DF6A4 /* keccak.cpp */,
+			);
+			path = CPP;
+			sourceTree = "<group>";
+		};
+		7A501BBD220EAB1B004DF6A4 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				7A501BBE220EAB1B004DF6A4 /* ethash.h */,
+				7A501BBF220EAB1B004DF6A4 /* internal.h */,
+				7A501BC3220EAB1B004DF6A4 /* internal.c */,
+				7A501BC2220EAB1B004DF6A4 /* sha3.h */,
+				7A501BC4220EAB1B004DF6A4 /* sha3.c */,
+				7A501BC1220EAB1B004DF6A4 /* endian.h */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		7A8007DE2214D23300828AE9 /* targets */ = {
+			isa = PBXGroup;
+			children = (
+				7AF2B13322185083007F7F10 /* EthashMetalLib-Mac */,
+				7A8007F52214D2F800828AE9 /* CmdTestMetal */,
+				7A8007EA2214D2E300828AE9 /* CmdTestC */,
+				7A8007DF2214D23400828AE9 /* CmdTestCpp */,
+			);
+			path = targets;
+			sourceTree = "<group>";
+		};
+		7A8007DF2214D23400828AE9 /* CmdTestCpp */ = {
+			isa = PBXGroup;
+			children = (
+				7A8007E02214D23400828AE9 /* main.swift */,
+				7A8008122214D3ED00828AE9 /* Bridging-Header.h */,
+			);
+			path = CmdTestCpp;
+			sourceTree = "<group>";
+		};
+		7A8007EA2214D2E300828AE9 /* CmdTestC */ = {
+			isa = PBXGroup;
+			children = (
+				7A8007EB2214D2E300828AE9 /* main.swift */,
+				7A8008132214D3F900828AE9 /* Bridging-Header.h */,
+			);
+			path = CmdTestC;
+			sourceTree = "<group>";
+		};
+		7A8007F52214D2F800828AE9 /* CmdTestMetal */ = {
+			isa = PBXGroup;
+			children = (
+				7A8007F62214D2F800828AE9 /* main.swift */,
+				7A8008142214D40F00828AE9 /* Bridging-Header.h */,
+			);
+			path = CmdTestMetal;
 			sourceTree = "<group>";
 		};
 		7A884C032207869700B9D69C /* GPUEthashTest */ = {
@@ -114,26 +286,14 @@
 			path = GPUEthashTest;
 			sourceTree = "<group>";
 		};
-		7A884C1222078DA300B9D69C /* libethash */ = {
-			isa = PBXGroup;
-			children = (
-				7AA6E91A2208F4AC00CCDFCD /* sha3expanded.c */,
-				7A884C1322078DA300B9D69C /* ethash.h */,
-				7A884C1422078DA300B9D69C /* internal.h */,
-				7A884C1522078DA300B9D69C /* data_sizes.h */,
-				7A884C1622078DA300B9D69C /* endian.h */,
-				7A884C1722078DA300B9D69C /* sha3.h */,
-				7A884C1822078DA300B9D69C /* internal.c */,
-				7A884C1922078DA300B9D69C /* sha3.c */,
-			);
-			path = libethash;
-			sourceTree = SOURCE_ROOT;
-		};
 		7A8E179B21F9D6AD004F8A5D = {
 			isa = PBXGroup;
 			children = (
+				7AEEECC5221579790089B6C4 /* Package.swift */,
+				7A8007DE2214D23300828AE9 /* targets */,
+				7A501BB2220EAB1B004DF6A4 /* libethash */,
+				7ADF737B21FCB5BF004BD5EF /* Ethash */,
 				7A8E17A621F9D6AD004F8A5D /* EthashMetalTest */,
-				7A884BF22205CE8C00B9D69C /* TestMetalLib */,
 				7A884C032207869700B9D69C /* GPUEthashTest */,
 				7A8E17A521F9D6AD004F8A5D /* Products */,
 				7A3C87112207B35B00D8CFF4 /* Frameworks */,
@@ -144,8 +304,10 @@
 			isa = PBXGroup;
 			children = (
 				7A8E17A421F9D6AD004F8A5D /* EthashMetalTest.app */,
-				7A884BF12205CE8C00B9D69C /* TestMetalLib.metallib */,
-				7A884C022207869700B9D69C /* GPUEthashTest */,
+				7A8007D72214D20100828AE9 /* CmdTestCpp */,
+				7A8007E92214D2E300828AE9 /* CmdTestC */,
+				7A8007F42214D2F800828AE9 /* CmdTestMetal */,
+				7AF2B13222185083007F7F10 /* EthashMetalLib-Mac.metallib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,9 +315,6 @@
 		7A8E17A621F9D6AD004F8A5D /* EthashMetalTest */ = {
 			isa = PBXGroup;
 			children = (
-				7A884C1222078DA300B9D69C /* libethash */,
-				7ADF737B21FCB5BF004BD5EF /* Ethash */,
-				7A8E17BB21F9D73D004F8A5D /* Metal */,
 				7A8E17A721F9D6AD004F8A5D /* AppDelegate.swift */,
 				7A8E17A921F9D6AD004F8A5D /* ViewController.swift */,
 				7A8E17AB21F9D6AD004F8A5D /* Main.storyboard */,
@@ -167,61 +326,79 @@
 			path = EthashMetalTest;
 			sourceTree = "<group>";
 		};
-		7A8E17BB21F9D73D004F8A5D /* Metal */ = {
-			isa = PBXGroup;
-			children = (
-				7A884BFD220764EF00B9D69C /* Ethash.h */,
-				7A8E17BE21F9E010004F8A5D /* Ethash.metal */,
-				7A8E17BC21F9DD5F004F8A5D /* keccak.metal */,
-				7A6E48D521FA606100C450AC /* Ethash.txt */,
-			);
-			path = Metal;
-			sourceTree = "<group>";
-		};
 		7ADF737B21FCB5BF004BD5EF /* Ethash */ = {
 			isa = PBXGroup;
 			children = (
-				7ADF737921FCB5B9004BD5EF /* Ethash.swift */,
 				7A884BE92205BDE500B9D69C /* EthashGPU.swift */,
+				7A501BC6220EB580004DF6A4 /* EthashCPU.swift */,
+				7A80079F221469E400828AE9 /* EthashCPP.swift */,
 				7A884BE72205BB4F00B9D69C /* EthashTests.swift */,
 				7A884C2122078E0700B9D69C /* Common.swift */,
 			);
 			path = Ethash;
 			sourceTree = "<group>";
 		};
+		7AF2B13322185083007F7F10 /* EthashMetalLib-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				7AF2B13422185083007F7F10 /* EthashMetalLib_Mac.metal */,
+			);
+			path = "EthashMetalLib-Mac";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7A884BF02205CE8C00B9D69C /* TestMetalLib */ = {
+		7A8007D62214D20100828AE9 /* CmdTestCpp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A884BF52205CE8C00B9D69C /* Build configuration list for PBXNativeTarget "TestMetalLib" */;
+			buildConfigurationList = 7A8007DB2214D20200828AE9 /* Build configuration list for PBXNativeTarget "CmdTestCpp" */;
 			buildPhases = (
-				7A884BEF2205CE8C00B9D69C /* Sources */,
+				7A8007D32214D20100828AE9 /* Sources */,
+				7A8007D42214D20100828AE9 /* Frameworks */,
+				7A8007D52214D20100828AE9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TestMetalLib;
-			productName = TestMetalLib;
-			productReference = 7A884BF12205CE8C00B9D69C /* TestMetalLib.metallib */;
-			productType = "com.apple.product-type.metal-library";
+			name = CmdTestCpp;
+			productName = CmdTestCpp;
+			productReference = 7A8007D72214D20100828AE9 /* CmdTestCpp */;
+			productType = "com.apple.product-type.tool";
 		};
-		7A884C012207869700B9D69C /* GPUEthashTest */ = {
+		7A8007E82214D2E300828AE9 /* CmdTestC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A884C062207869700B9D69C /* Build configuration list for PBXNativeTarget "GPUEthashTest" */;
+			buildConfigurationList = 7A8007ED2214D2E300828AE9 /* Build configuration list for PBXNativeTarget "CmdTestC" */;
 			buildPhases = (
-				7A884BFE2207869700B9D69C /* Sources */,
-				7A884BFF2207869700B9D69C /* Frameworks */,
-				7A884C002207869700B9D69C /* CopyFiles */,
+				7A8007E52214D2E300828AE9 /* Sources */,
+				7A8007E62214D2E300828AE9 /* Frameworks */,
+				7A8007E72214D2E300828AE9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = GPUEthashTest;
-			productName = GPUEthashTest;
-			productReference = 7A884C022207869700B9D69C /* GPUEthashTest */;
+			name = CmdTestC;
+			productName = CmdTestC;
+			productReference = 7A8007E92214D2E300828AE9 /* CmdTestC */;
+			productType = "com.apple.product-type.tool";
+		};
+		7A8007F32214D2F800828AE9 /* CmdTestMetal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A8007F82214D2F800828AE9 /* Build configuration list for PBXNativeTarget "CmdTestMetal" */;
+			buildPhases = (
+				7A8007F02214D2F800828AE9 /* Sources */,
+				7A8007F12214D2F800828AE9 /* Frameworks */,
+				7A8007F22214D2F800828AE9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AF2B13D2218517B007F7F10 /* PBXTargetDependency */,
+			);
+			name = CmdTestMetal;
+			productName = CmdTestMetal;
+			productReference = 7A8007F42214D2F800828AE9 /* CmdTestMetal */;
 			productType = "com.apple.product-type.tool";
 		};
 		7A8E17A321F9D6AD004F8A5D /* EthashMetalTest */ = {
@@ -241,6 +418,23 @@
 			productReference = 7A8E17A421F9D6AD004F8A5D /* EthashMetalTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7AF2B13122185083007F7F10 /* EthashMetalLib-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AF2B13622185083007F7F10 /* Build configuration list for PBXNativeTarget "EthashMetalLib-Mac" */;
+			buildPhases = (
+				7AF2B13022185083007F7F10 /* Sources */,
+				7AF2B14122188940007F7F10 /* ShellScript */,
+				7AF2B13F221851E0007F7F10 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EthashMetalLib-Mac";
+			productName = "EthashMetalLib-Mac";
+			productReference = 7AF2B13222185083007F7F10 /* EthashMetalLib-Mac.metallib */;
+			productType = "com.apple.product-type.metal-library";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -251,16 +445,21 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Jakub Tomanik";
 				TargetAttributes = {
-					7A884BF02205CE8C00B9D69C = {
+					7A8007D62214D20100828AE9 = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					7A884C012207869700B9D69C = {
+					7A8007E82214D2E300828AE9 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+					};
+					7A8007F32214D2F800828AE9 = {
+						CreatedOnToolsVersion = 10.1;
 					};
 					7A8E17A321F9D6AD004F8A5D = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1000;
+					};
+					7AF2B13122185083007F7F10 = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -278,8 +477,10 @@
 			projectRoot = "";
 			targets = (
 				7A8E17A321F9D6AD004F8A5D /* EthashMetalTest */,
-				7A884BF02205CE8C00B9D69C /* TestMetalLib */,
-				7A884C012207869700B9D69C /* GPUEthashTest */,
+				7A8007D62214D20100828AE9 /* CmdTestCpp */,
+				7A8007E82214D2E300828AE9 /* CmdTestC */,
+				7A8007F32214D2F800828AE9 /* CmdTestMetal */,
+				7AF2B13122185083007F7F10 /* EthashMetalLib-Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -290,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A8E17B221F9D6AF004F8A5D /* LaunchScreen.storyboard in Resources */,
+				7A7485C0222069D40056249E /* Ethashmetal.metal in Resources */,
 				7A8E17AF21F9D6AF004F8A5D /* Assets.xcassets in Resources */,
 				7A8E17AD21F9D6AD004F8A5D /* Main.storyboard in Resources */,
 			);
@@ -297,23 +499,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7AF2B14122188940007F7F10 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "OUTFILE=${BUILT_PRODUCTS_DIR}/EthashMetalLib-Mac.metallib.h\necho 'static const uint8_t EthashMetalLib-Mac.metallib[] = {' > \"$OUTFILE\"\ncat \"${BUILT_PRODUCTS_DIR}/EthashMetalLib-Mac.metallib\" | xxd -i >> \"$OUTFILE\"\necho '};' >> \"$OUTFILE\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		7A884BEF2205CE8C00B9D69C /* Sources */ = {
+		7A8007D32214D20100828AE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A884C0E22078A4E00B9D69C /* Ethash.metal in Sources */,
+				7A8007E32214D2BA00828AE9 /* internal.cpp in Sources */,
+				7A8007E42214D2BD00828AE9 /* keccak.cpp in Sources */,
+				7AEEECD02215C4990089B6C4 /* EthashObjCPP.mm in Sources */,
+				7A8007E12214D23B00828AE9 /* main.swift in Sources */,
+				7A8008042214D34D00828AE9 /* Common.swift in Sources */,
+				7A8008152214D5EC00828AE9 /* EthashCPP.swift in Sources */,
+				7A8008012214D34700828AE9 /* EthashTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A884BFE2207869700B9D69C /* Sources */ = {
+		7A8007E52214D2E300828AE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A884C2322078E0700B9D69C /* Common.swift in Sources */,
-				7A884C052207869700B9D69C /* main.swift in Sources */,
-				7A884C0D22078A4D00B9D69C /* Ethash.metal in Sources */,
-				7A884C0B220786F200B9D69C /* EthashGPU.swift in Sources */,
+				7A8007FB2214D32200828AE9 /* internal.c in Sources */,
+				7A8007FC2214D32200828AE9 /* sha3.c in Sources */,
+				7A8007EC2214D2E300828AE9 /* main.swift in Sources */,
+				7A8007FF2214D33800828AE9 /* EthashCPU.swift in Sources */,
+				7A8008052214D34E00828AE9 /* Common.swift in Sources */,
+				7A8008022214D34800828AE9 /* EthashTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A8007F02214D2F800828AE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A8007FD2214D32800828AE9 /* Ethash.metal in Sources */,
+				7A8007FE2214D33300828AE9 /* EthashGPU.swift in Sources */,
+				7A7485BB2220139B0056249E /* internal.c in Sources */,
+				7A8007F72214D2F800828AE9 /* main.swift in Sources */,
+				7A8008062214D35000828AE9 /* Common.swift in Sources */,
+				7A8008032214D34900828AE9 /* EthashTests.swift in Sources */,
+				7A7485BC2220139F0056249E /* sha3.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,19 +565,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A884C1B22078DA300B9D69C /* internal.c in Sources */,
+				7A8007A0221469E400828AE9 /* EthashCPP.swift in Sources */,
+				7A501BCC220F669D004DF6A4 /* sha3.c in Sources */,
 				7A884BE82205BB4F00B9D69C /* EthashTests.swift in Sources */,
 				7A8E17AA21F9D6AD004F8A5D /* ViewController.swift in Sources */,
-				7A884BEB2205BFD500B9D69C /* Ethash.metal in Sources */,
+				7A501BC8220F6682004DF6A4 /* Ethash.metal in Sources */,
 				7A8E17A821F9D6AD004F8A5D /* AppDelegate.swift in Sources */,
-				7A884BEA2205BDE500B9D69C /* EthashGPU.swift in Sources */,
-				7A884C1D22078DA300B9D69C /* sha3.c in Sources */,
+				7A501BC7220EB580004DF6A4 /* EthashCPU.swift in Sources */,
 				7A884C2222078E0700B9D69C /* Common.swift in Sources */,
-				7ADF737A21FCB5B9004BD5EF /* Ethash.swift in Sources */,
+				7A501BCB220F669D004DF6A4 /* internal.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AF2B13022185083007F7F10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AF2B139221850CD007F7F10 /* Ethash.metal in Sources */,
+				7AF2B13522185083007F7F10 /* EthashMetalLib_Mac.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7AF2B13D2218517B007F7F10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7AF2B13122185083007F7F10 /* EthashMetalLib-Mac */;
+			targetProxy = 7AF2B13C2218517B007F7F10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7A8E17AB21F9D6AD004F8A5D /* Main.storyboard */ = {
@@ -355,67 +616,90 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		7A884BF62205CE8C00B9D69C /* Debug */ = {
+		7A8007DC2214D20200828AE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XAV4QTNJ2K;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = "";
-				SUPPORTED_PLATFORMS = "macosx iphoneos";
-				VALID_ARCHS = "arm64 arm64e x86_64";
-			};
-			name = Debug;
-		};
-		7A884BF72205CE8C00B9D69C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XAV4QTNJ2K;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = "";
-				SUPPORTED_PLATFORMS = "macosx iphoneos";
-				VALID_ARCHS = "arm64 arm64e x86_64";
-			};
-			name = Release;
-		};
-		7A884C072207869700B9D69C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XAV4QTNJ2K;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
+				GCC_INPUT_FILETYPE = automatic;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "GPUEthashTest/GPUEthashTest-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/targets/CmdTestCpp/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
-		7A884C082207869700B9D69C /* Release */ = {
+		7A8007DD2214D20200828AE9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XAV4QTNJ2K;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
+				GCC_INPUT_FILETYPE = automatic;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "GPUEthashTest/GPUEthashTest-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/targets/CmdTestCpp/Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		7A8007EE2214D2E300828AE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAV4QTNJ2K;
+				GCC_INPUT_FILETYPE = sourcecode.c.c;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/targets/CmdTestC/Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		7A8007EF2214D2E300828AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAV4QTNJ2K;
+				GCC_INPUT_FILETYPE = sourcecode.c.c;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/targets/CmdTestC/Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		7A8007F92214D2F800828AE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAV4QTNJ2K;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/targets/CmdTestMetal/Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		7A8007FA2214D2F800828AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAV4QTNJ2K;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/targets/CmdTestMetal/Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -555,6 +839,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e";
 			};
 			name = Debug;
 		};
@@ -571,32 +856,67 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jakub.tomanik.ethash.metal.EthashMetalTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "EthashMetalTest/EthashMetalTest-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 arm64e";
+			};
+			name = Release;
+		};
+		7AF2B13722185083007F7F10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAV4QTNJ2K;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7AF2B13822185083007F7F10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XAV4QTNJ2K;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7A884BF52205CE8C00B9D69C /* Build configuration list for PBXNativeTarget "TestMetalLib" */ = {
+		7A8007DB2214D20200828AE9 /* Build configuration list for PBXNativeTarget "CmdTestCpp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7A884BF62205CE8C00B9D69C /* Debug */,
-				7A884BF72205CE8C00B9D69C /* Release */,
+				7A8007DC2214D20200828AE9 /* Debug */,
+				7A8007DD2214D20200828AE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A884C062207869700B9D69C /* Build configuration list for PBXNativeTarget "GPUEthashTest" */ = {
+		7A8007ED2214D2E300828AE9 /* Build configuration list for PBXNativeTarget "CmdTestC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7A884C072207869700B9D69C /* Debug */,
-				7A884C082207869700B9D69C /* Release */,
+				7A8007EE2214D2E300828AE9 /* Debug */,
+				7A8007EF2214D2E300828AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A8007F82214D2F800828AE9 /* Build configuration list for PBXNativeTarget "CmdTestMetal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A8007F92214D2F800828AE9 /* Debug */,
+				7A8007FA2214D2F800828AE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -615,6 +935,15 @@
 			buildConfigurations = (
 				7A8E17B721F9D6AF004F8A5D /* Debug */,
 				7A8E17B821F9D6AF004F8A5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AF2B13622185083007F7F10 /* Build configuration list for PBXNativeTarget "EthashMetalLib-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AF2B13722185083007F7F10 /* Debug */,
+				7AF2B13822185083007F7F10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

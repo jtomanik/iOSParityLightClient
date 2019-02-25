@@ -1,0 +1,41 @@
+[package]
+description = "Parity Ethereum mobile light client"
+name = "parity-ethereum-light"
+# NOTE Make sure to update util/version/Cargo.toml as well
+version = "2.3.0"
+license = "GPL-3.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+
+[dependencies]
+parity-ethereum = { path = "../../../../../github/parity" }
+# ethcore
+ethcore = { path = "../../../../../github/parity/ethcore", features = ["parity"] }
+ethcore-db = { path = "../../../../../github/parity/ethcore/db" }
+ethcore-light = { path = "../../../../../github/parity/ethcore/light" }
+ethcore-logger = { path = "../../../../../github/parity/parity/logger" }
+ethcore-sync = { path = "../../../../../github/parity/ethcore/sync" }
+ethcore-blockchain = { path = "../../../../../github/parity/ethcore/blockchain" }
+
+parity-rpc = { path = "../../../../../github/parity/rpc" }
+#util
+parity-version = { path = "../../../../../github/parity/util/version" }
+parity-runtime = { path = "../../../../../github/parity/util/runtime" }
+dir = { path = "../../../../../github/parity/util/dir" }
+blooms-db = { path = "../../../../../github/parity/util/blooms-db" }
+#accounts
+ethkey = { path = "../../../../../github/parity/accounts/ethkey" }
+ethstore = { path = "../../../../../github/parity/accounts/ethstore" }
+
+parity-hash-fetch = { path = "../../../../../github/parity/updater/hash-fetch" }
+
+
+jsonrpc-core = { git = "https://github.com/paritytech/jsonrpc.git", branch = "parity-2.2" }
+ethereum-types = "0.4"
+log = "0.4"
+parking_lot = "0.7"
+kvdb = "0.1"
+kvdb-memorydb = "0.1"
+
+[lib]
+name = "paritylib_light"
+path = "src/lib.rs"

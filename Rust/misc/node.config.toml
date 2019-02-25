@@ -1,0 +1,36 @@
+# This config should be placed in following path:
+#   ~/.local/share/io.parity.ethereum/config.toml
+
+[parity]
+# You will be identified as 'jt-parity-1' amongst other nodes..
+identity = "jt-parity-1"
+
+[account]
+# Disables hardware wallet support.
+disable_hardware = true
+
+[network]
+# Parity will maintain additional 32 peers for snapshot sync.
+snapshot_peers = 32
+# Parity will try to maintain connection to at least 32 peers.
+min_peers = 32
+# Parity will maintain at most 64 peers.
+max_peers = 64
+# Fill up the config manually and provide your public IP address.
+nat = "extip:35.242.227.201"
+# Enable or disable new peers discovery.
+discovery = false
+# Specify node secret key (64-char hex or input to SHA3)
+node_key = "c1ab1b82bca20aa7d7e742c5408f5b098cee06fbf59bb8b5194226ef9a9a82ce"
+
+[websockets]
+# UI won't work and WebSockets server will be not available.
+disable = true
+
+[secretstore]
+# You won't be able to encrypt and decrypt secrets.
+disable = true
+
+[misc]
+# Enables colors in logs.
+color = false

@@ -2,7 +2,6 @@ extern crate parity;
 
 use parity::parity_start_ios;
 use parity::parity_rpc_ios_query;
-use parity::parity_rpc_ios_release;
 use std::ffi::{CString, CStr};
 use std::io;
 use std::os::raw::{c_char, c_void};
@@ -68,19 +67,19 @@ fn main() {
 //				let ret3 = parity_rpc_ios_query(client, query3.as_ptr(), &mut response);
 				let mut response_pointer: *mut c_char = ptr::null_mut();
 				let mut response_length: usize = 0;
-				let ret3 = parity_rpc_ios_query(client, query3.as_ptr(), &mut response_pointer, &mut response_length);
+				let ret3 = parity_rpc_ios_query(client, query3.as_ptr(), dummy, Some(logger_callback));
 
-				if ret3 == 0 {
-					if response_length > 0 {
-//						let response_string = CStr::from_ptr(response_pointer).to_string_lossy().into_owned();
-						let string_bytes = slice::from_raw_parts(response_pointer as *mut u8, response_length);
-						let c_string = CString::new(string_bytes).unwrap().to_owned();
-						let string = c_string.to_str().to_owned().unwrap();
-						println!("returned :{}", string);
-					}
-
-					parity_rpc_ios_release(response_pointer);
-				}
+//				if ret3 == 0 {
+//					if response_length > 0 {
+////						let response_string = CStr::from_ptr(response_pointer).to_string_lossy().into_owned();
+//						let string_bytes = slice::from_raw_parts(response_pointer as *mut u8, response_length);
+//						let c_string = CString::new(string_bytes).unwrap().to_owned();
+//						let string = c_string.to_str().to_owned().unwrap();
+//						println!("returned :{}", string);
+//					}
+//
+//					parity_rpc_ios_release(response_pointer);
+//				}
 			}
 			srcunit = "".to_string();
 		}

@@ -1,0 +1,220 @@
+:(
+Docs directory /Users/jakubtomanik/Library/Developer/CoreSimulator/Devices/F270A1C8-D246-41BE-8F62-C0CB7F639A9D/data/Containers/Data/Application/EEADAA41-86E5-48BA-B1B1-2685F7EFC2F9/Documents
+Chain spec directory /Users/jakubtomanik/Library/Developer/CoreSimulator/Devices/F270A1C8-D246-41BE-8F62-C0CB7F639A9D/data/Containers/Bundle/Application/C43223C7-77A0-4788-94BF-BBE599BC3E67/StaticLibTest.app/custom_foundation.json
+2018-10-28 19:22:40  Starting Parity-Ethereum/v2.2.0-unstable-96f909a3e-20181028/x86_64-ios/rustc1.30.0-nightly
+2018-10-28 19:22:40  Keys path /Users/jakubtomanik/Library/Developer/CoreSimulator/Devices/F270A1C8-D246-41BE-8F62-C0CB7F639A9D/data/Containers/Data/Application/EEADAA41-86E5-48BA-B1B1-2685F7EFC2F9/Documents/keys/ethereum
+2018-10-28 19:22:40  DB path /Users/jakubtomanik/Library/Developer/CoreSimulator/Devices/F270A1C8-D246-41BE-8F62-C0CB7F639A9D/data/Containers/Data/Application/EEADAA41-86E5-48BA-B1B1-2685F7EFC2F9/Documents/chains_light/ethereum/db/906a34e69aec8c0d
+2018-10-28 19:22:40  Running in experimental Light Client mode.
+2018-10-28 19:22:41  Inserting hardcoded block #6467585 in chain
+2018-10-28 19:22:41  Debug API is not available in light client mode.
+parity_start returned 0
+returned pointer: Optional(0x0000600001dc9f10)
+2018-10-28 19:22:42  Public node URL: enode://100ef9d4a516a3571639586b8364cc0b39f98aa68aa9e50cc43d8a0263e2f38a9423e86146fd15317ed81171370c67886ed3fdfb4166b65664273fcb13a08670@192.168.2.101:30303
+2018-10-28 19:22:46  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   3/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:22:56  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed  10/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:23:01  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   7/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:23:06  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   7/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:23:11  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   5/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:23:16  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   6/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:23:21  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   5/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:23:26  Syncing #6467585 0x1843…2f98     0.0 hdr/s      0+    0 Qed   6/50 peers   552 bytes cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:23:31  Syncing #6467585 0x1843…2f98     0.0 hdr/s   4095+    0 Qed   6/50 peers   552 bytes cache    3 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:23:36  Syncing #6468245 0xd34b…c910   132.0 hdr/s  13675+    0 Qed   6/50 peers    364 KiB cache   10 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:23:41  Syncing #6469009 0xac1d…37be   152.8 hdr/s  16752+    0 Qed  11/50 peers    785 KiB cache   12 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:23:46  Syncing #6469799 0x73f7…5c45   157.9 hdr/s  18265+    0 Qed   5/50 peers      1 MiB cache   13 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:23:51  Syncing #6470543 0xcc29…3576   148.7 hdr/s  17521+    0 Qed   6/50 peers      2 MiB cache   13 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:23:56  Syncing #6471285 0x1640…98cb   148.3 hdr/s  16779+    0 Qed   5/50 peers      2 MiB cache   12 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:24:01  Syncing #6472042 0x2417…c1fc   151.3 hdr/s  16022+    0 Qed   6/50 peers      2 MiB cache   12 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:24:06  Syncing #6472927 0xfaaf…a0f7   176.9 hdr/s  15137+    0 Qed   5/50 peers      3 MiB cache   11 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:24:11  Syncing #6473739 0x6f3b…1130   162.4 hdr/s  14325+    0 Qed   7/50 peers      3 MiB cache   10 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:24:16  Syncing #6474548 0x53a2…d0e6   161.8 hdr/s  13516+    0 Qed  10/50 peers      4 MiB cache   10 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:24:21  Syncing #6475350 0x6a65…223e   160.3 hdr/s  12714+    0 Qed   7/50 peers      4 MiB cache    9 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:24:26  Syncing #6476173 0x136a…e1fc   164.6 hdr/s  11891+    0 Qed   7/50 peers      5 MiB cache    9 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:24:31  Syncing #6476978 0x1a99…4121   161.0 hdr/s  11086+    0 Qed   5/50 peers      5 MiB cache    8 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:24:36  Syncing #6477815 0xe79e…f97e   167.4 hdr/s  10249+    0 Qed   5/50 peers      6 MiB cache    7 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:24:41  Syncing #6478667 0x2977…47c2   170.4 hdr/s   9397+    0 Qed   6/50 peers      6 MiB cache    7 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:24:46  Syncing #6479445 0x42f4…2312   155.6 hdr/s   8619+    0 Qed  10/50 peers      6 MiB cache    6 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:24:51  Syncing #6479999 0x363a…a9b6   110.7 hdr/s   8065+    0 Qed   6/50 peers      7 MiB cache    6 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:24:56  Syncing #6480323 0x0257…ba3f    64.8 hdr/s   7741+    0 Qed   6/50 peers      7 MiB cache    6 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:25:01  Syncing #6481159 0xd297…8a36   167.2 hdr/s   6905+    0 Qed   6/50 peers      7 MiB cache    5 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:25:06  Syncing #6482200 0xcc20…66ed   208.0 hdr/s   5864+    0 Qed   6/50 peers      8 MiB cache    4 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:25:11  Syncing #6483396 0xe861…2b11   239.2 hdr/s   4668+    0 Qed   6/50 peers      9 MiB cache    3 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:25:16  Syncing #6484575 0xc79e…d4de   235.8 hdr/s   3489+    0 Qed   6/50 peers      9 MiB cache    3 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:25:21  Syncing #6485735 0xe08c…4919   232.0 hdr/s   2329+    0 Qed   6/50 peers     10 MiB cache    2 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:25:26  Syncing #6486884 0x6a97…6090   229.8 hdr/s   1180+    0 Qed   6/50 peers     10 MiB cache  884 KiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:25:31  Syncing #6487842 0xb199…3b00   191.6 hdr/s    222+    0 Qed   6/50 peers     10 MiB cache  167 KiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:25:33  Imported #6488062 0xea29…a96e (8.00 Mgas)
+2018-10-28 19:25:36  Syncing #6488450 0x9ef6…913c   121.6 hdr/s   4478+    0 Qed  11/50 peers     10 MiB cache    3 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:25:41  Syncing #6489169 0x3e35…f371   143.8 hdr/s  26799+    0 Qed   6/50 peers     10 MiB cache   20 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:25:51  Syncing #6491198 0x073f…9723   202.7 hdr/s  30018+    0 Qed   7/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:25:56  Syncing #6492182 0x9e03…1604   196.7 hdr/s  29034+    0 Qed   7/50 peers     10 MiB cache   21 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:26:01  Syncing #6492812 0x5eff…8f55   126.0 hdr/s  30068+    0 Qed   8/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:26:06  Syncing #6493586 0x07a0…e27c   154.8 hdr/s  30062+    0 Qed   7/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:26:11  Syncing #6494345 0xc0c3…d082   151.8 hdr/s  30071+    0 Qed  10/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:26:16  Syncing #6495233 0xa8a2…26d2   177.5 hdr/s  30079+    0 Qed   9/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:26:21  Syncing #6496262 0x103b…4d0e   205.7 hdr/s  30074+    0 Qed   7/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:26:26  Syncing #6497420 0x2c60…4700   231.6 hdr/s  30068+    0 Qed   7/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:26:31  Syncing #6498391 0x7aab…76bc   194.1 hdr/s  29993+    0 Qed   8/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:26:36  Syncing #6499178 0x5404…d2a1   157.3 hdr/s  30102+    0 Qed   8/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:26:41  Syncing #6500003 0x38f6…88a1   165.0 hdr/s  30045+    0 Qed   8/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:26:46  Syncing #6500907 0xa1b1…e36c   180.8 hdr/s  30037+    0 Qed   7/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:26:51  Syncing #6501884 0x9bbe…1993   195.3 hdr/s  30084+    0 Qed   8/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:26:56  Syncing #6503029 0xae42…e03a   228.9 hdr/s  30091+    0 Qed   8/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:27:01  Syncing #6504023 0x645d…aebe   198.7 hdr/s  30121+    0 Qed  10/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:27:06  Syncing #6504986 0x21b1…d4ca   192.6 hdr/s  30054+    0 Qed   8/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:27:11  Syncing #6505664 0x5c87…c75d   135.5 hdr/s  30016+    0 Qed  11/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:27:16  Syncing #6506439 0xd9e8…eb4a   154.9 hdr/s  30009+    0 Qed  10/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:27:21  Syncing #6507642 0xaa0e…f588   240.5 hdr/s  30086+    0 Qed  10/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:27:26  Syncing #6508685 0x0633…c662   208.6 hdr/s  30067+    0 Qed   9/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:27:31  Syncing #6509815 0x9555…3278   226.0 hdr/s  30089+    0 Qed  10/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:27:36  Syncing #6510102 0xab92…dc45    57.4 hdr/s  30058+    0 Qed  11/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:27:41  Syncing #6511179 0x076a…7dbc   215.4 hdr/s  30005+    0 Qed   9/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:27:46  Syncing #6512250 0x3aaf…2a0b   214.0 hdr/s  30086+    0 Qed  10/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:27:51  Syncing #6513480 0xcdb8…0be1   245.9 hdr/s  30008+    0 Qed  11/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:27:56  Syncing #6514807 0x8c5e…e02e   265.3 hdr/s  30089+    0 Qed  12/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:28:01  Syncing #6516048 0xf268…2458   248.1 hdr/s  30000+    0 Qed  11/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:28:06  Syncing #6517262 0x7354…6124   242.7 hdr/s  30066+    0 Qed  11/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:28:11  Syncing #6518301 0x7906…6fbd   207.7 hdr/s  30051+    0 Qed  11/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:28:16  Syncing #6519388 0xaafa…3a8c   217.3 hdr/s  29988+    0 Qed  11/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:28:21  Syncing #6520453 0x60c1…1443   212.9 hdr/s  30075+    0 Qed  11/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:28:26  Syncing #6521424 0x6d0a…ce45   194.1 hdr/s  30000+    0 Qed  12/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:28:31  Syncing #6522651 0xc7ad…b36a   245.3 hdr/s  30053+    0 Qed  12/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:28:36  Syncing #6523782 0xbbb2…6180   226.1 hdr/s  29563+    0 Qed  13/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:28:41  Syncing #6524880 0x9760…21e3   219.5 hdr/s  28465+    0 Qed   6/50 peers     10 MiB cache   21 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:28:46  Syncing #6525829 0x88b8…e152   189.8 hdr/s  27516+    0 Qed   9/50 peers     10 MiB cache   20 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:28:51  Syncing #6526763 0x0b37…82a5   186.7 hdr/s  26582+    0 Qed   9/50 peers     10 MiB cache   19 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:28:56  Syncing #6527703 0x3f84…c057   188.0 hdr/s  25642+    0 Qed   9/50 peers     10 MiB cache   19 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:29:01  Syncing #6528712 0x2f59…215e   201.8 hdr/s  24633+    0 Qed   9/50 peers     10 MiB cache   18 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:29:06  Syncing #6529873 0x288b…f82a   232.2 hdr/s  23472+    0 Qed   9/50 peers     10 MiB cache   17 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:29:11  Syncing #6530988 0x562b…d1bc   223.0 hdr/s  22357+    0 Qed   9/50 peers     10 MiB cache   16 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:29:16  Syncing #6532003 0x21d9…6f15   202.9 hdr/s  21342+    0 Qed   9/50 peers     10 MiB cache   16 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:29:21  Syncing #6533153 0x24d8…881f   229.9 hdr/s  20192+    0 Qed   9/50 peers     10 MiB cache   15 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:29:26  Syncing #6534291 0xd359…4109   227.5 hdr/s  19054+    0 Qed   9/50 peers     10 MiB cache   14 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:29:31  Syncing #6535486 0x2c58…56b6   239.0 hdr/s  17859+    0 Qed   9/50 peers     10 MiB cache   13 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:29:36  Syncing #6536659 0x51ab…e166   234.5 hdr/s  16686+    0 Qed   9/50 peers     10 MiB cache   12 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:29:41  Syncing #6537502 0x4249…f373   168.6 hdr/s  15843+    0 Qed   9/50 peers     10 MiB cache   12 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:29:46  Syncing #6538470 0xd535…0b75   193.5 hdr/s  14875+    0 Qed   9/50 peers     10 MiB cache   11 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:29:51  Syncing #6539418 0xe9fc…880f   189.4 hdr/s  13927+    0 Qed   9/50 peers     10 MiB cache   10 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:29:56  Syncing #6539999 0x3d74…9396   116.1 hdr/s  13346+    0 Qed   9/50 peers     10 MiB cache   10 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:30:01  Syncing #6540548 0x1473…2088   109.8 hdr/s  12797+    0 Qed   9/50 peers     10 MiB cache    9 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:30:06  Syncing #6541680 0x9205…31ab   226.2 hdr/s  11665+    0 Qed   9/50 peers     10 MiB cache    9 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:30:11  Syncing #6542901 0xa86d…baa3   244.1 hdr/s  10444+    0 Qed   9/50 peers     10 MiB cache    8 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:30:16  Syncing #6544080 0x8593…7348   235.8 hdr/s   9265+    0 Qed   9/50 peers     10 MiB cache    7 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:30:21  Syncing #6545313 0xcf70…db6f   246.5 hdr/s   8032+    0 Qed   9/50 peers     10 MiB cache    6 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:30:26  Syncing #6546551 0xeb09…29ba   247.5 hdr/s   6794+    0 Qed   9/50 peers     10 MiB cache    5 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:30:31  Syncing #6547722 0xdcf3…54ad   234.1 hdr/s   5623+    0 Qed   9/50 peers     10 MiB cache    4 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:30:36  Syncing #6548847 0xb2e1…a5c1   224.8 hdr/s   4498+    0 Qed   9/50 peers     10 MiB cache    3 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:30:41  Syncing #6549966 0x950b…c035   223.7 hdr/s   3379+    0 Qed   9/50 peers     10 MiB cache    2 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:30:46  Syncing #6551154 0x1bae…e8a2   237.6 hdr/s   2191+    0 Qed   9/50 peers     10 MiB cache    2 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:30:51  Syncing #6552296 0xca29…49bc   228.2 hdr/s   1049+    0 Qed   9/50 peers     10 MiB cache  785 KiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:30:55  Imported #6553343 0x1e91…fe87 (0.00 Mgas)
+2018-10-28 19:30:56  Syncing #6553346 0x2cef…03a3   209.9 hdr/s      0+    0 Qed   3/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:31:01  Syncing #6553749 0xdf39…701a    80.5 hdr/s   5996+    0 Qed   2/50 peers     10 MiB cache    4 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:31:06  Syncing #6554878 0x5b54…9da0   225.7 hdr/s   5635+    0 Qed   2/50 peers     10 MiB cache    4 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:31:11  Syncing #6556012 0xe69c…562c   226.7 hdr/s   4501+    0 Qed   2/50 peers     10 MiB cache    3 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:31:16  Syncing #6557144 0x34d9…b934   226.3 hdr/s   3369+    0 Qed   2/50 peers     10 MiB cache    2 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:31:21  Syncing #6558262 0xe4cd…a9d4   223.4 hdr/s   2251+    0 Qed   4/50 peers     10 MiB cache    2 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:31:26  Syncing #6559265 0xa097…a77e   200.5 hdr/s   1248+    0 Qed   4/50 peers     10 MiB cache  934 KiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:31:31  Syncing #6560315 0x8a08…fcb8   209.8 hdr/s    966+    0 Qed   3/50 peers     10 MiB cache  723 KiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:31:36  Syncing #6561282 0x9d7e…343f   193.3 hdr/s      0+    0 Qed   3/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:31:41  Syncing #6561282 0x9d7e…343f     0.0 hdr/s      0+    0 Qed   3/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:31:46  Syncing #6561282 0x9d7e…343f     0.0 hdr/s      0+    0 Qed   4/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:31:51  Syncing #6562285 0x271f…5aa1   200.5 hdr/s  27412+    0 Qed   8/50 peers     10 MiB cache   20 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:31:56  Syncing #6563232 0x74ec…950e   189.2 hdr/s  30049+    0 Qed   9/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:32:01  Syncing #6563994 0x2864…9881   152.4 hdr/s  30055+    0 Qed  11/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:32:06  Syncing #6564543 0x9b32…d792   109.8 hdr/s  29634+    0 Qed  13/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:32:11  Syncing #6565127 0x5e65…f9fc   116.7 hdr/s  30074+    0 Qed  15/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:32:16  Syncing #6565802 0x4716…7083   134.9 hdr/s  30039+    0 Qed  13/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:32:21  Syncing #6566431 0xceef…74f4   125.8 hdr/s  30050+    0 Qed  13/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:32:26  Syncing #6567183 0x6516…58e1   150.4 hdr/s  30066+    0 Qed  13/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:32:31  Syncing #6567948 0x790d…b789   152.9 hdr/s  30069+    0 Qed  13/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:32:36  Syncing #6568782 0xfa8b…52ed   166.8 hdr/s  30003+    0 Qed  12/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:32:41  Syncing #6569733 0x510c…7556   190.0 hdr/s  30076+    0 Qed  13/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:32:46  Syncing #6570305 0x54d7…b059   114.4 hdr/s  30016+    0 Qed  13/50 peers     10 MiB cache   22 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:32:51  Syncing #6571416 0xdedd…2da4   222.1 hdr/s  29332+    0 Qed  12/50 peers     10 MiB cache   21 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:32:56  Syncing #6572538 0x65ed…d0e5   224.2 hdr/s  28210+    0 Qed  12/50 peers     10 MiB cache   21 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:33:01  Syncing #6573658 0xe97f…ac28   223.8 hdr/s  27090+    0 Qed  12/50 peers     10 MiB cache   20 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:33:06  Syncing #6574824 0x4feb…9f08   233.2 hdr/s  25924+    0 Qed  12/50 peers     10 MiB cache   19 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:33:11  Syncing #6575962 0x03fc…6e61   227.5 hdr/s  24786+    0 Qed  12/50 peers     10 MiB cache   18 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:33:16  Syncing #6576994 0x5461…62bf   206.3 hdr/s  23754+    0 Qed  12/50 peers     10 MiB cache   17 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:33:21  Syncing #6578129 0xee53…d403   226.9 hdr/s  22619+    0 Qed  12/50 peers     10 MiB cache   17 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:33:26  Syncing #6579216 0x14f7…324d   217.4 hdr/s  21532+    0 Qed  12/50 peers     10 MiB cache   16 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:33:31  Syncing #6580359 0x5eb2…d641   228.4 hdr/s  20389+    0 Qed  12/50 peers     10 MiB cache   15 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:33:36  Syncing #6581496 0x07c2…c7db   227.3 hdr/s  19252+    0 Qed  12/50 peers     10 MiB cache   14 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:33:41  Syncing #6582725 0x8885…3d01   245.8 hdr/s  18023+    0 Qed  12/50 peers     10 MiB cache   13 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:33:46  Syncing #6584045 0x242d…3bf7   263.8 hdr/s  16703+    0 Qed  12/50 peers     10 MiB cache   12 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:33:51  Syncing #6585425 0x500a…effa   275.8 hdr/s  15324+    0 Qed  12/50 peers     10 MiB cache   11 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:33:56  Syncing #6586358 0x85de…2b6f   186.4 hdr/s  14390+    0 Qed  12/50 peers     10 MiB cache   11 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:34:01  Syncing #6587278 0x1782…a418   183.9 hdr/s  13470+    0 Qed  12/50 peers     10 MiB cache   10 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:34:06  Syncing #6588013 0x0c94…8fb8   146.9 hdr/s  12735+    0 Qed  12/50 peers     10 MiB cache    9 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:34:11  Syncing #6588774 0x9b0a…8921   152.1 hdr/s  11974+    0 Qed  12/50 peers     10 MiB cache    9 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:34:16  Syncing #6589564 0x124d…f81d   157.9 hdr/s  11184+    0 Qed  12/50 peers     10 MiB cache    8 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:34:21  Syncing #6590573 0x3d07…df8d   201.8 hdr/s  10175+    0 Qed  12/50 peers     10 MiB cache    7 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:34:26  Syncing #6591717 0xd8a2…d796   228.7 hdr/s   9031+    0 Qed  12/50 peers     10 MiB cache    7 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:34:31  Syncing #6592788 0x12b9…f2a8   214.0 hdr/s   7960+    0 Qed  12/50 peers     10 MiB cache    6 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:34:36  Syncing #6593930 0x5c9e…3dd9   228.2 hdr/s   6818+    0 Qed  12/50 peers     10 MiB cache    5 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:34:41  Syncing #6595128 0x771c…f01b   239.4 hdr/s   5620+    0 Qed  12/50 peers     10 MiB cache    4 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:34:46  Syncing #6596152 0x5a19…01f2   204.6 hdr/s   4596+    0 Qed  12/50 peers     10 MiB cache    3 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:34:51  Syncing #6597247 0x1603…7089   218.9 hdr/s   3501+    0 Qed  12/50 peers     10 MiB cache    3 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:34:56  Syncing #6598290 0x729c…1d78   208.5 hdr/s   2458+    0 Qed  12/50 peers     10 MiB cache    2 MiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:35:01  Syncing #6599476 0x0ec7…00a0   237.0 hdr/s   1272+    0 Qed  12/50 peers     10 MiB cache  953 KiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:35:06  Syncing #6600199 0xd110…89ef   144.6 hdr/s    549+    0 Qed  12/50 peers     10 MiB cache  411 KiB queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:35:09  Imported #6600746 0xfe0e…2603 (0.04 Mgas)
+2018-10-28 19:35:11  Syncing #6600749 0xa3a6…1313   110.0 hdr/s      0+    0 Qed   1/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:35:41     0/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:36:07  Imported #6600764 0xe2dd…2889 (8.00 Mgas)
+2018-10-28 19:36:11     3/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:36:16  Syncing #6600767 0x9327…4c12     0.0 hdr/s      0+    0 Qed   5/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:36:17  Imported #6600768 0x269a…5112 (8.00 Mgas)
+2018-10-28 19:36:26  Syncing #6600768 0x269a…5112     0.0 hdr/s      0+    0 Qed   2/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:36:26  Imported #6600769 0xdbf1…1e51 (7.99 Mgas)
+2018-10-28 19:36:33  Imported #6600770 0x25a6…b20e (3.21 Mgas)
+2018-10-28 19:36:42  Imported #6600772 0x1986…1264 (6.32 Mgas)
+2018-10-28 19:36:51  Syncing #6600772 0x1986…1264     0.0 hdr/s      0+    0 Qed  13/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:36:52  Imported #6600773 0xefe0…bee4 (0.40 Mgas)
+2018-10-28 19:37:12  Imported #6600774 0xc7ea…db0e (6.17 Mgas)
+2018-10-28 19:37:21    15/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:37:32  Imported #6600775 0x5cb4…e00b (8.00 Mgas)
+2018-10-28 19:37:51  Imported #6600776 0xe57c…7273 (7.93 Mgas)
+2018-10-28 19:37:51    15/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:38:02  Imported #6600777 0xe0b9…9cfd (7.94 Mgas)
+2018-10-28 19:38:14  Imported #6600779 0xde81…8fae (1.72 Mgas)
+2018-10-28 19:38:21    15/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:38:28  Imported #6600780 0x9972…f759 (7.98 Mgas)
+2018-10-28 19:38:34  Imported #6600781 0x7b41…8c05 (4.84 Mgas)
+2018-10-28 19:38:40  Imported #6600782 0x485e…5cb7 (2.55 Mgas)
+2018-10-28 19:38:51    15/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:38:56  Syncing #6600782 0x485e…5cb7     0.0 hdr/s      0+    0 Qed  15/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:38:57  Imported #6600783 0xf4b3…dc54 (7.99 Mgas)
+2018-10-28 19:39:03  Imported #6600784 0x4151…4124 (7.99 Mgas)
+2018-10-28 19:39:26    15/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:39:32  Imported #6600785 0x20e7…ac97 (0.25 Mgas)
+2018-10-28 19:39:41  Syncing #6600785 0x20e7…ac97     0.0 hdr/s      0+    0 Qed  16/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:39:41  Imported #6600786 0xe5bc…e87d (3.56 Mgas)
+2018-10-28 19:39:55  Imported #6600787 0xc588…6712 (7.99 Mgas)
+2018-10-28 19:40:01  Syncing #6600787 0xc588…6712     0.0 hdr/s      0+    0 Qed  16/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:40:02  Imported #6600788 0x7d37…11f1 (6.96 Mgas)
+2018-10-28 19:40:20  Imported #6600789 0x1ebc…e613 (7.99 Mgas)
+2018-10-28 19:40:26  Imported #6600790 0x6123…1668 (7.99 Mgas)
+2018-10-28 19:40:29  Imported #6600790 0x6aaa…2ac7 (1.67 Mgas)
+2018-10-28 19:40:31    21/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:40:47  Imported #6600792 0x0334…75f4 (6.01 Mgas)
+2018-10-28 19:41:01    23/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:41:07  Imported #6600793 0x54bd…3981 (0.46 Mgas)
+2018-10-28 19:41:12  Imported #6600792 0x1c9d…c788 (7.99 Mgas)
+2018-10-28 19:41:31    22/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:41:35  Imported #6600794 0x5a0f…f9ac (7.98 Mgas)
+2018-10-28 19:41:43  Imported #6600795 0x119a…e5d5 (3.24 Mgas)
+2018-10-28 19:41:56  Imported #6600796 0xdea3…4a7e (7.98 Mgas)
+2018-10-28 19:42:01  Imported #6600797 0xccc7…a634 (7.90 Mgas)
+2018-10-28 19:42:01    25/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:42:18  Imported #6600798 0x633e…79b7 (7.95 Mgas)
+2018-10-28 19:42:28  Imported #6600799 0x6a64…1500 (7.99 Mgas)
+2018-10-28 19:42:31    24/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:42:43  Imported #6600800 0xa902…6137 (8.00 Mgas)
+2018-10-28 19:42:45  Imported #6600801 0x9bfc…978b (0.00 Mgas)
+2018-10-28 19:43:01    23/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:43:11  Syncing #6600801 0x9bfc…978b     0.0 hdr/s      0+    0 Qed  23/50 peers     10 MiB cache  0 bytes queue  RPC:  0 conn,    0 req/s,    0 µs
+2018-10-28 19:43:14  Imported #6600802 0x69ab…c606 (2.87 Mgas)
+2018-10-28 19:43:16  Imported #6600803 0x28b3…963c (7.99 Mgas)
+

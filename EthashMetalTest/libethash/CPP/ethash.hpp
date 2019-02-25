@@ -29,8 +29,8 @@ void cpp_ethash_keccak_256(
                            )
 {
     *result = -1;
-    const size_t out_bytes = sizeof(ethash_h256_t);
-    *result = keccak_256(in, size, (ethash_uint8_t *)ret, out_bytes);
+    size_t out_bytes = sizeof(ethash_h256_t);
+    *result = keccak_256_device(in, size, (ethash_uint8_t *)ret, out_bytes);
 }
 
 void cpp_ethash_keccak_512(
@@ -41,8 +41,8 @@ void cpp_ethash_keccak_512(
                            )
 {
     *result = -1;
-    const size_t out_bytes = sizeof(ethash_node_t);
-    *result = keccak_512(in, size, (ethash_uint8_t *)ret, out_bytes);
+    size_t out_bytes = sizeof(ethash_node_t);
+    *result = keccak_512_device(in, size, (ethash_uint8_t *)ret, out_bytes);
 }
 
 void cpp_ethash_get_seedhash(
@@ -51,57 +51,65 @@ void cpp_ethash_get_seedhash(
                              )
 {
     ethash_uint64_t block_number = *blocknumber;
-    *ret = ethash_get_seedhash(block_number);
+    ethash_get_seedhash_device(block_number, ret);
 }
 
-ethash_uint64_t cpp_ethash_get_cachesize(const ethash_uint64_t block_number)
+ethash_uint64_t cpp_ethash_get_cachesize(ethash_uint64_t block_number)
 {
     return ethash_get_cachesize(block_number);
 }
 
-ethash_uint32_t cpp_ethash_get_cache_node_number(const ethash_uint64_t block_number)
+ethash_uint32_t cpp_ethash_get_cache_node_number(ethash_uint64_t block_number)
 {
     return ethash_get_cache_node_number(block_number);
 }
 
 bool cpp_ethash_compute_cache_nodes(
-                                    ethash_node_t *const nodes,
-                                    const ethash_uint64_t cache_size,
-                                    const ethash_h256_t *const seed
+                                    ethash_node_t *nodes,
+                                    ethash_uint64_t cache_size,
+                                    ethash_h256_t *seed
                                     )
 {
-    return ethash_compute_cache_nodes(nodes, cache_size, seed);
+//    return ethash_compute_cache_nodes_device(nodes, cache_size, seed);
+    return ethash_compute_cache_nodes_device_and_thread(nodes, cache_size, seed);
 }
 
-ethash_light_ptr cpp_ethash_light_new_with_cache(
-                                             const ethash_uint64_t block_number,
-                                             const ethash_node_t *const nodes,
-                                             const ethash_uint64_t cache_size
+ethash_light_t* cpp_ethash_light_new_with_cache(
+                                             ethash_uint64_t block_number,
+                                             ethash_node_t *nodes,
+                                             ethash_uint64_t cache_size
                                              )
 {
-    return ethash_light_new_with_cache(block_number, nodes, cache_size);
+    DEVICESPACE(ethash_light_t) *ret;
+    ret = (ethash_light_t *)calloc(sizeof(ethash_light_t), 1);
+    if (!ret) {
+        return NULL;
+    }
+    ethash_light_new_with_cache(block_number, nodes, cache_size, ret);
+    return ret;
 }
 
 void cpp_ethash_calculate_dag_item(
-                               DEVICESPACE(ethash_node_t) *const ret,
-                               const ethash_uint32_t node_index,
-                               const DEVICESPACE(ethash_light_ptr) light
+                               DEVICESPACE(ethash_node_t) *ret,
+                               ethash_uint32_t node_index,
+                               DEVICESPACE(ethash_light_t) *light
                                )
 {
-    ethash_calculate_dag_item(ret, node_index, light);
+    ethash_calculate_dag_item_device(ret, node_index, light);
 }
 
-ethash_return_value_t cpp_ethash_light_compute(
-                                           ethash_light_ptr light,
-                                           const ethash_h256_t header_hash,
-                                           const ethash_uint64_t nonce
-                                           )
+void cpp_ethash_light_compute(
+                                               ethash_light_t *light,
+                                               ethash_h256_t header_hash,
+                                               ethash_uint64_t nonce,
+                                               ethash_return_value_t *ret
+                                               )
 {
-    return ethash_light_compute(light, header_hash, nonce);
+    ethash_light_compute(light, header_hash, nonce, ret);
 }
+
 
 #ifdef __cplusplus
 }
 #endif
 #endif /* ethash_cpp */
-

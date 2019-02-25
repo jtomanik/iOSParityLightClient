@@ -1,5 +1,6 @@
 extern crate log;
 extern crate ethcore_logger;
+extern crate regex;
 
 use std::os::raw::{c_void};
 use self::log::{Log, Level, Metadata, Record, LevelFilter};
@@ -7,7 +8,7 @@ use helpers::{ForeginCallbackObject, LoggingCallback};
 use std::sync::atomic::{AtomicUsize, Ordering, ATOMIC_USIZE_INIT};
 use ethcore_logger::{RotatingLogger};
 use std::sync::{Arc};
-
+use self::regex::Regex;
 
 static STATE: AtomicUsize = ATOMIC_USIZE_INIT;
 const UNINITIALIZED: usize = 0;
@@ -42,12 +43,20 @@ impl Log for CallbackLogger {
     fn log(&self, record: &Record) {
         if self.enabled(record.metadata()) {
             let log: &str = &record.args().to_string();
-            self.delegate.call_with(log);
+            let log_without_color = remove_color_from(log);
+            self.delegate.call_with(log_without_color.as_str());
         }
     }
 
     fn flush(&self) {
     }
+}
+
+fn remove_color_from(s: &str) -> String {
+    lazy_static! {
+		static ref RE: Regex = Regex::new("\x1b\\[[^m]+m").unwrap();
+	}
+    RE.replace_all(s, "").to_string()
 }
 
 pub unsafe fn setup_log(callback_owner: *mut c_void, callback: LoggingCallback) -> Result<Arc<RotatingLogger>, String> {

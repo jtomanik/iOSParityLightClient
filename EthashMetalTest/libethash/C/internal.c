@@ -28,29 +28,63 @@
 #include "ethash.h"
 #include "internal.h"
 #include "../data_sizes.h"
+#include "../common.h"
+#include "../mem.h"
 #include "sha3.h"
-#include "endian.h"
 
-static inline ethash_uint32_t fnv_hash(const ethash_uint32_t x, const ethash_uint32_t y)
+typedef struct ethash_mix ethash_mix_t;
+struct ethash_mix { ethash_uint64_t double_words[ETHASH_MIX_BYTES/ETHASH_DOUBLE_WORD_BYTES]; };
+
+//MARK: FNV HELPERS
+static inline ethash_uint32_t fnv_32bit(const ethash_uint32_t x, const ethash_uint32_t y)
 {
     return x * FNV_PRIME ^ y;
 }
 
+static inline void fnv_data(void *x, void *y, void *r, ethash_uint64_t length) {
+    ethash_uint32_t *r_32 = (ethash_uint32_t *)r;
+    ethash_uint32_t *x_32 = (ethash_uint32_t *)x;
+    ethash_uint32_t *y_32 = (ethash_uint32_t *)y;
+    do {
+        for (ethash_uint64_t i = 0; i < length; i += 1)
+        {
+            r_32[i] = fnv_32bit(x_32[i], y_32[i]);
+        }
+    } while (0);
+}
+
+static inline ethash_node_t fnv_node(ethash_node_t *x, ethash_node_t *y)
+{
+    ethash_node_t result;
+    ethash_uint64_t len_32 = sizeof(ethash_node_t) / MEMORY_BUS_BYTES;
+    fnv_data(x, y, &result, len_32);
+    return result;
+}
+
+static inline ethash_mix_t fnv_mix(ethash_mix_t *x, ethash_mix_t *y)
+{
+    ethash_mix_t result;
+    ethash_uint64_t len_32 = sizeof(ethash_mix_t) / ETHASH_WORD_BYTES;
+    fnv_data(x, y, &result, len_32);
+    return result;
+}
+
+//MARK: ETHASH
 ethash_uint64_t ethash_get_epoch_number(const ethash_uint64_t block_number)
 {
-    assert(block_number / ETHASH_EPOCH_LENGTH < 2048);
+    assert(block_number / ETHASH_EPOCH_LENGTH < ETHASH_MAX_PRECALCULATED_ITEMS);
     return block_number / ETHASH_EPOCH_LENGTH;
 }
 
 ethash_uint64_t ethash_get_datasize(const ethash_uint64_t block_number)
 {
-    assert(block_number / ETHASH_EPOCH_LENGTH < 2048);
+    assert(block_number / ETHASH_EPOCH_LENGTH < ETHASH_MAX_PRECALCULATED_ITEMS);
     return dag_sizes[block_number / ETHASH_EPOCH_LENGTH];
 }
 
 ethash_uint64_t ethash_get_cachesize(const ethash_uint64_t block_number)
 {
-    assert(block_number / ETHASH_EPOCH_LENGTH < 2048);
+    assert(block_number / ETHASH_EPOCH_LENGTH < ETHASH_MAX_PRECALCULATED_ITEMS);
     return cache_sizes[block_number / ETHASH_EPOCH_LENGTH];
 }
 
@@ -75,23 +109,22 @@ bool ethash_compute_cache_nodes(
         return false;
     }
     const ethash_uint32_t num_nodes = (ethash_uint32_t) (cache_size / sizeof(ethash_node_t));
-    keccak_512((ethash_uint8_t *)seed, 32, nodes[0].bytes, 64);
+    keccak_512((ethash_uint8_t *)seed, ETHASH_HASH_BYTES,
+               (ethash_uint8_t *)nodes[0].double_words, ETHASH_NODE_BYTES);
 
     for (ethash_uint32_t i = 1; i != num_nodes; ++i) {
-        keccak_512(nodes[i - 1].bytes, 64, nodes[i].bytes, 64);
-
+        keccak_512((ethash_uint8_t *)nodes[i - 1].double_words, ETHASH_NODE_BYTES,
+                   (ethash_uint8_t *)nodes[i].double_words, ETHASH_NODE_BYTES);
     }
 
     for (ethash_uint32_t j = 0; j != ETHASH_CACHE_ROUNDS; j++) {
         for (ethash_uint32_t i = 0; i != num_nodes; i++) {
-            const ethash_uint32_t idx = nodes[i].words[0] % num_nodes;
+            const ethash_uint32_t idx = ethash_node_get_word(&nodes[i], 0) % num_nodes;
             ethash_node_t data;
             data = nodes[(num_nodes - 1 + i) % num_nodes];
-            for (ethash_uint32_t w = 0; w != NODE_WORDS; ++w) {
-                data.words[w] ^= nodes[idx].words[w];
-            }
-            keccak_512(data.bytes, sizeof(data), nodes[i].bytes, 64);
-
+            ethash_xor_nodes(&nodes[idx], &data);
+            keccak_512((ethash_uint8_t *)data.double_words, ETHASH_NODE_BYTES,
+                       (ethash_uint8_t *)nodes[i].double_words, ETHASH_NODE_BYTES);
         }
     }
 
@@ -103,36 +136,99 @@ bool ethash_compute_cache_nodes(
 void ethash_calculate_dag_item(
                                ethash_node_t *const ret,
                                const ethash_uint32_t node_index,
-                               const ethash_light_ptr light
+                               ethash_light_t *light
                                )
 {
     const ethash_uint32_t num_parent_nodes = (ethash_uint32_t) (light->cache_size / sizeof(ethash_node_t));
     const ethash_node_t *cache_nodes = (const ethash_node_t *) light->cache;
     const ethash_node_t *init = &cache_nodes[node_index % num_parent_nodes];
-    memcpy(ret, init, sizeof(ethash_node_t));
-    ret->words[0] ^= node_index;
-    keccak_512(ret->bytes, sizeof(ethash_node_t), ret->bytes, 64);
+
+    mem_copy_thread(init, ret, sizeof(ethash_node_t));
+    ethash_uint32_t tmp = ethash_node_get_word(ret, 0) ^ node_index;
+    ethash_node_set_word(ret, 0, tmp);
+
+    keccak_512((ethash_uint8_t *)ret->double_words, ETHASH_NODE_BYTES,
+               (ethash_uint8_t *)ret->double_words, ETHASH_NODE_BYTES);
 
 
     for (ethash_uint32_t i = 0; i != ETHASH_DATASET_PARENTS; ++i) {
-        const ethash_uint32_t parent_index = fnv_hash(node_index ^ i, ret->words[i % NODE_WORDS]) % num_parent_nodes;
+        const ethash_uint32_t parent_index = (fnv_32bit(node_index ^ i,
+                                                          ethash_node_get_word(ret, i % NODE_WORDS))
+                                              % num_parent_nodes);
         const ethash_node_t *parent = &cache_nodes[parent_index];
 
-        for (unsigned w = 0; w != NODE_WORDS; ++w) {
-            ret->words[w] = fnv_hash(ret->words[w], parent->words[w]);
-        }
+        *ret = fnv_node(ret, parent);
     }
-    keccak_512(ret->bytes, sizeof(ethash_node_t), ret->bytes, 64);
+    keccak_512((ethash_uint8_t *)ret->double_words, ETHASH_NODE_BYTES,
+               (ethash_uint8_t *)ret->double_words, ETHASH_NODE_BYTES);
+}
+
+//MARK: ETHASh HELPERS
+static inline ethash_node_t ethash_create_mix_seed(
+                                                   ethash_h256_t header,
+                                                   ethash_uint64_t nonce
+                                                   )
+{
+    ethash_node_t seed = {0};
+    seed.double_words[0] = header.double_words[0];
+    seed.double_words[1] = header.double_words[1];
+    seed.double_words[2] = header.double_words[2];
+    seed.double_words[3] = header.double_words[3];
+    seed.double_words[4] = nonce;
+    return seed;
+}
+
+static inline ethash_mix_t ethash_create_mix_from_nodes(
+                                                        ethash_node_t *first_node,
+                                                        ethash_node_t *second_node
+                                                        )
+{
+    ethash_mix_t mix;
+    ethash_node_t *mapped_pointer = (ethash_node_t *)&mix;
+    mapped_pointer[0] = *first_node;
+    mapped_pointer[1] = *second_node;
+    return mix;
+}
+
+static inline ethash_mix_t ethash_create_mix_from_seed(
+                                                       ethash_node_t *seed
+                                                       )
+{
+    return ethash_create_mix_from_nodes(seed, seed);
+}
+
+static inline ethash_mix_t ethash_hash_mix(
+                                           ethash_mix_t *old_mix,
+                                           ethash_uint32_t index,
+                                           const ethash_light_t *light
+                                           )
+{
+    ethash_node_t first_node;
+    ethash_node_t second_node;
+    ethash_calculate_dag_item(&first_node, index * MIX_NODES + 0, light);
+    ethash_calculate_dag_item(&second_node, index * MIX_NODES + 1, light);
+    ethash_mix_t new_mix = ethash_create_mix_from_nodes(&first_node, &second_node);
+    return fnv_mix(old_mix, &new_mix);
+}
+
+static inline void ethash_compress_mix(ethash_mix_t *mix) {
+    // compress mix
+    for (ethash_uint32_t w = 0; w != MIX_WORDS; w += 4) {
+        ethash_uint32_t reduction = ethash_get_word(mix->double_words, w + 0);
+        reduction = fnv_32bit(reduction, ethash_get_word(mix->double_words, w + 1));
+        reduction = fnv_32bit(reduction, ethash_get_word(mix->double_words, w + 2));
+        reduction = fnv_32bit(reduction, ethash_get_word(mix->double_words, w + 3));
+        ethash_set_word(mix->double_words, w / 4 , reduction);
+    }
 }
 
 bool ethash_hash(
-                        ethash_return_value_t *ret,
-                        const ethash_node_t *full_nodes,
-                        const ethash_light_ptr light,
-                        const ethash_uint64_t full_size,
-                        const ethash_h256_t header_hash,
-                        const ethash_uint64_t nonce
-                        )
+                 ethash_return_value_t *ret,
+                 const ethash_light_t *light,
+                 const ethash_uint64_t full_size,
+                 const ethash_h256_t header_hash,
+                 const ethash_uint64_t nonce
+                 )
 {
     if (full_size % MIX_WORDS != 0) {
         return false;
@@ -141,54 +237,28 @@ bool ethash_hash(
     // pack hash and nonce together into first 40 bytes of s_mix
     assert(sizeof(ethash_node_t) * 8 == 512);
     ethash_node_t s_mix[MIX_NODES + 1];
-    memcpy(s_mix[0].bytes, &header_hash, 32);
-    fix_endian64(s_mix[0].double_words[4], nonce);
 
+    ethash_node_t mix_seed = ethash_create_mix_seed(header_hash, nonce);
     // compute sha3-512 hash and replicate across mix
-    keccak_512(s_mix->bytes, 40, s_mix->bytes, 64);
+    keccak_512((ethash_uint8_t *)mix_seed.double_words, 40,
+               (ethash_uint8_t *)mix_seed.double_words, ETHASH_NODE_BYTES);
+    ethash_mix_t mix = ethash_create_mix_from_seed(&mix_seed);
 
-    fix_endian_arr32(s_mix[0].words, 16);
+    const ethash_uint64_t num_full_pages = (unsigned) (full_size / ETHASH_NODE_BYTES);
 
-    ethash_node_t *const mix = s_mix + 1;
-    for (ethash_uint32_t w = 0; w != MIX_WORDS; ++w) {
-        mix->words[w] = s_mix[0].words[w % NODE_WORDS];
+    for (ethash_uint32_t i = 0; i != ETHASH_ACCESSES; ++i) {
+        const ethash_uint32_t index = fnv_32bit(ethash_get_word(mix_seed.double_words, 0) ^ i,
+                                                ethash_get_word(mix.double_words, i % MIX_WORDS)) % num_full_pages;
+
+        mix = ethash_hash_mix(&mix, index, light);
     }
 
-    const unsigned int page_size = sizeof(ethash_uint32_t) * MIX_WORDS;
-    const unsigned int num_full_pages = (unsigned) (full_size / page_size);
+    ethash_compress_mix(&mix);
+    mem_copy_thread_to_device(mix.double_words, &ret->mix_hash, ETHASH_HASH_BYTES);
 
-    for (unsigned i = 0; i != ETHASH_ACCESSES; ++i) {
-        const ethash_uint32_t index = fnv_hash(s_mix->words[0] ^ i, mix->words[i % MIX_WORDS]) % num_full_pages;
-
-        for (unsigned n = 0; n != MIX_NODES; ++n) {
-            const ethash_node_t *dag_node;
-            if (full_nodes) {
-                dag_node = &full_nodes[MIX_NODES * index + n];
-            } else {
-                ethash_node_t tmp_node;
-                ethash_calculate_dag_item(&tmp_node, index * MIX_NODES + n, light);
-                dag_node = &tmp_node;
-            }
-
-            for (unsigned w = 0; w != NODE_WORDS; ++w) {
-                mix[n].words[w] = fnv_hash(mix[n].words[w], dag_node->words[w]);
-            }
-        }
-    }
-
-    // compress mix
-    for (ethash_uint32_t w = 0; w != MIX_WORDS; w += 4) {
-        ethash_uint32_t reduction = mix->words[w + 0];
-        reduction = reduction * FNV_PRIME ^ mix->words[w + 1];
-        reduction = reduction * FNV_PRIME ^ mix->words[w + 2];
-        reduction = reduction * FNV_PRIME ^ mix->words[w + 3];
-        mix->words[w / 4] = reduction;
-    }
-
-    fix_endian_arr32(mix->words, MIX_WORDS / 4);
-    memcpy(&ret->mix_hash, mix->bytes, 32);
     // final Keccak hash
-    keccak_256(s_mix->bytes, (64 + 32), (ethash_uint8_t *)&ret->result, 32);
+    keccak_256((ethash_uint8_t *)s_mix->double_words, (ETHASH_NODE_BYTES + ETHASH_HASH_BYTES),
+               (ethash_uint8_t *)&ret->result, ETHASH_HASH_BYTES);
     return true;
 }
 
@@ -207,13 +277,11 @@ ethash_h256_t ethash_get_seedhash(const ethash_uint64_t block_number)
     return ret;
 }
 
-ethash_light_ptr ethash_light_new(const ethash_uint64_t block_number)
+ethash_light_t* ethash_light_new(const ethash_uint64_t block_number)
 {
-//    ethash_h256_t seedhash;
     const ethash_h256_t seedhash = ethash_get_seedhash(block_number);
-//    ethash_get_seedhash(block_number, &seedhash);
     const ethash_uint64_t cache_size = ethash_get_cachesize(block_number);
-    ethash_light_ptr ret;
+    ethash_light_t *ret;
     ret = calloc(sizeof(ethash_light_t), 1);
     if (!ret) {
         return NULL;
@@ -234,10 +302,10 @@ ethash_light_ptr ethash_light_new(const ethash_uint64_t block_number)
     return ret;
 }
 
-ethash_light_ptr ethash_light_new_with_cache(
-                                             const ethash_uint64_t block_number,
-                                             const ethash_node_t *const nodes,
-                                             const ethash_uint64_t cache_size)
+ethash_light_t* ethash_light_new_with_cache(
+                                            const ethash_uint64_t block_number,
+                                            const ethash_node_t *const nodes,
+                                            const ethash_uint64_t cache_size)
 {
     const ethash_uint64_t calculated_size = ethash_get_cachesize(block_number);
     if (calculated_size != cache_size) {
@@ -255,12 +323,12 @@ ethash_light_ptr ethash_light_new_with_cache(
     return ret;
 }
 
-void ethash_light_delete_without_cache(ethash_light_ptr light)
+void ethash_light_delete_without_cache(ethash_light_t *light)
 {
     free(light);
 }
 
-void ethash_light_delete(ethash_light_ptr light)
+void ethash_light_delete(ethash_light_t *light)
 {
     if (light->cache) {
         free(light->cache);
@@ -269,14 +337,14 @@ void ethash_light_delete(ethash_light_ptr light)
 }
 
 ethash_return_value_t ethash_light_compute(
-                                           ethash_light_ptr light,
+                                           ethash_light_t *light,
                                            const ethash_h256_t header_hash,
                                            const ethash_uint64_t nonce
                                            )
 {
     const ethash_uint64_t full_size = ethash_get_datasize(light->block_number);
     ethash_return_value_t ret;
-    ret.success = ethash_hash(&ret, NULL, light, full_size, header_hash, nonce);
+    ret.success = ethash_hash(&ret, light, full_size, header_hash, nonce);
     return ret;
 }
 

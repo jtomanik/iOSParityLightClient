@@ -25,9 +25,10 @@
 #define ETHASH_CACHE_BYTES_GROWTH 131072U  // cache growth per epoch 2**17
 #define ETHASH_EPOCH_LENGTH 30000U // blocks per epoch
 #define ETHASH_WORD_BYTES 4 // bytes in word, 32 bits
+#define ETHASH_DOUBLE_WORD_BYTES 8 // bytes in word, 64 bits
 #define ETHASH_MIX_BYTES 128 // width of mix, 1024 bits
-#define ETHASH_SHORT_HASH_BYTES 32 // hash length in bytes, 256bits
-#define ETHASH_HASH_BYTES 64 // hash length in bytes, 512bits
+#define ETHASH_HASH_BYTES 32 // hash length in bytes, 256bits
+#define ETHASH_NODE_BYTES 64 // hash length in bytes, 512bits
 #define ETHASH_DATASET_PARENTS 256 // number of parents of each dataset element
 #define ETHASH_CACHE_ROUNDS 3 // number of rounds in cache production
 #define ETHASH_ACCESSES 64 // number of accesses in hashimoto loop
@@ -37,18 +38,23 @@
 #define FNV_PRIME 0x01000193
 
 // compile time settings
-#define NODE_WORDS (ETHASH_HASH_BYTES / ETHASH_WORD_BYTES)
+#define NODE_WORDS (ETHASH_NODE_BYTES / ETHASH_WORD_BYTES)
 #define MIX_WORDS (ETHASH_MIX_BYTES / ETHASH_WORD_BYTES)
 #define MIX_NODES (MIX_WORDS / NODE_WORDS)
 
-#define MEMORY_BUS_BYTES 4
+// probably MEMORY_BUS_BYTES == ETHASH_DOUBLE_WORD_BYTES because we are on a 64 bit system
+#define MEMORY_BUS_BYTES ETHASH_WORD_BYTES
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-    typedef union ethash_node ethash_node_t;
+//    typedef union ethash_node ethash_node_t;
+    typedef struct ethash_node ethash_node_t;
+    typedef struct ethash_node_short ethash_node_short_t;
+    typedef struct ethash_node_words ethash_node_words_t;
     typedef struct ethash_h256 ethash_h256_t;
+    typedef struct ethash_h256_short ethash_h256_short_t;
     typedef unsigned int ethash_uint32_t;
     typedef signed int ethash_int32_t;
     typedef unsigned char ethash_uint8_t;
@@ -58,23 +64,6 @@ extern "C" {
 
 #if defined(__METAL_MACOS__) || defined(__METAL_IOS__)
     typedef size_t ethash_uint64_t;
-
-//    typedef device ethash_light_t device_ethash_light_t;
-//    typedef device ethash_node_t device_ethash_node_t;
-//    typedef device ethash_h256_t device_ethash_h256_t;
-//    typedef device ethash_uint64_t device_ethash_uint64_t;
-//    typedef device ethash_uint32_t device_ethash_uint32_t;
-//    typedef device ethash_int32_t device_ethash_int32_t;
-//    typedef device ethash_uint8_t device_ethash_uint8_t;
-//    typedef device void device_void;
-//
-//    typedef thread ethash_node_t thread_ethash_node_t;
-//    typedef thread ethash_h256_t thread_ethash_h256_t;
-//    typedef thread ethash_uint64_t thread_ethash_uint64_t;
-//    typedef thread ethash_uint32_t thread_ethash_uint32_t;
-//    typedef thread ethash_int32_t thread_ethash_int32_t;
-//    typedef thread ethash_uint8_t thread_ethash_uint8_t;
-//    typedef thread void thread_void;
 
     #define DEVICESPACE(e) device e
     #define THREADSPACE(e) thread e
@@ -90,9 +79,10 @@ extern "C" {
 
 
     //    typedef struct ethash_light DEVICESPACE( *ethash_light_ptr);
-    typedef DEVICESPACE(ethash_light_t *) ethash_light_ptr;
+//    typedef DEVICESPACE(ethash_light_t *) ethash_light_ptr;
 
-    struct ethash_h256 { ethash_uint8_t b[ETHASH_SHORT_HASH_BYTES]; };
+    struct ethash_h256_short { ethash_uint8_t bytes[ETHASH_HASH_BYTES]; };
+    struct ethash_h256 { ethash_uint64_t double_words[ETHASH_HASH_BYTES/ETHASH_DOUBLE_WORD_BYTES]; };
 
     struct ethash_light {
         //        MEMSPACE const void *cache;
@@ -110,11 +100,15 @@ extern "C" {
         bool success;
     };
 
-    union ethash_node {
-        ethash_uint8_t bytes[NODE_WORDS * 4];
-        ethash_uint32_t words[NODE_WORDS];
-        ethash_uint64_t double_words[NODE_WORDS / 2];
-    };
+//    union ethash_node {
+//        ethash_uint8_t bytes[NODE_WORDS * 4];
+//        ethash_uint32_t words[NODE_WORDS];
+//        ethash_uint64_t double_words[NODE_WORDS / 2];
+//    };
+
+    struct ethash_node_short { ethash_uint8_t bytes[ETHASH_NODE_BYTES]; };
+    struct ethash_node_words { ethash_uint32_t words[ETHASH_NODE_BYTES/ETHASH_WORD_BYTES]; };
+    struct ethash_node { ethash_uint64_t double_words[ETHASH_NODE_BYTES/ETHASH_DOUBLE_WORD_BYTES]; };
 
 #ifdef __cplusplus
 }

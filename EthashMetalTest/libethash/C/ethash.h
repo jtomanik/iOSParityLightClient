@@ -41,23 +41,22 @@ extern "C" {
                                     const ethash_uint64_t cache_size,
                                     const ethash_h256_t *const seed
                                     );
-    ethash_light_ptr ethash_light_new(const ethash_uint64_t block_number);
-    ethash_light_ptr ethash_light_new_with_cache(
+    ethash_light_t* ethash_light_new(const ethash_uint64_t block_number);
+    ethash_light_t* ethash_light_new_with_cache(
                                                  const ethash_uint64_t block_number,
                                                  const ethash_node_t *const nodes,
                                                  const ethash_uint64_t cache_size
                                                  );
-    void ethash_light_delete_without_cache(ethash_light_ptr light);
-    void ethash_light_delete(ethash_light_ptr light);
+    void ethash_light_delete_without_cache(ethash_light_t *light);
+    void ethash_light_delete(ethash_light_t *light);
     ethash_return_value_t ethash_light_compute(
-                                               ethash_light_ptr light,
+                                               ethash_light_t *light,
                                                const ethash_h256_t header_hash,
                                                const ethash_uint64_t nonce
                                                );
     bool ethash_hash(
                             ethash_return_value_t *const ret,
-                            const ethash_node_t *full_nodes,
-                            const ethash_light_ptr light,
+                            const ethash_light_t *light,
                             const ethash_uint64_t full_size,
                             const ethash_h256_t header_hash,
                             const ethash_uint64_t nonce
@@ -75,7 +74,7 @@ extern "C" {
     void ethash_calculate_dag_item(
                                    ethash_node_t *const ret,
                                    const ethash_uint32_t node_index,
-                                   const ethash_light_ptr light
+                                   ethash_light_t *const light
                                    );
 #ifdef __cplusplus
 }
