@@ -56,28 +56,41 @@ extern "C" {
         ethash_set_word(hash, i, value);
     }
 
+#define LOOP_BODY(type, op) \
+ethash_uint32_t *in_buffer_32 = (ethash_uint32_t *)src;             \
+ethash_uint32_t *out_buffer_32 = (ethash_uint32_t *)dst;            \
+ethash_uint64_t len_32 = sizeof(type) / MEMORY_BUS_BYTES;           \
+do {                                                                \
+    for (ethash_uint64_t i = 0; i < len_32; i += 1)                 \
+    {                                                               \
+        out_buffer_32[i] op in_buffer_32[i];                        \
+    }                                                               \
+} while (0);
+
     static inline void ethash_xor_hashes(ethash_h256_t *src, ethash_h256_t *dst) {
-        ethash_uint32_t *in_buffer_32 = (ethash_uint32_t *)src;
-        ethash_uint32_t *out_buffer_32 = (ethash_uint32_t *)dst;
-        ethash_uint64_t len_32 = sizeof(ethash_h256_t) / MEMORY_BUS_BYTES;
-        do {
-            for (ethash_uint64_t i = 0; i < len_32; i += 1)
-            {
-                out_buffer_32[i] ^= in_buffer_32[i];
-            }
-        } while (0);
+//        ethash_uint32_t *in_buffer_32 = (ethash_uint32_t *)src;
+//        ethash_uint32_t *out_buffer_32 = (ethash_uint32_t *)dst;
+//        ethash_uint64_t len_32 = sizeof(ethash_h256_t) / MEMORY_BUS_BYTES;
+//        do {
+//            for (ethash_uint64_t i = 0; i < len_32; i += 1)
+//            {
+//                out_buffer_32[i] ^= in_buffer_32[i];
+//            }
+//        } while (0);
+        LOOP_BODY(ethash_h256_t, ^=)
     }
 
     static inline void ethash_xor_nodes(ethash_node_t *src, ethash_node_t *dst) {
-        ethash_uint32_t *in_buffer_32 = (ethash_uint32_t *)src;
-        ethash_uint32_t *out_buffer_32 = (ethash_uint32_t *)dst;
-        ethash_uint64_t len_32 = sizeof(ethash_node_t) / MEMORY_BUS_BYTES;
-        do {
-            for (ethash_uint64_t i = 0; i < len_32; i += 1)
-            {
-                out_buffer_32[i] ^= in_buffer_32[i];
-            }
-        } while (0);
+//        ethash_uint32_t *in_buffer_32 = (ethash_uint32_t *)src;
+//        ethash_uint32_t *out_buffer_32 = (ethash_uint32_t *)dst;
+//        ethash_uint64_t len_32 = sizeof(ethash_node_t) / MEMORY_BUS_BYTES;
+//        do {
+//            for (ethash_uint64_t i = 0; i < len_32; i += 1)
+//            {
+//                out_buffer_32[i] ^= in_buffer_32[i];
+//            }
+//        } while (0);
+        LOOP_BODY(ethash_node_t, ^=)
     }
 
     static inline void copy_ethash_h256(
@@ -85,15 +98,16 @@ extern "C" {
                                         ethash_h256_t *dst
                                         )
     {
-        ethash_uint32_t *in_buffer_32 = (ethash_uint32_t *)src;
-        ethash_uint32_t *out_buffer_32 = (ethash_uint32_t *)dst;
-        ethash_uint64_t len_32 = sizeof(ethash_h256_t) / MEMORY_BUS_BYTES;
-        do {
-            for (ethash_uint64_t i = 0; i < len_32; i += 1)
-            {
-                out_buffer_32[i] = in_buffer_32[i];
-            }
-        } while (0);
+//        ethash_uint32_t *in_buffer_32 = (ethash_uint32_t *)src;
+//        ethash_uint32_t *out_buffer_32 = (ethash_uint32_t *)dst;
+//        ethash_uint64_t len_32 = sizeof(ethash_h256_t) / MEMORY_BUS_BYTES;
+//        do {
+//            for (ethash_uint64_t i = 0; i < len_32; i += 1)
+//            {
+//                out_buffer_32[i] = in_buffer_32[i];
+//            }
+//        } while (0);
+        LOOP_BODY(ethash_h256_t, =)
     }
 
     static inline void copy_ethash_node(
@@ -101,15 +115,16 @@ extern "C" {
                                         ethash_node_t *dst
                                         )
     {
-        ethash_uint32_t *in_buffer_32 = (ethash_uint32_t *)src;
-        ethash_uint32_t *out_buffer_32 = (ethash_uint32_t *)dst;
-        ethash_uint64_t len_32 = sizeof(ethash_node_t) / MEMORY_BUS_BYTES;
-        do {
-            for (ethash_uint64_t i = 0; i < len_32; i += 1)
-            {
-                out_buffer_32[i] = in_buffer_32[i];
-            }
-        } while (0);
+//        ethash_uint32_t *in_buffer_32 = (ethash_uint32_t *)src;
+//        ethash_uint32_t *out_buffer_32 = (ethash_uint32_t *)dst;
+//        ethash_uint64_t len_32 = sizeof(ethash_node_t) / MEMORY_BUS_BYTES;
+//        do {
+//            for (ethash_uint64_t i = 0; i < len_32; i += 1)
+//            {
+//                out_buffer_32[i] = in_buffer_32[i];
+//            }
+//        } while (0);
+        LOOP_BODY(ethash_node_t, =)
     }
 
 #ifdef __cplusplus
