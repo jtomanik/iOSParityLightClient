@@ -247,8 +247,10 @@ bool ethash_hash(
     const ethash_uint64_t num_full_pages = (unsigned) (full_size / ETHASH_NODE_BYTES);
 
     for (ethash_uint32_t i = 0; i != ETHASH_ACCESSES; ++i) {
-        const ethash_uint32_t index = fnv_32bit(ethash_get_word(mix_seed.double_words, 0) ^ i,
-                                                ethash_get_word(mix.double_words, i % MIX_WORDS)) % num_full_pages;
+        ethash_uint32_t hash_a = ethash_get_word(mix_seed.double_words, 0) ^ i;
+        ethash_uint32_t hash_b = ethash_get_word(mix.double_words, i % MIX_WORDS);
+        const ethash_uint32_t index = fnv_32bit(hash_a, hash_b) % num_full_pages;
+        printf("i [ %u ], hash_a [ %u ], hash_b [ %u ], num_full_pages [ %llu ], index [ %u ]\n", i, hash_a, hash_b, num_full_pages, index);
 
         mix = ethash_hash_mix(&mix, index, light);
     }
